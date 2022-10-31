@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */; };
+		BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */; };
+		BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */; };
+		BE5EAFD8290F23D6002C5417 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */; };
+		BE5EAFDF290F2DA7002C5417 /* dictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */; };
+		BE5EAFE6290F4B00002C5417 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFE5290F4B00002C5417 /* CategoryCard.swift */; };
+		BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */; };
+		BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFE9290F6B49002C5417 /* UIViewController+Alert.swift */; };
 		BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48928E23BD20055EE86 /* AppDelegate.swift */; };
 		BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */; };
 		BEBEC48E28E23BD20055EE86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48D28E23BD20055EE86 /* ViewController.swift */; };
@@ -17,6 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
+		BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
+		BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dictionaryModel.swift; sourceTree = "<group>"; };
+		BE5EAFE5290F4B00002C5417 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
+		BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCompseViewController.swift; sourceTree = "<group>"; };
+		BE5EAFE9290F6B49002C5417 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		BEBEC48628E23BD20055EE86 /* EnSena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnSena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEC48928E23BD20055EE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,6 +55,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE5EAFDD290F2D86002C5417 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BE5EAFE0290F4A5C002C5417 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				BE5EAFE5290F4B00002C5417 /* CategoryCard.swift */,
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
 		BEBEC47D28E23BD20055EE86 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +90,22 @@
 		BEBEC48828E23BD20055EE86 /* EnSena */ = {
 			isa = PBXGroup;
 			children = (
+				BE5EAFE0290F4A5C002C5417 /* Componentes */,
+				BE5EAFDD290F2D86002C5417 /* Model */,
 				BEBEC48928E23BD20055EE86 /* AppDelegate.swift */,
 				BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */,
 				BEBEC48D28E23BD20055EE86 /* ViewController.swift */,
 				BEBEC48F28E23BD20055EE86 /* Main.storyboard */,
+				BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */,
+				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
+				BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */,
 				BEBEC49528E23BD70055EE86 /* Assets.xcassets */,
 				BEBEC49728E23BD70055EE86 /* LaunchScreen.storyboard */,
 				BEBEC49A28E23BD70055EE86 /* Info.plist */,
 				BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */,
+				BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */,
+				BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */,
+				BE5EAFE9290F6B49002C5417 /* UIViewController+Alert.swift */,
 			);
 			path = EnSena;
 			sourceTree = "<group>";
@@ -141,8 +181,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE5EAFDF290F2DA7002C5417 /* dictionaryModel.swift in Sources */,
+				BE5EAFE6290F4B00002C5417 /* CategoryCard.swift in Sources */,
+				BE5EAFD8290F23D6002C5417 /* NotificationViewController.swift in Sources */,
+				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
+				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
+				BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */,
 				BEBEC48E28E23BD20055EE86 /* ViewController.swift in Sources */,
+				BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */,
 				BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */,
+				BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */,
 				BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */,
 				BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */,
 			);
@@ -220,7 +268,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -274,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
