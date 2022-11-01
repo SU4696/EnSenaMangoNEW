@@ -6,7 +6,20 @@
 //
 
 import UIKit
-
+/*
+import SwiftUI
+struct DictionaryView: View {
+    @available(iOS 13.0.0, *)
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(Category.allCases) { category in Text(category.rawValue + "s")}
+            }
+        }
+    }
+    
+}
+*/
 class DictionaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var nameView: UITableView!
     
@@ -33,7 +46,7 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
     var token: NSObjectProtocol?
     deinit {
         if let token = token {
-            NotificationViewController.default.removeObserver(token)
+            NotificationCenter.default.removeObserver(token)
             
         }
     }
@@ -57,3 +70,4 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
     */
 
 }
+
