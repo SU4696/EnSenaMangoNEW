@@ -9,13 +9,13 @@ import Foundation
 
 class Dictionary {
     var name: String
-    
     init(name: String){
         self.name = name
     }
     
     static var dummyDicCategory = [
-        Dictionary(name: "Alfabeto")
+        Dictionary(name: "Alfabeto"),
+        Dictionary(name: "Herramientas")
     ]
 }
 

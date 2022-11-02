@@ -20,7 +20,8 @@ class DicDetailCompseViewController: UIViewController {
             alert(message: "Teclea palabra")
             return
         }
-        let newPal = Dictionary(name: name)
+        //TODO: Cambiar category por variable dinámica
+        let newPal = DictionaryDetail(name: name, category: "Test")
         DictionaryDetail.dummyPalCategory.append(newPal)
         
         NotificationCenter.default.post(name: DicDetailCompseViewController.newPalDidInsert, object: nil)

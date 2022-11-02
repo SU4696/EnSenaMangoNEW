@@ -8,13 +8,20 @@
 import Foundation
 
 class DictionaryDetail {
+    var category: String
     var name: String
-    
     init(name: String){
         self.name = name
+        self.category = "Alfabeto"
+    }
+    init(name: String, category: String){
+        self.name = name
+        self.category = category
     }
     
     static var dummyPalCategory = [
-        Dictionary(name: "A")
+        DictionaryDetail(name: "A"),
+        DictionaryDetail(name: "Tornillo", category: "Herramientas")
+//        DictionaryDetail(name: "B", category: "Alfabeto")
     ]
 }

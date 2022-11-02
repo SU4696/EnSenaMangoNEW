@@ -9,16 +9,30 @@ import UIKit
 
 class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var palView: UITableView!
+    var category: String = ""
+    var elements = [DictionaryDetail(name: "")]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return DictionaryDetail.dummyPalCategory.count
+            //obtener los elementos de la misma categoria
+            //TODO: Incializar de manera correcta la varaible elments
+            let dictCount = DictionaryDetail.dummyPalCategory
+            elements = [DictionaryDetail(name: "")]
+            for item in dictCount {
+                if (item.category == category)
+                {
+                    elements.append(item)
+                }
+            }
+            //TODO: Una vez inicializado de manera correcta se cambia return por return elements.count
+            return elements.count - 1
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            //TODO: Una vez inicializado de manera correcta se cambia elements por elements[indexPath.row]
+            let target = elements[indexPath.row + 1]
             let cell = palView.dequeueReusableCell(withIdentifier: "dicCell", for: indexPath)
-            let target = DictionaryDetail.dummyPalCategory[indexPath.row]
             cell.textLabel?.text = target.name
             return cell
         }

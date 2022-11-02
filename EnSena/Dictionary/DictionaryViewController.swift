@@ -20,9 +20,12 @@ struct DictionaryView: View {
     
 }
 */
+class MyTapGesture: UITapGestureRecognizer {
+    var category = String()
+}
+
 class DictionaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var nameView: UITableView!
-    
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 132
@@ -31,12 +34,30 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
         return Dictionary.dummyDicCategory.count
     }
     
+    @objc func labelTapped(_ sender: MyTapGesture) {
+            //abrir un view controller
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "DictonaryDetailViewController") as! DictonaryDetailViewController
+        vc.modalPresentationStyle = .popover
+        vc.category = sender.category
+            self.present(vc, animated: true)
+        }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = nameView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let target = Dictionary.dummyDicCategory[indexPath.row]
         cell.textLabel?.text = target.name
+        //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de acell.textLabel
+        //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
+            //Programatically Tapped Action
+            let labelTap = MyTapGesture(target: self, action: #selector(self.labelTapped(_:)))
+            cell.textLabel!.isUserInteractionEnabled = true
+            cell.textLabel!.addGestureRecognizer(labelTap)
+            labelTap.category = target.name
+            //Programatically Tapped Action
         return cell
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //nameView.reloadData()
