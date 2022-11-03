@@ -38,7 +38,8 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
             //abrir un view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DictonaryDetailViewController") as! DictonaryDetailViewController
-        vc.modalPresentationStyle = .popover
+  
+        vc.modalPresentationStyle = .fullScreen
         vc.category = sender.category
             self.present(vc, animated: true)
         }
@@ -47,7 +48,7 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
         let cell = nameView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let target = Dictionary.dummyDicCategory[indexPath.row]
         cell.textLabel?.text = target.name
-        //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de acell.textLabel
+        //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de cell.textLabel
         //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
             //Programatically Tapped Action
             let labelTap = MyTapGesture(target: self, action: #selector(self.labelTapped(_:)))

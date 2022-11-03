@@ -10,18 +10,23 @@ import UIKit
 class DicDetailCompseViewController: UIViewController {
     
     @IBOutlet weak var palabra: UITextField!
+    @IBOutlet weak var category: UITextField!
 
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     @IBAction func save(_ sender: Any) {
-        guard let name = palabra.text, name.count > 0 else{
+        guard let palabra = palabra.text, palabra.count > 0 else{
             alert(message: "Teclea palabra")
             return
         }
+        guard let categoryname = category.text, categoryname.count > 0 else{
+            alert(message: "Teclea Categoria respectando acento y mayuscula")
+            return
+        }
         //TODO: Cambiar category por variable dinámica
-        let newPal = DictionaryDetail(name: name, category: "Test")
+        let newPal = DictionaryDetail(name: palabra, category: categoryname)
         DictionaryDetail.dummyPalCategory.append(newPal)
         
         NotificationCenter.default.post(name: DicDetailCompseViewController.newPalDidInsert, object: nil)

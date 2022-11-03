@@ -9,11 +9,18 @@ import UIKit
 
 class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var palView: UITableView!
+    
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
     var category: String = ""
     var elements = [DictionaryDetail(name: "")]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
+    
+        
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             //obtener los elementos de la misma categoria
             //TODO: Incializar de manera correcta la varaible elments
@@ -49,12 +56,17 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
                 
             }
         }
+    
+   
 
+   
         override func viewDidLoad() {
             super.viewDidLoad()
+
             
             NotificationCenter.default.addObserver(forName: DicDetailCompseViewController.newPalDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.palView.reloadData()}
         }
+    
 
     /*
     // MARK: - Navigation
