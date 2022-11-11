@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE3B46BA291E0D0B00E0D6C9 /* lessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */; };
+		BE3B46BD291E979700E0D6C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE3B46BC291E979700E0D6C9 /* GoogleService-Info.plist */; };
 		BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */; };
 		BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */; };
 		BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */; };
@@ -29,6 +31,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lessonModel.swift; sourceTree = "<group>"; };
+		BE3B46BC291E979700E0D6C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
@@ -63,12 +67,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE3B46B8291E0C9A00E0D6C9 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lesson;
+			sourceTree = "<group>";
+		};
+		BE3B46BB291E977500E0D6C9 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BE3B46BC291E979700E0D6C9 /* GoogleService-Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		BE5EAFDD290F2D86002C5417 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */,
 				BE5EAFED2910BEA2002C5417 /* CategoryModel.swift */,
 				BE5EAFEF2910CAE3002C5417 /* dicDetailModel.swift */,
+				BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -84,6 +104,7 @@
 		BE5EAFF12910CAF8002C5417 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
+				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
 				BE5EAFF22910CB3C002C5417 /* DicDetail */,
 				BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */,
 				BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */,
@@ -120,6 +141,8 @@
 		BEBEC48828E23BD20055EE86 /* EnSena */ = {
 			isa = PBXGroup;
 			children = (
+				BE3B46BB291E977500E0D6C9 /* Resource */,
+				BE3B46B8291E0C9A00E0D6C9 /* Lesson */,
 				BE5EAFF12910CAF8002C5417 /* Dictionary */,
 				BE5EAFE0290F4A5C002C5417 /* Componentes */,
 				BE5EAFDD290F2D86002C5417 /* Model */,
@@ -128,7 +151,6 @@
 				BEBEC48D28E23BD20055EE86 /* ViewController.swift */,
 				BEBEC48F28E23BD20055EE86 /* Main.storyboard */,
 				BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */,
-				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
 				BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */,
 				BEBEC49528E23BD70055EE86 /* Assets.xcassets */,
 				BEBEC49728E23BD70055EE86 /* LaunchScreen.storyboard */,
@@ -197,6 +219,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEBEC49928E23BD70055EE86 /* LaunchScreen.storyboard in Resources */,
+				BE3B46BD291E979700E0D6C9 /* GoogleService-Info.plist in Resources */,
 				BEBEC49628E23BD70055EE86 /* Assets.xcassets in Resources */,
 				BEBEC49128E23BD20055EE86 /* Main.storyboard in Resources */,
 			);
@@ -215,6 +238,7 @@
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
 				BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */,
+				BE3B46BA291E0D0B00E0D6C9 /* lessonModel.swift in Sources */,
 				BEBEC48E28E23BD20055EE86 /* ViewController.swift in Sources */,
 				BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */,
 				BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */,

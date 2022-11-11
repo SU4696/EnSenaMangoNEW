@@ -9,6 +9,7 @@ import UIKit
 
 class LearnViewController: UIViewController {
 
+    @IBOutlet weak var lessonName: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
