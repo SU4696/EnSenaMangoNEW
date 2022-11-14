@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE0CAEE42921B5D800DD1188 /* LearnComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */; };
+		BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */; };
+		BE0CAEE92921B8F900DD1188 /* LessonDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE82921B8F900DD1188 /* LessonDetail.swift */; };
+		BE0CAEEB2922DF7E00DD1188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */; };
+		BE1A3C172922E02F00E6D498 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BE1A3C162922E02F00E6D498 /* FirebaseAuth */; };
+		BE1A3C192922E02F00E6D498 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BE1A3C182922E02F00E6D498 /* FirebaseFirestore */; };
+		BE1A3C1B2922E02F00E6D498 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BE1A3C1A2922E02F00E6D498 /* FirebaseStorage */; };
 		BE3B46BA291E0D0B00E0D6C9 /* lessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */; };
-		BE3B46BD291E979700E0D6C9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE3B46BC291E979700E0D6C9 /* GoogleService-Info.plist */; };
 		BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */; };
 		BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */; };
 		BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */; };
@@ -23,7 +29,7 @@
 		BE5EAFF62910CB94002C5417 /* DicDetailCompseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFF52910CB94002C5417 /* DicDetailCompseViewController.swift */; };
 		BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48928E23BD20055EE86 /* AppDelegate.swift */; };
 		BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */; };
-		BEBEC48E28E23BD20055EE86 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48D28E23BD20055EE86 /* ViewController.swift */; };
+		BEBEC48E28E23BD20055EE86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48D28E23BD20055EE86 /* LoginViewController.swift */; };
 		BEBEC49128E23BD20055EE86 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC48F28E23BD20055EE86 /* Main.storyboard */; };
 		BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */; };
 		BEBEC49628E23BD70055EE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC49528E23BD70055EE86 /* Assets.xcassets */; };
@@ -31,8 +37,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnComposeViewController.swift; sourceTree = "<group>"; };
+		BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
+		BE0CAEE82921B8F900DD1188 /* LessonDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetail.swift; sourceTree = "<group>"; };
+		BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lessonModel.swift; sourceTree = "<group>"; };
-		BE3B46BC291E979700E0D6C9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +57,7 @@
 		BEBEC48628E23BD20055EE86 /* EnSena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnSena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEC48928E23BD20055EE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BEBEC48D28E23BD20055EE86 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BEBEC48D28E23BD20055EE86 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BEBEC49028E23BD20055EE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BEBEC49328E23BD20055EE86 /* EnSena.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EnSena.xcdatamodel; sourceTree = "<group>"; };
 		BEBEC49528E23BD70055EE86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -61,15 +70,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE1A3C172922E02F00E6D498 /* FirebaseAuth in Frameworks */,
+				BE1A3C192922E02F00E6D498 /* FirebaseFirestore in Frameworks */,
+				BE1A3C1B2922E02F00E6D498 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BE0CAEE52921B7D900DD1188 /* LessonDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */,
+			);
+			path = LessonDetail;
+			sourceTree = "<group>";
+		};
 		BE3B46B8291E0C9A00E0D6C9 /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
+				BE0CAEE52921B7D900DD1188 /* LessonDetail */,
+				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
+				BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -77,7 +100,7 @@
 		BE3B46BB291E977500E0D6C9 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				BE3B46BC291E979700E0D6C9 /* GoogleService-Info.plist */,
+				BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -89,6 +112,7 @@
 				BE5EAFED2910BEA2002C5417 /* CategoryModel.swift */,
 				BE5EAFEF2910CAE3002C5417 /* dicDetailModel.swift */,
 				BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */,
+				BE0CAEE82921B8F900DD1188 /* LessonDetail.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -104,7 +128,6 @@
 		BE5EAFF12910CAF8002C5417 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
-				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
 				BE5EAFF22910CB3C002C5417 /* DicDetail */,
 				BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */,
 				BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */,
@@ -148,7 +171,7 @@
 				BE5EAFDD290F2D86002C5417 /* Model */,
 				BEBEC48928E23BD20055EE86 /* AppDelegate.swift */,
 				BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */,
-				BEBEC48D28E23BD20055EE86 /* ViewController.swift */,
+				BEBEC48D28E23BD20055EE86 /* LoginViewController.swift */,
 				BEBEC48F28E23BD20055EE86 /* Main.storyboard */,
 				BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */,
 				BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */,
@@ -176,6 +199,11 @@
 			dependencies = (
 			);
 			name = EnSena;
+			packageProductDependencies = (
+				BE1A3C162922E02F00E6D498 /* FirebaseAuth */,
+				BE1A3C182922E02F00E6D498 /* FirebaseFirestore */,
+				BE1A3C1A2922E02F00E6D498 /* FirebaseStorage */,
+			);
 			productName = EnSena;
 			productReference = BEBEC48628E23BD20055EE86 /* EnSena.app */;
 			productType = "com.apple.product-type.application";
@@ -204,6 +232,9 @@
 				Base,
 			);
 			mainGroup = BEBEC47D28E23BD20055EE86;
+			packageReferences = (
+				BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = BEBEC48728E23BD20055EE86 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -219,7 +250,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BEBEC49928E23BD70055EE86 /* LaunchScreen.storyboard in Resources */,
-				BE3B46BD291E979700E0D6C9 /* GoogleService-Info.plist in Resources */,
+				BE0CAEEB2922DF7E00DD1188 /* GoogleService-Info.plist in Resources */,
 				BEBEC49628E23BD70055EE86 /* Assets.xcassets in Resources */,
 				BEBEC49128E23BD20055EE86 /* Main.storyboard in Resources */,
 			);
@@ -235,17 +266,20 @@
 				BE5EAFDF290F2DA7002C5417 /* dictionaryModel.swift in Sources */,
 				BE5EAFE6290F4B00002C5417 /* CategoryCard.swift in Sources */,
 				BE5EAFD8290F23D6002C5417 /* NotificationViewController.swift in Sources */,
+				BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */,
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
 				BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */,
 				BE3B46BA291E0D0B00E0D6C9 /* lessonModel.swift in Sources */,
-				BEBEC48E28E23BD20055EE86 /* ViewController.swift in Sources */,
+				BEBEC48E28E23BD20055EE86 /* LoginViewController.swift in Sources */,
 				BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */,
 				BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */,
 				BE5EAFEC29103707002C5417 /* DictonaryDetailViewController.swift in Sources */,
 				BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */,
+				BE0CAEE42921B5D800DD1188 /* LearnComposeViewController.swift in Sources */,
 				BE5EAFEE2910BEA2002C5417 /* CategoryModel.swift in Sources */,
 				BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */,
+				BE0CAEE92921B8F900DD1188 /* LessonDetail.swift in Sources */,
 				BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */,
 				BE5EAFF62910CB94002C5417 /* DicDetailCompseViewController.swift in Sources */,
 				BE5EAFF02910CAE3002C5417 /* dicDetailModel.swift in Sources */,
@@ -468,6 +502,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		BE1A3C162922E02F00E6D498 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		BE1A3C182922E02F00E6D498 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		BE1A3C1A2922E02F00E6D498 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */ = {

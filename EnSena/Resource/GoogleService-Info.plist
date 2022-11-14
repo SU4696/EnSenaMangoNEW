@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1025834364400-4ffuqmc2m3ai0hp29im4t3hpsnj52dbi.apps.googleusercontent.com</string>
+	<string>662425639066-gj6pihgp5bj0a3pdag1gk1oj13slmqv5.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1025834364400-4ffuqmc2m3ai0hp29im4t3hpsnj52dbi</string>
+	<string>com.googleusercontent.apps.662425639066-gj6pihgp5bj0a3pdag1gk1oj13slmqv5</string>
 	<key>API_KEY</key>
-	<string>AIzaSyDJdeFfDPib3Q6Cwjm1RvGke_Wi6_KiNRY</string>
+	<string>AIzaSyBYgXsskctDxjvmHm4jDDhByX4r_n-roRI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>1025834364400</string>
+	<string>662425639066</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>Mango.EnSena</string>
 	<key>PROJECT_ID</key>
-	<string>mango-e0856</string>
+	<string>ensena-ebca7</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mango-e0856.appspot.com</string>
+	<string>ensena-ebca7.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1025834364400:ios:8b3925bb65fb0cb329c135</string>
+	<string>1:662425639066:ios:c0c302405295bd96f16723</string>
 </dict>
 </plist>
