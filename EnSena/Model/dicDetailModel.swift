@@ -10,7 +10,7 @@ import Foundation
 class DictionaryDetail {
     var category: String
     var name: String
-    var image: String
+    var media: String
     init(name: String){
         self.name = name
         self.category = "Alfabeto"
@@ -19,7 +19,7 @@ class DictionaryDetail {
     init(name: String, category: String){
         self.name = name
         self.category = category
-        self.image = ""
+        self.media = ""
     }
     
     static var dummyPalCategory = [

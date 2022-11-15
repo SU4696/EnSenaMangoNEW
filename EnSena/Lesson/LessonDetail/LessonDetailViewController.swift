@@ -15,7 +15,7 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
     }
     
     var category: String = ""
-    var elements = [LessonDetail(name: "")]
+    var elements = [LessonAprender(palabra: "")]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
@@ -24,8 +24,8 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             //obtener los elementos de la misma categoria
             //TODO: Incializar de manera correcta la varaible elments
-            let LesCount = LessonDetail.dummyLesCategory
-            elements = [LessonDetail(name: "")]
+            let LesCount = LessonAprender.dummyLesCategory
+            elements = [LessonAprender(palabra: "")]
             for item in LesCount {
                 if (item.category == category)
                 {
@@ -40,7 +40,7 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
             //TODO: Una vez inicializado de manera correcta se cambia elements por elements[indexPath.row]
             let target = elements[indexPath.row + 1]
             let cell = LesView.dequeueReusableCell(withIdentifier: "lesCell", for: indexPath)
-            cell.textLabel?.text = target.name
+            cell.textLabel?.text = target.palabra
             return cell
         }
         override func viewWillAppear(_ animated: Bool) {
