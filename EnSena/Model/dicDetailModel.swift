@@ -14,7 +14,7 @@ class DictionaryDetail {
     init(name: String){
         self.name = name
         self.category = "Alfabeto"
-        self.image = ""
+        self.media = ""
     }
     init(name: String, category: String){
         self.name = name

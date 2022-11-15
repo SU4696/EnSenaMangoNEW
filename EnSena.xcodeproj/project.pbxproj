@@ -36,6 +36,8 @@
 		BEBEC49928E23BD70055EE86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC49728E23BD70055EE86 /* LaunchScreen.storyboard */; };
 		BEF9E04F29231FBC0026D94F /* LessonQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E04E29231FBC0026D94F /* LessonQuizModel.swift */; };
 		BEF9E052292320350026D94F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BEF9E051292320350026D94F /* FirebaseDatabase */; };
+		BEF9E054292326BA0026D94F /* loginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E053292326BA0026D94F /* loginModel.swift */; };
+		BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E055292327560026D94F /* CrearCuentaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +68,8 @@
 		BEBEC49828E23BD70055EE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEBEC49A28E23BD70055EE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF9E04E29231FBC0026D94F /* LessonQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizModel.swift; sourceTree = "<group>"; };
+		BEF9E053292326BA0026D94F /* loginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginModel.swift; sourceTree = "<group>"; };
+		BEF9E055292327560026D94F /* CrearCuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuentaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,7 @@
 				BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */,
 				BE0CAEE82921B8F900DD1188 /* LessonAprenderModel.swift */,
 				BEF9E04E29231FBC0026D94F /* LessonQuizModel.swift */,
+				BEF9E053292326BA0026D94F /* loginModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 				BEBEC49728E23BD70055EE86 /* LaunchScreen.storyboard */,
 				BEBEC49A28E23BD70055EE86 /* Info.plist */,
 				BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */,
+				BEF9E055292327560026D94F /* CrearCuentaViewController.swift */,
 			);
 			path = EnSena;
 			sourceTree = "<group>";
@@ -285,6 +291,7 @@
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
 				BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */,
 				BE3B46BA291E0D0B00E0D6C9 /* lessonModel.swift in Sources */,
+				BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */,
 				BEBEC48E28E23BD20055EE86 /* LoginViewController.swift in Sources */,
 				BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */,
 				BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */,
@@ -296,6 +303,7 @@
 				BEF9E04F29231FBC0026D94F /* LessonQuizModel.swift in Sources */,
 				BE0CAEE92921B8F900DD1188 /* LessonAprenderModel.swift in Sources */,
 				BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */,
+				BEF9E054292326BA0026D94F /* loginModel.swift in Sources */,
 				BE5EAFF62910CB94002C5417 /* DicDetailCompseViewController.swift in Sources */,
 				BE5EAFF02910CAE3002C5417 /* dicDetailModel.swift in Sources */,
 			);
