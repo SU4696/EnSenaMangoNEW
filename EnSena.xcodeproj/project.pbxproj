@@ -37,6 +37,7 @@
 		BEF9E04F29231FBC0026D94F /* LessonQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E04E29231FBC0026D94F /* LessonQuizModel.swift */; };
 		BEF9E052292320350026D94F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BEF9E051292320350026D94F /* FirebaseDatabase */; };
 		BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E055292327560026D94F /* CrearCuentaViewController.swift */; };
+		BEF9E058292409180026D94F /* AdminTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E057292409170026D94F /* AdminTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		BEBEC49A28E23BD70055EE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BEF9E04E29231FBC0026D94F /* LessonQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizModel.swift; sourceTree = "<group>"; };
 		BEF9E055292327560026D94F /* CrearCuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuentaViewController.swift; sourceTree = "<group>"; };
+		BEF9E057292409170026D94F /* AdminTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +190,7 @@
 				BEBEC49A28E23BD70055EE86 /* Info.plist */,
 				BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */,
 				BEF9E055292327560026D94F /* CrearCuentaViewController.swift */,
+				BEF9E057292409170026D94F /* AdminTabBarController.swift */,
 			);
 			path = EnSena;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */,
 				BE5EAFF62910CB94002C5417 /* DicDetailCompseViewController.swift in Sources */,
 				BE5EAFF02910CAE3002C5417 /* dicDetailModel.swift in Sources */,
+				BEF9E058292409180026D94F /* AdminTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             
             if segue.identifier == "logInAdmin"{
-                let vistaTab = segue.destination as! UITabBarController
+                 let vc = segue.destination as? AdminTabBarController
   
             }
     
