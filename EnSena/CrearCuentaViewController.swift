@@ -6,11 +6,30 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class CrearCuentaViewController: UIViewController {
 
+    @IBOutlet weak var nombre: UITextField!
+    
+    @IBOutlet weak var id: UITextField!
+    
+    @IBOutlet weak var pw: UITextField!
+    
+    @IBOutlet weak var edad: UITextField!
+    
+    @IBOutlet weak var codigo: UITextField!
+
+    
+    @IBAction func CreatButton(_ sender: UIButton) {
+        let componenteDB =  Database.database().reference()
+        componenteDB.childByAutoId().setValue(["usernombre": nombre.text, "userid": id.text, "userpw": pw.text, "useredad": edad.text,  "usercodigo": codigo.text])
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+       
+
 
         // Do any additional setup after loading the view.
     }
