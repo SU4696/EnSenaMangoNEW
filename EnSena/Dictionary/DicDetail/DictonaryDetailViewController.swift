@@ -14,6 +14,8 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
         dismiss(animated: true, completion: nil)
     }
     
+    
+    
     var category: String = ""
     var elements = [DictionaryDetail(name: "")]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
