@@ -7,6 +7,9 @@
 
 import UIKit
 import Firebase
+import FirebaseCore
+import FirebaseAuth
+import FirebaseFirestore
 import SwiftUI
 
 class LoginViewController: UIViewController {
@@ -37,7 +40,7 @@ class LoginViewController: UIViewController {
                 
                 
                 let db = Firestore.firestore()
-                var information: [String:Any]?
+                var Information: [String:Any]?
             
                 db.collection("USER").order(by: "id").getDocuments { (querySnapshot, error) in
                 
@@ -46,11 +49,11 @@ class LoginViewController: UIViewController {
                     
                 }
                 else {
-                    information = QuerySnapshot!.documents.first?.data()
+                    Information = querySnapshot!.documents.first?.data()
                     
-                    var tipo: String = Information["admin"] as! int
-                        if self.tipo == 0 {
-                            self.performSegue(withIdentifier: StringAdminSegue, sender: nil)
+                    var tipo: Int = Information!["admin"] as! Int
+                        if tipo == 0 {
+                            self.performSegue(withIdentifier: "StringAdminSegue", sender: nil)
                         }
                            
                         /*else{
