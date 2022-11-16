@@ -11,10 +11,8 @@ import SwiftUI
 
 class LoginViewController: UIViewController {
 
-    let db = Firestore.firestore()
+   
     
-    var opc : Int?
-    var iduser : QueryDocumentSnapshot?
     
     override func viewDidLoad() {
         
@@ -24,31 +22,37 @@ class LoginViewController: UIViewController {
         
     }
 
-    @IBOutlet weak var idEmail: UITextField!
+    @IBOutlet weak var id: UITextField!
     
     @IBOutlet weak var pw: UITextField!
     
-    @IBAction func loginButton(_ sender: UIButton) {
-        logInAdmin()
-    }
-    func logInAdmin(){
+   
+    func login(){
+        Auth.auth().signIn(withEmail: id.text!, password: pw.text!) { (user,error) in
+            if let error = error {
+                print(error.localizedDescription)
+          }
+            else{
+                print("OK")
+                
+                
+                let db = Firestore.firestore()
+                var information: [String:Any]?
             
-            db.collection("Administrador").getDocuments { querySnapshot, error in
+                db.collection("USER").order(by: "id").getDocuments { (querySnapshot, error) in
                 
                 if let error = error {
-                    self.opc = -1
                     print(error.localizedDescription)
                     
                 }
                 else {
-                    for document in querySnapshot!.documents {
-                        let data = document.data()
-                        if self.idEmail.text == data["id"] as! String? &&
-                            self.pw.text == data["pw"] as! String?{
-                            self.iduser = document
-                            self.opc = 2
-                            self.performSegue(withIdentifier: "logInAdmin", sender: nil)
+                    information = QuerySnapshot!.documents.first?.data()
+                    
+                    var tipo: String = Information["admin"] as! int
+                        if self.tipo == 0 {
+                            self.performSegue(withIdentifier: StringAdminSegue, sender: nil)
                         }
+                           
                         /*else{
                             self.tfEmail.text = ""
                             self.tfPassword.text = ""
@@ -61,17 +65,14 @@ class LoginViewController: UIViewController {
                             self.present(alerta, animated: true, completion: nil)
                         }*/
                     }
-                }
+                }}
             }
         }
-
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            
-            if segue.identifier == "logInAdmin"{
-                 let vc = segue.destination as? AdminTabBarController
-  
-            }
-    
+    @IBAction func loginButton(_ sender: UIButton) {
+        login()
     }
+    
+   
+    
 }
 

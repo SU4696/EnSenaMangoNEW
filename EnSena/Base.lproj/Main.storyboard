@@ -10,57 +10,6 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
-        <scene sceneID="rqS-nZ-6ed">
-            <objects>
-                <viewController id="35z-5w-APX" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wPm-iV-0qN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="Fbl-dw-J3k"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="0b3-0r-xiX"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y29-9m-HJy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-536" y="-496"/>
-        </scene>
-        <!--Item 1-->
-        <scene sceneID="43p-WH-Fmi">
-            <objects>
-                <viewController id="n00-Kh-G81" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="DFR-Sj-0l8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="V6o-VL-eSA"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="0mc-qQ-CVM"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YtE-69-bBT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-536" y="-1102"/>
-        </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="TaX-VW-Zzy">
-            <objects>
-                <tabBarController id="z4U-cg-W4t" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="wa8-55-ORW"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XjT-Mx-Hnt">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="n00-Kh-G81" kind="relationship" relationship="viewControllers" id="1kd-EU-Ba6"/>
-                        <segue destination="35z-5w-APX" kind="relationship" relationship="viewControllers" id="EnO-ZT-Er8"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="p8i-h6-YRq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1426" y="-799"/>
-        </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -90,9 +39,6 @@
                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
-                                <connections>
-                                    <segue destination="z4U-cg-W4t" kind="push" id="sHW-Ib-KGf"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EnSeña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-YA-wOZ">
                                 <rect key="frame" x="141" y="334" width="132" height="56"/>
@@ -143,6 +89,7 @@
                     <connections>
                         <outlet property="idEmail" destination="DkS-0V-Tct" id="5YN-ze-f5f"/>
                         <outlet property="pw" destination="pxF-lU-pXd" id="0bf-3n-AJM"/>
+                        <segue destination="8tL-5f-D8e" kind="presentation" identifier="AdminSegue" id="0fg-Nv-Xfd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -152,7 +99,8 @@
         <!--Vamos a aprender-->
         <scene sceneID="jKb-Aq-JlM">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="K0u-Yh-lmD" customClass="HomeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PxF-kt-T59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="HomeViewController" modalPresentationStyle="fullScreen" id="K0u-Yh-lmD" customClass="HomeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h2K-Ww-QzP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -216,13 +164,13 @@
                     </view>
                     <navigationItem key="navigationItem" title="Vamos a aprender" id="Pte-md-Rjw"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PxF-kt-T59" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1430.4347826086957" y="1508.7053571428571"/>
         </scene>
         <!--Diccionario-->
         <scene sceneID="fTO-Nc-RZi">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EkE-Gg-0ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="Cx6-j7-X1A" customClass="DictionaryViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="is4-mj-Ugh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -280,13 +228,13 @@
                         <outlet property="nameView" destination="dAk-Nz-jXC" id="OzK-3W-aHI"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="EkE-Gg-0ex" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3491.3043478260875" y="778.79464285714278"/>
         </scene>
         <!--Añadir Categoria-->
         <scene sceneID="5ij-tY-bfm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qgC-WE-DLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="iFh-ek-A3R" customClass="DictionaryCompseViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MbB-Tm-kcB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -320,13 +268,13 @@
                         <outlet property="catname" destination="OEa-zm-cwS" id="PGM-ag-nu0"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qgC-WE-DLm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3491" y="1509"/>
         </scene>
         <!--Dictonary Detail View Controller-->
         <scene sceneID="UeY-Ki-JVz">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1EA-2J-kLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DictonaryDetailViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="xNR-EZ-dBH" customClass="DictonaryDetailViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MAY-NR-sqe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -407,13 +355,13 @@
                         <outlet property="palView" destination="Qt7-71-PKN" id="FMh-pt-NWr"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1EA-2J-kLt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5315.9420289855079" y="1508.7053571428571"/>
         </scene>
         <!--Añadir Palabra-->
         <scene sceneID="flo-46-c7W">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eRU-AD-zKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="PrF-Aj-eab" customClass="DicDetailCompseViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4eV-Cz-KaS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -473,13 +421,13 @@
                         <outlet property="palabra" destination="tXa-yl-a4s" id="Tbz-to-8YD"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="eRU-AD-zKg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6952.1739130434789" y="1493.9732142857142"/>
         </scene>
         <!--Lección-->
         <scene sceneID="upB-YF-jJ3">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ThA-5E-ebg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="nce-B2-jff" customClass="LearnViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mLf-7S-czC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
@@ -537,13 +485,13 @@
                         <outlet property="lessonName" destination="9HQ-Cx-k1O" id="q3S-jL-cBX"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ThA-5E-ebg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5315.9420289855079" y="778.79464285714278"/>
         </scene>
         <!--Notificaciones-->
         <scene sceneID="e1n-6r-eUx">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m2k-Gd-7w7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" id="jJO-cL-6Hi" customClass="NotificationViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="syq-6G-4h4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
@@ -570,7 +518,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Notificaciones" id="Rvf-r2-vtO"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m2k-Gd-7w7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7146.3768115942039" y="778.79464285714278"/>
         </scene>
@@ -677,11 +624,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ria-cH-QtT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2469.5652173913045" y="60.9375"/>
+            <point key="canvasLocation" x="-2107" y="100"/>
         </scene>
         <!--Admin Tab Bar Controller-->
         <scene sceneID="8Um-Ro-yWY">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m1T-XE-Vca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="logInAdmin" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="8tL-5f-D8e" customClass="AdminTabBarController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="T5B-bF-PQL"/>
@@ -700,13 +648,13 @@
                         <segue destination="sD5-I5-q5H" kind="relationship" relationship="viewControllers" id="1CQ-RG-RvX"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m1T-XE-Vca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17" y="846"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="2hW-Wm-u39">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GHd-iS-NrM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="PJE-QL-Euj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G17-nc-JZ1">
@@ -722,13 +670,13 @@
                         <segue destination="iFh-ek-A3R" kind="relationship" relationship="rootViewController" id="ymi-4R-pfv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="GHd-iS-NrM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2470" y="1509"/>
         </scene>
         <!--Main-->
         <scene sceneID="EIb-7P-JgW">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wtH-an-KRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="yos-AV-MCP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Main" id="Dow-Qr-5VW"/>
                     <toolbarItems/>
@@ -745,13 +693,13 @@
                         <segue destination="K0u-Yh-lmD" kind="relationship" relationship="rootViewController" id="QEk-dj-8s8"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="wtH-an-KRO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="600" y="1509"/>
         </scene>
         <!--Diccionario-->
         <scene sceneID="P3a-yu-7y3">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="15H-Se-aCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jMR-Gb-iXD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Diccionario" id="zcT-ml-hEI"/>
                     <toolbarItems/>
@@ -768,13 +716,13 @@
                         <segue destination="Cx6-j7-X1A" kind="relationship" relationship="rootViewController" id="VpE-IZ-4UL"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="15H-Se-aCn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2581.1594202898555" y="778.79464285714278"/>
         </scene>
         <!--Lecciónes-->
         <scene sceneID="s2v-MM-3PO">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gac-gk-4gL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="oCA-SG-byg" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Lecciónes" id="KTa-cj-cHf"/>
                     <toolbarItems/>
@@ -791,13 +739,13 @@
                         <segue destination="nce-B2-jff" kind="relationship" relationship="rootViewController" id="xCF-Ux-2Dg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Gac-gk-4gL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4405.7971014492759" y="778.79464285714278"/>
         </scene>
         <!--Notificación -->
         <scene sceneID="emn-Ff-gcg">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CkZ-7d-2PJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="sD5-I5-q5H" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Notificación " id="atg-pP-eJj"/>
                     <toolbarItems/>
@@ -814,13 +762,13 @@
                         <segue destination="jJO-cL-6Hi" kind="relationship" relationship="rootViewController" id="FCY-A8-5G9"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CkZ-7d-2PJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6236.2318840579719" y="778.79464285714278"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="9cM-eC-Gfm">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PjZ-NL-OzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Ih-HF-M14" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="XpT-zc-ZWA">
@@ -836,13 +784,13 @@
                         <segue destination="PrF-Aj-eab" kind="relationship" relationship="rootViewController" id="iWg-gS-lhv"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PjZ-NL-OzT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6042.0289855072469" y="1493.9732142857142"/>
         </scene>
         <!--Lesson Detail View Controller-->
         <scene sceneID="W2D-eu-KcP">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8wf-jg-B1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="LessonDetailViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="oHI-nM-NhR" customClass="LessonDetailViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j5C-F0-I0t">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -920,13 +868,13 @@
                         <outlet property="LesView" destination="OJv-zv-Taa" id="MLn-TO-Atk"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8wf-jg-B1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5316" y="2194"/>
         </scene>
         <!--Añadir Categoria-->
         <scene sceneID="a6I-b7-IVA">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l96-vL-eeO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="YGo-Sz-4Ac" customClass="LearnComposeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uy0-n8-StP">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
@@ -960,13 +908,13 @@
                         <outlet property="lesname" destination="fA7-Ya-yKW" id="bwP-Wj-j5r"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l96-vL-eeO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6226.0869565217399" y="101.11607142857143"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Qa9-WR-xdh">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2dc-Vx-y61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTE-rX-Hyq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2A-nD-maO">
@@ -982,7 +930,6 @@
                         <segue destination="YGo-Sz-4Ac" kind="relationship" relationship="rootViewController" id="FIM-6f-AKY"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="2dc-Vx-y61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5315.9420289855079" y="100.44642857142857"/>
         </scene>
@@ -1090,6 +1037,9 @@
             <point key="canvasLocation" x="930" y="61"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="0fg-Nv-Xfd"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="splash" width="256" height="256"/>
         <namedColor name="pinktheme">
