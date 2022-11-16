@@ -93,6 +93,7 @@
                         <outlet property="id" destination="DkS-0V-Tct" id="Ocw-h1-dqY"/>
                         <outlet property="pw" destination="pxF-lU-pXd" id="0bf-3n-AJM"/>
                         <segue destination="8tL-5f-D8e" kind="presentation" identifier="AdminSegue" id="olQ-gz-ziC"/>
+                        <segue destination="ffr-Vu-jT8" kind="presentation" identifier="NotAdminSegue" id="CHX-DM-E2g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1345,7 +1346,7 @@
             <objects>
                 <viewController id="ffr-Vu-jT8" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PHF-Ij-Xj3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="cm8-UK-WaB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
