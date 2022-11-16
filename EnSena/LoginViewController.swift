@@ -20,6 +20,7 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        Auth.auth().languageCode="en"
         // Do any additional setup after loading the view.
       
         
@@ -29,53 +30,78 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var pw: UITextField!
     
-   
     func login(){
-        Auth.auth().signIn(withEmail: id.text!, password: pw.text!) { (user,error) in
-            if let error = error {
-                print(error.localizedDescription)
-          }
-            else{
-                print("OK")
-                
-                
-                let db = Firestore.firestore()
-                var Information: [String:Any]?
-            
-                db.collection("USER").order(by: "id").getDocuments { (querySnapshot, error) in
-                
+            Auth.auth().signIn(withEmail: id.text!, password: pw.text!) { (user,error) in
                 if let error = error {
                     print(error.localizedDescription)
+              }
+                else{
+                    print("OK")
+                    let db = Firestore.firestore()
+                    //var Information: [String:Any]?
+                
+                    db.collection("USER").order(by: "id").getDocuments { (querySnapshot, error) in
+                    
+                    if let error = error {
+                        print(error.localizedDescription)
+                        
+                    }
+                    else {
+                        //Information = querySnapshot!.documents.first?.data()
+                        
+                       
+                        
+                        //if tipo == 0 {
+                          //  self.performSegue(withIdentifier: "AdminSegue", sender: nil)
+                        for document in querySnapshot!.documents {
+                            let data = document.data()
+                        if self.id.text == data["correo"] as! String? &&
+                            self.pw.text == data["password"] as! String? {
+                            if data["type"] as! Int == 0{
+                            self.performSegue(withIdentifier: "AdminSegue", sender: nil)
+                            }                        }
+                        }
+                        }
+                    }
                     
                 }
-                else {
-                    Information = querySnapshot!.documents.first?.data()
-                    
-                    var tipo: Int = Information!["admin"] as! Int
-                        if tipo == 0 {
-                            self.performSegue(withIdentifier: "StringAdminSegue", sender: nil)
-                        }
-                           
-                        /*else{
-                            self.tfEmail.text = ""
-                            self.tfPassword.text = ""
-                            
-                            let alerta = UIAlertController(title: "Error", message: "El usuario o contraseña son incorrectos", preferredStyle: .alert)
-                            
-                            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                            
-                            alerta.addAction(action)
-                            self.present(alerta, animated: true, completion: nil)
-                        }*/
-                    }
-                }}
+                }
             }
-        }
-    @IBAction func loginButton(_ sender: UIButton) {
+    
+    
+    @IBAction func loginButton(_ sender: Any) {
         login()
     }
     
-   
     
 }
 
+/*
+ func login(){
+         Auth.auth().signIn(withEmail: id.text!, password: pw.text!) { (user,error) in
+             if let error = error {
+                 print(error.localizedDescription)
+           }
+             else{
+                 print("OK")
+                 let db = Firestore.firestore()
+                 var Information: [String:Any]?
+             
+                 db.collection("USER").order(by: "id").getDocuments { (querySnapshot, error) in
+                 
+                 if let error = error {
+                     print(error.localizedDescription)
+                     
+                 }
+                 else {
+                     Information = querySnapshot!.documents.first?.data()
+                     
+                     var tipo: Int = Information!["type"] as! Int
+                         if tipo == 0 {
+                             self.performSegue(withIdentifier: "AdminSegue", sender: nil)
+                         }
+                     }
+                 }}
+             }
+         }
+ */
