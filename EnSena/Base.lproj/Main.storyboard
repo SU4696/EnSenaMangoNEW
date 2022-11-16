@@ -87,7 +87,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="idEmail" destination="DkS-0V-Tct" id="5YN-ze-f5f"/>
+                        <outlet property="id" destination="DkS-0V-Tct" id="Ocw-h1-dqY"/>
                         <outlet property="pw" destination="pxF-lU-pXd" id="0bf-3n-AJM"/>
                         <segue destination="8tL-5f-D8e" kind="presentation" identifier="AdminSegue" id="0fg-Nv-Xfd"/>
                     </connections>
