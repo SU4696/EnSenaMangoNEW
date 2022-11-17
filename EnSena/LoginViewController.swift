@@ -23,7 +23,8 @@ class LoginViewController: UIViewController {
         Auth.auth().languageCode="en"
         // Do any additional setup after loading the view.
       
-        
+        id.text = "nachtknot@gmail.com"
+        pw.text = "1234567"
     }
 
     @IBOutlet weak var id: UITextField!
@@ -40,7 +41,8 @@ class LoginViewController: UIViewController {
                     let db = Firestore.firestore()
                     //var Information: [String:Any]?
                 
-                    db.collection("USER").order(by: "id").getDocuments { (querySnapshot, error) in
+                    
+                    db.collection("USER").whereField("id", isEqualTo: self.id.text!).getDocuments { (querySnapshot, error) in
                     
                     if let error = error {
                         print(error.localizedDescription)
@@ -53,14 +55,18 @@ class LoginViewController: UIViewController {
                         
                         //if tipo == 0 {
                           //  self.performSegue(withIdentifier: "AdminSegue", sender: nil)
-                        for document in querySnapshot!.documents {
-                            let data = document.data()
-                        if self.id.text == data["correo"] as! String? &&
+//                        for document in querySnapshot!.documents {
+                        let data: [String:Any] = (querySnapshot!.documents.first?.data())!
+                        if self.id.text == data["id"] as! String? &&
                             self.pw.text == data["password"] as! String? {
                             if data["type"] as! Int == 0{
                             self.performSegue(withIdentifier: "AdminSegue", sender: nil)
-                            }                        }
+                            }
+                            else {
+                                self.performSegue(withIdentifier: "NotAdminSegue", sender: nil)
+                            }
                         }
+//                        }
                         }
                     }
                     

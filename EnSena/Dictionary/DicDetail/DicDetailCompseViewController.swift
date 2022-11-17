@@ -6,13 +6,28 @@
 //
 
 import UIKit
+import Firebase
 import FirebaseStorage
+
+/*
+ [
+    {
+        "category": "ABCD",
+        "words": [
+            {
+                "word": "A",
+                "media": "http://"
+            }
+        ]
+    }
+ ]
+ */
 
 class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     @IBOutlet weak var palabra: UITextField!
     @IBOutlet weak var category: UITextField!
-    
+    var imageData: Data?
     @IBOutlet weak var label: UILabel!
     
     private let storage = Storage.storage().reference()
@@ -32,24 +47,25 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
         guard let imageData = image.pngData() else{
             return
         }
+        self.imageData = imageData
         /*
          /Desktop/file,png
          */
-        storage.child("images/file.png").putData(imageData, metadata: nil, completion: { _, error in
-            guard error == nil else{
-                print("Failed to uploead")
-                return
-            }
-            self.storage.child("images/file.png").downloadURL(completion: {url, error in
-                guard let url = url, error == nil else {
-                    return
-                }
-                let urlString=url.absoluteString
-                print("Download URL: \(urlString)")
-                UserDefaults.standard.set(urlString, forKey: "url")
-
-            })
-        })
+//        storage.child("images/file.png").putData(imageData, metadata: nil, completion: { _, error in
+//            guard error == nil else{
+//                print("Failed to uploead")
+//                return
+//            }
+//            self.storage.child("images/file.png").downloadURL(completion: {url, error in
+//                guard let url = url, error == nil else {
+//                    return
+//                }
+//                let urlString=url.absoluteString
+//                print("Download URL: \(urlString)")
+//                UserDefaults.standard.set(urlString, forKey: "url")
+//
+//            })
+//        })
         //upload image data
         //get download url
         //sabe download url to userDefault
@@ -80,6 +96,72 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
         NotificationCenter.default.post(name: DicDetailCompseViewController.newPalDidInsert, object: nil)
         dismiss(animated: true, completion: nil)
         
+        
+        let db = Firestore.firestore()
+        //CODIGO PARA CREAT CATEGORIAS
+//        let docData: [String: Any] = [
+//            "categories": [[
+//                "category": "Alfabeto",
+//                "words": [[
+//                    "media": "a.png",
+//                    "word": "A",
+//                ],[
+//                    "media": "b.png",
+//                    "word": "B",
+//                ]]
+//                ],
+//                           [
+//                                "category": "Herramientas",
+//                                "words": [[
+//                                    "media": "Martillo.png",
+//                                    "word": "Martillo",
+//                                ],[
+//                                    "media": "Tonrillo.png",
+//                                    "word": "Tonrillo",
+//                                ]]
+//                           ]
+//                          ]
+//        ]
+//        db.collection("DICTIONARY").document("dictionary").setData(docData) { err in
+//            if let err = err {
+//                print("Error writing document: \(err)")
+//            } else {
+//                print("Document successfully written!")
+//            }
+//        }
+        
+        //CODIGO PARA ACTUALIZAR CATEGORIAS
+        let alfabetoRef = db.collection("DICTIONARY").document("dictionary")
+
+        
+        let docUpdateData: [String: Any] = [
+                "category": categoryname,
+                "words": [[
+                    "media": "\(palabra).png",
+                    "word": palabra,
+                ]]
+        ]
+        // Atomically add a new region to the "regions" array field.
+        alfabetoRef.updateData([
+            "categories": FieldValue.arrayUnion([docUpdateData])
+        ])
+        
+        
+        storage.child("dictionary/\(palabra).png").putData(imageData!, metadata: nil, completion: { _, error in
+           guard error == nil else{
+               print("Failed to uploead")
+               return
+           }
+           self.storage.child("dictionary/\(palabra).png").downloadURL(completion: {url, error in
+               guard let url = url, error == nil else {
+                   return
+               }
+               let urlString=url.absoluteString
+               print("Download URL: \(urlString)")
+               UserDefaults.standard.set(urlString, forKey: "url")
+
+           })
+       })
         
     }
     override func viewDidLoad() {

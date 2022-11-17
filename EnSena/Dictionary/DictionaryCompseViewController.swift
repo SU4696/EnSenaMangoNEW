@@ -6,10 +6,17 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
-class DictionaryCompseViewController: UIViewController {
+
+class DictionaryCompseViewController: UIViewController{
 
     @IBOutlet weak var catname: UITextField!
+    var imageData: Data?
+    private let storage = Storage.storage().reference()
+    
+    
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -18,11 +25,27 @@ class DictionaryCompseViewController: UIViewController {
             alert(message: "Teclea el nombre")
             return
         }
-        let newDic = Dictionary(name: name)
-        Dictionary.dummyDicCategory.append(newDic)
-        
+//        let newDic = Dictionary(name: name)
+//        Dictionary.dummyDicCategory.append(newDic)
+//
         NotificationCenter.default.post(name: DictionaryCompseViewController.newDicDidInsert, object: nil)
         dismiss(animated: true, completion: nil)
+
+        let db = Firestore.firestore()
+        let alfabetoRef = db.collection("DICTIONARY").document("dictionary")
+
+        let docUpdateData: [String: Any] = [
+                "category": name,
+                "words": [[
+                    "media": "",
+                    "word": "",
+                ]]
+        ]
+        // Atomically add a new region to the "regions" array field.
+        alfabetoRef.updateData([
+            "categories": FieldValue.arrayUnion([docUpdateData])
+        ])
+        
         
         
     }

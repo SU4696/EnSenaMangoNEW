@@ -20,7 +20,6 @@
 		BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */; };
 		BE5EAFD8290F23D6002C5417 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */; };
 		BE5EAFDF290F2DA7002C5417 /* dictionaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */; };
-		BE5EAFE6290F4B00002C5417 /* CategoryCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFE5290F4B00002C5417 /* CategoryCard.swift */; };
 		BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */; };
 		BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFE9290F6B49002C5417 /* UIViewController+Alert.swift */; };
 		BE5EAFEC29103707002C5417 /* DictonaryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFEB29103707002C5417 /* DictonaryDetailViewController.swift */; };
@@ -51,7 +50,6 @@
 		BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 		BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dictionaryModel.swift; sourceTree = "<group>"; };
-		BE5EAFE5290F4B00002C5417 /* CategoryCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCard.swift; sourceTree = "<group>"; };
 		BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryCompseViewController.swift; sourceTree = "<group>"; };
 		BE5EAFE9290F6B49002C5417 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		BE5EAFEB29103707002C5417 /* DictonaryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictonaryDetailViewController.swift; sourceTree = "<group>"; };
@@ -126,14 +124,6 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		BE5EAFE0290F4A5C002C5417 /* Componentes */ = {
-			isa = PBXGroup;
-			children = (
-				BE5EAFE5290F4B00002C5417 /* CategoryCard.swift */,
-			);
-			path = Componentes;
-			sourceTree = "<group>";
-		};
 		BE5EAFF12910CAF8002C5417 /* Dictionary */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,7 +167,6 @@
 				BE3B46BB291E977500E0D6C9 /* Resource */,
 				BE3B46B8291E0C9A00E0D6C9 /* Lesson */,
 				BE5EAFF12910CAF8002C5417 /* Dictionary */,
-				BE5EAFE0290F4A5C002C5417 /* Componentes */,
 				BE5EAFDD290F2D86002C5417 /* Model */,
 				BEBEC48928E23BD20055EE86 /* AppDelegate.swift */,
 				BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */,
@@ -284,7 +273,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				BE5EAFDF290F2DA7002C5417 /* dictionaryModel.swift in Sources */,
-				BE5EAFE6290F4B00002C5417 /* CategoryCard.swift in Sources */,
 				BE5EAFD8290F23D6002C5417 /* NotificationViewController.swift in Sources */,
 				BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */,
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,

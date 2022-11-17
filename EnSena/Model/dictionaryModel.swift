@@ -15,7 +15,6 @@ class Dictionary {
     
     static var dummyDicCategory = [
         Dictionary(name: "Alfabeto"),
-        Dictionary(name: "Herramientas")
     ]
 }
 

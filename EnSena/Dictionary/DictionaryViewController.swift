@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 /*
 import SwiftUI
 struct DictionaryView: View {
@@ -24,8 +25,22 @@ class MyTapGesture: UITapGestureRecognizer {
     var category = String()
 }
 
+struct Response: Decodable {
+        let categories: [Categories]
+    }
+struct Categories: Decodable {
+    let words: [Words]
+    let category: String
+    }
+
+struct Words: Decodable {
+    let word: String
+    let media: String
+    }
+
 class DictionaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var nameView: UITableView!
+
    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 132
@@ -63,6 +78,30 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
         super.viewWillAppear(animated)
         //nameView.reloadData()
         
+        //BUSCAR LOS DATOS EN FIREBASE
+        
+        let db = Firestore.firestore()
+        //var Information: [String:Any]?
+    
+        
+        db.collection("DICTIONARY").getDocuments { (querySnapshot, error) in
+                        for document in querySnapshot!.documents {
+                            let data: [String:Any] = document.data()
+                            let categories = data["categories"] as? Array<Any>
+                            for index in 0...categories!.count-1
+                            {
+                                let dataCategories = categories![index] as? [String: Any]
+                                let category = dataCategories!["category"]
+                                let newCategory = Dictionary(name: (category) as! String)
+                                Dictionary.dummyDicCategory.append(newCategory)
+                            }
+//                            for category in categories {
+//                                let data = category["category"]
+//                                let newCategory = Dictionary(name: data)
+//                                Dictionary.dummyDicCategory.append(newCategory)
+//                            }
+                        }
+        }
        // print(#function)
     }
     var token: NSObjectProtocol?
@@ -76,8 +115,10 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         NotificationCenter.default.addObserver(forName: DictionaryCompseViewController.newDicDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.nameView.reloadData()}
 
+        
         // Do any additional setup after loading the view.
     }
    
@@ -92,4 +133,3 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
     */
 
 }
-
