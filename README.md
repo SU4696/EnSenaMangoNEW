@@ -4,7 +4,7 @@
 
 Suyeon Cho 	csuyeon0105@gmail.com
 
-Ignacio Hernández de la Fuente CONTACTO
+Ignacio Hernández de la Fuente ignacio.hdz@hotmail.com
 
 Mario Jáuregui Gómez mariojg.2002@gmail.com
 
