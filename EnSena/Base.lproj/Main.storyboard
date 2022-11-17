@@ -406,7 +406,7 @@
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MR1-wp-zvl">
                                                             <rect key="frame" x="232" y="19" width="134" height="31"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="134" id="oFZ-PD-sqM"/>
+                                                                <constraint firstAttribute="width" constant="134" id="zvr-Ir-xyp"/>
                                                             </constraints>
                                                             <state key="normal" title="Button"/>
                                                             <buttonConfiguration key="configuration" style="filled" title="Aprender">
@@ -415,9 +415,6 @@
                                                         </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vGW-Jq-0gG">
                                                             <rect key="frame" x="0.0" y="8" width="224" height="93"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="224" id="z6M-m3-Dtx"/>
-                                                            </constraints>
                                                             <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="35"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -433,22 +430,23 @@
                                                     </subviews>
                                                     <color key="backgroundColor" name="yellowtheme"/>
                                                     <constraints>
-                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="leading" secondItem="E9Z-gx-UYt" secondAttribute="leading" id="3z9-4N-WFs"/>
-                                                        <constraint firstItem="vGW-Jq-0gG" firstAttribute="leading" secondItem="VAY-5T-Twh" secondAttribute="leading" id="6Wg-hJ-qb9"/>
-                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="trailing" secondItem="E9Z-gx-UYt" secondAttribute="trailing" id="JHw-FI-DxG"/>
-                                                        <constraint firstItem="vGW-Jq-0gG" firstAttribute="bottom" secondItem="VAY-5T-Twh" secondAttribute="bottomMargin" id="PCq-m6-L7h"/>
-                                                        <constraint firstItem="E9Z-gx-UYt" firstAttribute="top" secondItem="MR1-wp-zvl" secondAttribute="bottom" constant="12" id="e75-uV-H9s"/>
-                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="leading" secondItem="vGW-Jq-0gG" secondAttribute="trailing" constant="8" id="fN2-rx-YsO"/>
-                                                        <constraint firstItem="vGW-Jq-0gG" firstAttribute="top" secondItem="VAY-5T-Twh" secondAttribute="topMargin" id="sxd-5k-q5A"/>
-                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="top" secondItem="VAY-5T-Twh" secondAttribute="top" constant="19" id="ykx-kU-ZU5"/>
+                                                        <constraint firstItem="vGW-Jq-0gG" firstAttribute="leading" secondItem="VAY-5T-Twh" secondAttribute="leading" id="1tl-ge-KHf"/>
+                                                        <constraint firstItem="vGW-Jq-0gG" firstAttribute="top" secondItem="VAY-5T-Twh" secondAttribute="topMargin" id="2FU-sB-kwW"/>
+                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="trailing" secondItem="VAY-5T-Twh" secondAttribute="trailingMargin" id="Eaq-bb-YWQ"/>
+                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="leading" secondItem="vGW-Jq-0gG" secondAttribute="trailing" constant="8" id="YUe-Np-dkP"/>
+                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="leading" secondItem="E9Z-gx-UYt" secondAttribute="leading" id="d0O-eV-j9d"/>
+                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="trailing" secondItem="E9Z-gx-UYt" secondAttribute="trailing" id="dpr-eY-HBk"/>
+                                                        <constraint firstItem="vGW-Jq-0gG" firstAttribute="bottom" secondItem="VAY-5T-Twh" secondAttribute="bottomMargin" id="mPp-oC-pcr"/>
+                                                        <constraint firstItem="MR1-wp-zvl" firstAttribute="top" secondItem="VAY-5T-Twh" secondAttribute="top" constant="19" id="vPS-Bw-TUm"/>
+                                                        <constraint firstItem="E9Z-gx-UYt" firstAttribute="top" secondItem="MR1-wp-zvl" secondAttribute="bottom" constant="12" id="zhi-7i-psC"/>
                                                     </constraints>
                                                 </view>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="top" secondItem="94l-2A-HMP" secondAttribute="topMargin" id="0Fn-oO-tkp"/>
-                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="leading" secondItem="94l-2A-HMP" secondAttribute="leadingMargin" constant="-20" id="1Y4-2m-cCP"/>
-                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="centerX" secondItem="94l-2A-HMP" secondAttribute="centerX" id="Uik-DT-qyP"/>
-                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="bottom" secondItem="94l-2A-HMP" secondAttribute="bottomMargin" id="s0y-xj-Yq0"/>
+                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="top" secondItem="94l-2A-HMP" secondAttribute="topMargin" id="C8e-oH-7bG"/>
+                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="centerX" secondItem="94l-2A-HMP" secondAttribute="centerX" id="D7C-5f-kad"/>
+                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="leading" secondItem="94l-2A-HMP" secondAttribute="leadingMargin" constant="-20" id="Is6-os-tKa"/>
+                                                <constraint firstItem="VAY-5T-Twh" firstAttribute="bottom" secondItem="94l-2A-HMP" secondAttribute="bottomMargin" id="lbf-uj-tst"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -480,9 +478,7 @@
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="NameView" destination="VAY-5T-Twh" id="8z1-od-VEH"/>
                         <outlet property="lessonName" destination="9HQ-Cx-k1O" id="q3S-jL-cBX"/>
-                        <outlet property="nameLabel" destination="vGW-Jq-0gG" id="xUr-hW-cxg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ThA-5E-ebg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1504,34 +1500,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ups-p6-T4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6236" y="-2729"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="sNa-sj-f4H">
-            <objects>
-                <viewController id="fIJ-Oo-oCR" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mn4-Hr-AZb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ce-8B-Ydi">
-                                <rect key="frame" x="20" y="109" width="374" height="75"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
-                                <color key="textColor" name="pinktheme"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dnL-1H-L7d">
-                                <rect key="frame" x="20" y="237" width="374" height="465"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="zPh-h0-dTn"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LXG-Sb-PXW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6226" y="1438"/>
         </scene>
     </scenes>
     <resources>

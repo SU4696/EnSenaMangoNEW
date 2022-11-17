@@ -38,6 +38,10 @@ class MyTapGesture: UITapGestureRecognizer {
 //    let media: String
 //    }
 
+public struct Dict {
+    let name: String
+}
+
 class DictionaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var nameView: UITableView!
     struct Dictionary {
@@ -58,14 +62,50 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
     }
     
     
+    var dicArrayDetail: [Dict] = []
+    
     @objc func labelTapped(_ sender: MyTapGesture) {
             //abrir un view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "DictonaryDetailViewController") as! DictonaryDetailViewController
+        
+        
+        let db = Firestore.firestore()
+        dicArrayDetail = []
+         db.collection("DICTIONARY").getDocuments { (snapshot, error) in
+             if let error = error {
+                 print(error)
+                 return
+             } else {
+                 for document in snapshot!.documents{
+                     
+                     let data: [String:Any] = document.data()
+                    let categories = data["categories"] as? Array<Any>
+                    for index in 0...categories!.count-1
+                    {
+                        let dataCategories = categories![index] as? [String: Any]
+                        let category = dataCategories!["category"]
+                        if category as! String == sender.category
+                        {
+                            let words = dataCategories!["words"] as? Array<Any>
+                            for wordIndex in 0...words!.count-1 {
+                                    let word = words![wordIndex] as? [String: Any]
+                                    let actualWord = word!["word"]
+                                    let newWord = Dict(name: (actualWord) as! String)
+                                //Solo agregar unas para que sea aleatorio
+                                    self.dicArrayDetail.append(newWord)
+                            }
+                            break
+                        }
+                 }
+                 }
+                 vc.modalPresentationStyle = .fullScreen
+                 vc.category = sender.category
+                 vc.dicArrayDetail = self.dicArrayDetail
+                     self.present(vc, animated: true)
+            }
+         }
   
-        vc.modalPresentationStyle = .fullScreen
-        vc.category = sender.category
-            self.present(vc, animated: true)
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

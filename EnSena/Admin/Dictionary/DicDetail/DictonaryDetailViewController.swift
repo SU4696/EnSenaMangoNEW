@@ -6,9 +6,12 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var palView: UITableView!
+    var dicArrayDetail: [Dict] = []
     
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
@@ -35,12 +38,12 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
                 }
             }
             //TODO: Una vez inicializado de manera correcta se cambia return por return elements.count
-            return elements.count - 1
+            return dicArrayDetail.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             //TODO: Una vez inicializado de manera correcta se cambia elements por elements[indexPath.row]
-            let target = elements[indexPath.row + 1]
+            let target = dicArrayDetail[indexPath.row ]
             let cell = palView.dequeueReusableCell(withIdentifier: "dicCell", for: indexPath)
             cell.textLabel?.text = target.name
             return cell
@@ -50,6 +53,7 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
             //nameView.reloadData()
             
            // print(#function)
+            
         }
         var token: NSObjectProtocol?
         deinit {
@@ -67,6 +71,7 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
 
             
             NotificationCenter.default.addObserver(forName: DicDetailCompseViewController.newPalDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.palView.reloadData()}
+            
         }
     
 

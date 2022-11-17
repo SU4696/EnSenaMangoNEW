@@ -38,7 +38,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = lessonName.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let target = Lesson.dummyLessonCategory[indexPath.row]
-        cell.nameLabel.text = target.name
+        cell.textLabel?.text = target.name
         //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de cell.textLabel
         //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
             //Programatically Tapped Action
