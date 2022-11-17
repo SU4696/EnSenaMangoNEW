@@ -36,10 +36,6 @@ class DictionaryCompseViewController: UIViewController{
 
         let docUpdateData: [String: Any] = [
                 "category": name,
-                "words": [[
-                    "media": "",
-                    "word": "",
-                ]]
         ]
         // Atomically add a new region to the "regions" array field.
         alfabetoRef.updateData([

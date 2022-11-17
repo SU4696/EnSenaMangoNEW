@@ -33,6 +33,10 @@
 		BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */; };
 		BEBEC49628E23BD70055EE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC49528E23BD70055EE86 /* Assets.xcassets */; };
 		BEBEC49928E23BD70055EE86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC49728E23BD70055EE86 /* LaunchScreen.storyboard */; };
+		BEF9221C29268B6400AF4275 /* NotAdminDictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */; };
+		BEF9221F29268C7F00AF4275 /* NotAdminDicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */; };
+		BEF9222129268D3D00AF4275 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9222029268D3D00AF4275 /* RankingViewController.swift */; };
+		BEF9222429268E3700AF4275 /* NottAdminLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9222329268E3600AF4275 /* NottAdminLessonViewController.swift */; };
 		BEF9E04F29231FBC0026D94F /* LessonQuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E04E29231FBC0026D94F /* LessonQuizModel.swift */; };
 		BEF9E052292320350026D94F /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BEF9E051292320350026D94F /* FirebaseDatabase */; };
 		BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9E055292327560026D94F /* CrearCuentaViewController.swift */; };
@@ -65,6 +69,10 @@
 		BEBEC49528E23BD70055EE86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEBEC49828E23BD70055EE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEBEC49A28E23BD70055EE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDictionaryViewController.swift; sourceTree = "<group>"; };
+		BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDicDetailViewController.swift; sourceTree = "<group>"; };
+		BEF9222029268D3D00AF4275 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
+		BEF9222329268E3600AF4275 /* NottAdminLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NottAdminLessonViewController.swift; sourceTree = "<group>"; };
 		BEF9E04E29231FBC0026D94F /* LessonQuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonQuizModel.swift; sourceTree = "<group>"; };
 		BEF9E055292327560026D94F /* CrearCuentaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearCuentaViewController.swift; sourceTree = "<group>"; };
 		BEF9E057292409170026D94F /* AdminTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminTabBarController.swift; sourceTree = "<group>"; };
@@ -114,6 +122,7 @@
 		BE5EAFDD290F2D86002C5417 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */,
 				BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */,
 				BE5EAFED2910BEA2002C5417 /* CategoryModel.swift */,
 				BE5EAFEF2910CAE3002C5417 /* dicDetailModel.swift */,
@@ -164,16 +173,14 @@
 		BEBEC48828E23BD20055EE86 /* EnSena */ = {
 			isa = PBXGroup;
 			children = (
+				BEF9221929268ADA00AF4275 /* NotAdmin */,
+				BEF9221829268ACA00AF4275 /* Admin */,
 				BE3B46BB291E977500E0D6C9 /* Resource */,
-				BE3B46B8291E0C9A00E0D6C9 /* Lesson */,
-				BE5EAFF12910CAF8002C5417 /* Dictionary */,
 				BE5EAFDD290F2D86002C5417 /* Model */,
 				BEBEC48928E23BD20055EE86 /* AppDelegate.swift */,
 				BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */,
 				BEBEC48D28E23BD20055EE86 /* LoginViewController.swift */,
 				BEBEC48F28E23BD20055EE86 /* Main.storyboard */,
-				BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */,
-				BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */,
 				BEBEC49528E23BD70055EE86 /* Assets.xcassets */,
 				BEBEC49728E23BD70055EE86 /* LaunchScreen.storyboard */,
 				BEBEC49A28E23BD70055EE86 /* Info.plist */,
@@ -182,6 +189,51 @@
 				BEF9E057292409170026D94F /* AdminTabBarController.swift */,
 			);
 			path = EnSena;
+			sourceTree = "<group>";
+		};
+		BEF9221829268ACA00AF4275 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				BE3B46B8291E0C9A00E0D6C9 /* Lesson */,
+				BE5EAFF12910CAF8002C5417 /* Dictionary */,
+				BEF9222029268D3D00AF4275 /* RankingViewController.swift */,
+			);
+			path = Admin;
+			sourceTree = "<group>";
+		};
+		BEF9221929268ADA00AF4275 /* NotAdmin */ = {
+			isa = PBXGroup;
+			children = (
+				BEF9222229268E1700AF4275 /* Lesson */,
+				BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */,
+				BEF9221A29268B4A00AF4275 /* Dictioanry */,
+			);
+			path = NotAdmin;
+			sourceTree = "<group>";
+		};
+		BEF9221A29268B4A00AF4275 /* Dictioanry */ = {
+			isa = PBXGroup;
+			children = (
+				BEF9221D29268C5E00AF4275 /* NADicDetail */,
+				BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */,
+			);
+			path = Dictioanry;
+			sourceTree = "<group>";
+		};
+		BEF9221D29268C5E00AF4275 /* NADicDetail */ = {
+			isa = PBXGroup;
+			children = (
+				BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */,
+			);
+			path = NADicDetail;
+			sourceTree = "<group>";
+		};
+		BEF9222229268E1700AF4275 /* Lesson */ = {
+			isa = PBXGroup;
+			children = (
+				BEF9222329268E3600AF4275 /* NottAdminLessonViewController.swift */,
+			);
+			path = Lesson;
 			sourceTree = "<group>";
 		};
 		BEF9E050292320350026D94F /* Frameworks */ = {
@@ -277,6 +329,8 @@
 				BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */,
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
+				BEF9222129268D3D00AF4275 /* RankingViewController.swift in Sources */,
+				BEF9221C29268B6400AF4275 /* NotAdminDictionaryViewController.swift in Sources */,
 				BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */,
 				BE3B46BA291E0D0B00E0D6C9 /* lessonModel.swift in Sources */,
 				BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */,
@@ -289,8 +343,10 @@
 				BE5EAFEE2910BEA2002C5417 /* CategoryModel.swift in Sources */,
 				BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */,
 				BEF9E04F29231FBC0026D94F /* LessonQuizModel.swift in Sources */,
+				BEF9222429268E3700AF4275 /* NottAdminLessonViewController.swift in Sources */,
 				BE0CAEE92921B8F900DD1188 /* LessonAprenderModel.swift in Sources */,
 				BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */,
+				BEF9221F29268C7F00AF4275 /* NotAdminDicDetailViewController.swift in Sources */,
 				BE5EAFF62910CB94002C5417 /* DicDetailCompseViewController.swift in Sources */,
 				BE5EAFF02910CAE3002C5417 /* dicDetailModel.swift in Sources */,
 				BEF9E058292409180026D94F /* AdminTabBarController.swift in Sources */,
