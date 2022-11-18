@@ -70,7 +70,7 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
             let vc = storyboard.instantiateViewController(withIdentifier: "DictonaryDetailViewController") as! DictonaryDetailViewController
         
         
-        let db = Firestore.firestore()
+ 
         dicArrayDetail = []
          db.collection("DICTIONARY").getDocuments { (snapshot, error) in
              if let error = error {

@@ -1215,6 +1215,7 @@
         <!--Not Admin Dic Detail View Controller-->
         <scene sceneID="XEH-ZZ-4dJ">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W2Q-IY-rnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jLD-9g-0rQ" customClass="NotAdminDicDetailViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgn-e9-iEk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -1288,9 +1289,8 @@
                         <outlet property="palView" destination="2nn-El-jJQ" id="lT2-fA-qji"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W2Q-IY-rnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3490" y="-2000"/>
+            <point key="canvasLocation" x="3646" y="-1974"/>
         </scene>
         <!--Lección-->
         <scene sceneID="A4b-Pm-I5A">
@@ -1500,6 +1500,87 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ups-p6-T4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6236" y="-2729"/>
+        </scene>
+        <!--Not Admin Lesson Learn View Controller-->
+        <scene sceneID="YQN-4Z-MNq">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eeU-sT-hu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xvc-Zm-9y1" customClass="NotAdminLessonLearnViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VV8-qc-h2i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GiT-UA-vZM">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LearnCell" textLabel="0mW-Ly-2PD" rowHeight="75" style="IBUITableViewCellStyleDefault" id="hVT-qq-MIB">
+                                        <rect key="frame" x="20" y="49.5" width="374" height="75"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="hVT-qq-MIB" id="Zji-L5-PMH">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="75"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0mW-Ly-2PD">
+                                                    <rect key="frame" x="20" y="0.0" width="334" height="75"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                                    <color key="textColor" name="pinktheme"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xvc-Zm-9y1" id="mr3-fS-78Z"/>
+                                    <outlet property="delegate" destination="Xvc-Zm-9y1" id="LPV-3v-iyo"/>
+                                </connections>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PkJ-W0-zXE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="NeA-8f-lEi">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="KMC-ep-jz7">
+                                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="close:" destination="Xvc-Zm-9y1" id="fgR-yx-ujF"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DNR-T6-uAv">
+                                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QPq-ba-m5i"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PkJ-W0-zXE" firstAttribute="leading" secondItem="GiT-UA-vZM" secondAttribute="leading" id="0xU-NA-o4b"/>
+                            <constraint firstItem="PkJ-W0-zXE" firstAttribute="top" secondItem="QPq-ba-m5i" secondAttribute="top" id="2qv-aW-Dov"/>
+                            <constraint firstItem="PkJ-W0-zXE" firstAttribute="trailing" secondItem="GiT-UA-vZM" secondAttribute="trailing" id="7PX-SG-YB2"/>
+                            <constraint firstItem="GiT-UA-vZM" firstAttribute="top" secondItem="PkJ-W0-zXE" secondAttribute="bottom" id="HaW-6W-4tx"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="GiT-UA-vZM" secondAttribute="bottom" constant="-34" id="VGg-sF-fbT"/>
+                            <constraint firstItem="PkJ-W0-zXE" firstAttribute="centerX" secondItem="VV8-qc-h2i" secondAttribute="centerX" id="ekq-rj-1cW"/>
+                            <constraint firstItem="PkJ-W0-zXE" firstAttribute="leading" secondItem="QPq-ba-m5i" secondAttribute="leading" id="xdh-b8-5I3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="X3f-yJ-GmU">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="lLI-pi-SO5">
+                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="E3g-Sa-0iv">
+                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="LearnView" destination="GiT-UA-vZM" id="6Xd-IM-7iI"/>
+                        <outlet property="palView" destination="GiT-UA-vZM" id="CL2-lZ-TKs"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="5777" y="-2000"/>
         </scene>
     </scenes>
     <resources>

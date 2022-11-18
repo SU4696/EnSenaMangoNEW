@@ -14,6 +14,7 @@
 		BE1A3C172922E02F00E6D498 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BE1A3C162922E02F00E6D498 /* FirebaseAuth */; };
 		BE1A3C192922E02F00E6D498 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BE1A3C182922E02F00E6D498 /* FirebaseFirestore */; };
 		BE1A3C1B2922E02F00E6D498 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BE1A3C1A2922E02F00E6D498 /* FirebaseStorage */; };
+		BE1E75C72927C63F00BB59CE /* NotAdminLessonLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E75C62927C63F00BB59CE /* NotAdminLessonLearnViewController.swift */; };
 		BE3B46BA291E0D0B00E0D6C9 /* lessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */; };
 		BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */; };
 		BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */; };
@@ -48,6 +49,7 @@
 		BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
 		BE0CAEE82921B8F900DD1188 /* LessonAprenderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonAprenderModel.swift; sourceTree = "<group>"; };
 		BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BE1E75C62927C63F00BB59CE /* NotAdminLessonLearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminLessonLearnViewController.swift; sourceTree = "<group>"; };
 		BE3B46B9291E0D0A00E0D6C9 /* lessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lessonModel.swift; sourceTree = "<group>"; };
 		BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -122,7 +124,6 @@
 		BE5EAFDD290F2D86002C5417 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */,
 				BE5EAFDE290F2DA7002C5417 /* dictionaryModel.swift */,
 				BE5EAFED2910BEA2002C5417 /* CategoryModel.swift */,
 				BE5EAFEF2910CAE3002C5417 /* dicDetailModel.swift */,
@@ -204,6 +205,7 @@
 		BEF9221929268ADA00AF4275 /* NotAdmin */ = {
 			isa = PBXGroup;
 			children = (
+				BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */,
 				BEF9222229268E1700AF4275 /* Lesson */,
 				BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */,
 				BEF9221A29268B4A00AF4275 /* Dictioanry */,
@@ -232,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				BEF9222329268E3600AF4275 /* NottAdminLessonViewController.swift */,
+				BE1E75C62927C63F00BB59CE /* NotAdminLessonLearnViewController.swift */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				BEBEC48E28E23BD20055EE86 /* LoginViewController.swift in Sources */,
 				BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */,
 				BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */,
+				BE1E75C72927C63F00BB59CE /* NotAdminLessonLearnViewController.swift in Sources */,
 				BE5EAFEC29103707002C5417 /* DictonaryDetailViewController.swift in Sources */,
 				BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */,
 				BE0CAEE42921B5D800DD1188 /* LearnComposeViewController.swift in Sources */,

@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseStorage
 
 class LessonDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var LesView: UITableView!
-    
+    var LesArrayDetail: [Les] = []
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
     
     var category: String = ""
-    var elements = [LessonAprender(palabra: "")]
+//    var elements = [LessonAprender(palabra: "")]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
@@ -24,23 +26,23 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             //obtener los elementos de la misma categoria
             //TODO: Incializar de manera correcta la varaible elments
-            let LesCount = LessonAprender.dummyLesCategory
-            elements = [LessonAprender(palabra: "")]
-            for item in LesCount {
-                if (item.category == category)
-                {
-                    elements.append(item)
-                }
-            }
+//            let LesCount = LessonAprender.dummyLesCategory
+//            elements = [LessonAprender(palabra: "")]
+//            for item in LesCount {
+//                if (item.category == category)
+//                {
+//                    elements.append(item)
+//                }
+//            }
             //TODO: Una vez inicializado de manera correcta se cambia return por return elements.count
-            return elements.count - 1
+            return LesArrayDetail.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             //TODO: Una vez inicializado de manera correcta se cambia elements por elements[indexPath.row]
-            let target = elements[indexPath.row + 1]
+            let target = LesArrayDetail[indexPath.row ]
             let cell = LesView.dequeueReusableCell(withIdentifier: "lesCell", for: indexPath)
-            cell.textLabel?.text = target.palabra
+            cell.textLabel?.text = target.name
             return cell
         }
         override func viewWillAppear(_ animated: Bool) {

@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 import FirebaseStorage
+import FirebaseFirestore
 
 /*
  [
@@ -29,7 +30,7 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
     @IBOutlet weak var category: UITextField!
     var imageData: Data?
     @IBOutlet weak var label: UILabel!
-    
+    let db = Firestore.firestore()
     private let storage = Storage.storage().reference()
     
     @IBAction func tabImage(_ sender: Any) {
@@ -90,14 +91,10 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
             return
         }
         //TODO: Cambiar category por variable dinámica
-        let newPal = DictionaryDetail(name: palabra, category: categoryname)
-        DictionaryDetail.dummyPalCategory.append(newPal)
-        
+       
         NotificationCenter.default.post(name: DicDetailCompseViewController.newPalDidInsert, object: nil)
         dismiss(animated: true, completion: nil)
         
-        
-        let db = Firestore.firestore()
         //CODIGO PARA CREAT CATEGORIAS
 //        let docData: [String: Any] = [
 //            "categories": [[
@@ -131,20 +128,47 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
 //        }
         
         //CODIGO PARA ACTUALIZAR CATEGORIAS
-        let alfabetoRef = db.collection("DICTIONARY").document("dictionary")
+       
+      
 
+        let db = Firestore.firestore()
+         db.collection("DICTIONARY").getDocuments { (snapshot, error) in
+             if let error = error {
+                 print(error)
+                 return
+             } else {
+                 for document in snapshot!.documents{
+                     
+                     let data: [String:Any] = document.data()
+                    let categories = data["categories"] as? Array<Any>
+                    for index in 0...categories!.count-1
+                    {
+                        let dataCategories = categories![index] as? [String: Any]
+                        let category = dataCategories!["category"]
+                        if category as! String == categoryname
+                        {
+                            let wordyRef = db.collection("DICTIONARY").document("dictionary").field("\(dataCategories)")
+                            let docUpdateData: [String: Any] = [
+                                    "words": [[
+                                        "media": "\(palabra).png",
+                                        "word": palabra,
+                                    ]]
+                            ]
+                            // Atomically add a new region to the "regions" array field.
+                            wordyRef.updateData([
+                                "categories": FieldValue.arrayUnion([docUpdateData])
+                            ])
+                          
+                            
+                            
+                            break
+                        }
+                 }
+                 }
+            }
+         }
         
-        let docUpdateData: [String: Any] = [
-                "category": categoryname,
-                "words": [[
-                    "media": "\(palabra).png",
-                    "word": palabra,
-                ]]
-        ]
-        // Atomically add a new region to the "regions" array field.
-        alfabetoRef.updateData([
-            "categories": FieldValue.arrayUnion([docUpdateData])
-        ])
+        
         
         
         storage.child("dictionary/\(palabra).png").putData(imageData!, metadata: nil, completion: { _, error in

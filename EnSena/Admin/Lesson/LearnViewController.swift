@@ -6,11 +6,14 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class MyLessonTapGesture: UITapGestureRecognizer {
     var category = String()
 }
-
+public struct Les {
+    let name: String
+}
 
 class LearnViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
@@ -18,26 +21,66 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
    
     @IBOutlet weak var NameView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
+    struct Lesson {
+        let name: String
+    }
+    var LesArray: [Lesson] = []
+        
+    let db = Firestore.firestore()
+   
+    func numberOfSections(in tableView: UITableView) -> Int {
+            return 1
+        }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 132
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return Lesson.dummyLessonCategory.count
+        return LesArray.count
     }
-    
+    var LesArrayDetail: [Les] = []
     @objc func labelTapped(_ sender: MyLessonTapGesture) {
             //abrir un view controller
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "LessonDetailViewController") as! LessonDetailViewController
-  
+        
+                LesArrayDetail = []
+                db.collection("LESSON").getDocuments { (snapshot, error) in
+                    if let error = error {
+                        print(error)
+                        return
+                    } else {
+                        for document in snapshot!.documents{
+                            
+                            let data: [String:Any] = document.data()
+                           let categories = data["categories"] as? Array<Any>
+                           for index in 0...categories!.count-1
+                           {
+                               let dataCategories = categories![index] as? [String: Any]
+                               let category = dataCategories!["category"]
+                               if category as! String == sender.category
+                               {
+                                   let words = dataCategories!["words"] as? Array<Any>
+                                   for wordIndex in 0...words!.count-1 {
+                                           let word = words![wordIndex] as? [String: Any]
+                                           let actualWord = word!["word"]
+                                           let newWord = Les(name: (actualWord) as! String)
+                                       //Solo agregar unas para que sea aleatorio
+                                           self.LesArrayDetail.append(newWord)
+                                   }
+                                   break
+                               }
+                        }
+                        }
         vc.modalPresentationStyle = .fullScreen
         vc.category = sender.category
             self.present(vc, animated: true)
         }
-    
+                }
+    }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = lessonName.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        let target = Lesson.dummyLessonCategory[indexPath.row]
+        let target = LesArray[indexPath.row]
         cell.textLabel?.text = target.name
         //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de cell.textLabel
         //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
@@ -66,11 +109,44 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        getDatabaseRecords()
         NotificationCenter.default.addObserver(forName: LearnComposeViewController.newLesDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.lessonName.reloadData()}
 
         // Do any additional setup after loading the view.
     }
+    func getDatabaseRecords(){
+      
+       LesArray = []
+       db.collection("LESSON").getDocuments { (snapshot, error) in
+           if let error = error {
+               print(error)
+               return
+           } else {
+               for document in snapshot!.documents{
+//                    let data = document.data()
+//                   let newEntry = Dictionary(
+//                       name: data["category"] as! String)
+//                   self.dicArray.append(newEntry)
+                   
+                   let data: [String:Any] = document.data()
+                  let categories = data["categories"] as? Array<Any>
+                  for index in 0...categories!.count-1
+                  {
+                      let dataCategories = categories![index] as? [String: Any]
+                      let category = dataCategories!["category"]
+                      let newCategory = Lesson(name: (category) as! String)
+                      self.LesArray.append(newCategory)
+               }
+               }
+           
+           
+//               Dictionary.dummyDicCategory.append(newCategory)
+          }
+          DispatchQueue.main.async {
+                          self.lessonName.reloadData()
+                      }
+       }
+   }
     /*
     // MARK: - Navigation
 

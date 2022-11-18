@@ -20,7 +20,7 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
     
     
     var category: String = ""
-    var elements = [DictionaryDetail(name: "")]
+//    var elements = [DictionaryDetail(name: "")]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
@@ -29,14 +29,14 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             //obtener los elementos de la misma categoria
             //TODO: Incializar de manera correcta la varaible elments
-            let dictCount = DictionaryDetail.dummyPalCategory
-            elements = [DictionaryDetail(name: "")]
-            for item in dictCount {
-                if (item.category == category)
-                {
-                    elements.append(item)
-                }
-            }
+//            let dictCount = DictionaryDetail.dummyPalCategory
+//            elements = [DictionaryDetail(name: "")]
+//            for item in dictCount {
+//                if (item.category == category)
+//                {
+//                    elements.append(item)
+//                }
+//            }
             //TODO: Una vez inicializado de manera correcta se cambia return por return elements.count
             return dicArrayDetail.count
         }
