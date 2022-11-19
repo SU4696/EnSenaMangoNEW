@@ -32,18 +32,17 @@ class DictionaryCompseViewController: UIViewController{
         dismiss(animated: true, completion: nil)
 
         let db = Firestore.firestore()
-        let categoryRef = db.collection("DICTIONARY").document("dictionary")
+        let categoryRef = db.collection("DICTIONARY")
 
         let docUpdateData: [String: Any] = [
                 "category": name,
+                "words":[]
         ]
         // Atomically add a new region to the "regions" array field.
-        categoryRef.updateData([
-            "categories": FieldValue.arrayUnion([docUpdateData])
-        ])
+        categoryRef.document("\(name)").setData(docUpdateData)
         
         
-        
+    
     }
     
     override func viewDidLoad() {

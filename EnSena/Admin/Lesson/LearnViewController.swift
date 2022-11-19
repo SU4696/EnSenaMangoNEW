@@ -139,8 +139,6 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
                }
                }
            
-           
-//               Dictionary.dummyDicCategory.append(newCategory)
           }
           DispatchQueue.main.async {
                           self.lessonName.reloadData()

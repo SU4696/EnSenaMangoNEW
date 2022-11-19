@@ -138,35 +138,28 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
                  return
              } else {
                  for document in snapshot!.documents{
+                     let data = document.data()
+                     let category = data["category"] as? String ?? ""
+                    
+                     if category == categoryname{
+                         let wordRef = db.collection("DICTIONARY").document("\(categoryname)")
+                        
+                         let docUpdateData: [String: Any] =
+                                  [
+                                    "word": palabra,
+                                     "media": "\(palabra).png"
+                                 ]
+                         
+                         // Atomically add a new region to the "regions" array field.
+                         wordRef.updateData([
+                             "words": FieldValue.arrayUnion([docUpdateData])
+                         ])
+                     }
                      
-                     let data: [String:Any] = document.data()
-                    let categories = data["categories"] as? Array<Any>
-                    for index in 0...categories!.count-1
-                    {
-                        let dataCategories = categories![index] as? [String: Any]
-                        let category = dataCategories!["category"]
-                        if category as! String == categoryname
-                        {
-                            let wordyRef = db.collection("DICTIONARY").document("dictionary").field("\(dataCategories)")
-                            let docUpdateData: [String: Any] = [
-                                    "words": [[
-                                        "media": "\(palabra).png",
-                                        "word": palabra,
-                                    ]]
-                            ]
-                            // Atomically add a new region to the "regions" array field.
-                            wordyRef.updateData([
-                                "categories": FieldValue.arrayUnion([docUpdateData])
-                            ])
-                          
-                            
-                            
-                            break
-                        }
                  }
                  }
             }
-         }
+         
         
         
         
