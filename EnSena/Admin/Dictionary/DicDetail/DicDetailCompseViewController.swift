@@ -187,7 +187,7 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
               let url = URL(string:urlString) else{
             return
         }
-        
+       
         label.text=urlString
         
         /*let task = URLSession.shared.dataTask(with: url, completionHandler: {data, _, error in

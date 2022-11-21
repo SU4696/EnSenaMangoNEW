@@ -18,8 +18,8 @@ class LearnComposeViewController: UIViewController {
             alert(message: "Teclea el nombre")
             return
         }
-        let newLes = Lesson(name: name)
-        Lesson.dummyLessonCategory.append(newLes)
+        //let newLes = Lesson(name: name)
+        //Lesson.dummyLessonCategory.append(newLes)
         
         NotificationCenter.default.post(name: LearnComposeViewController.newLesDidInsert, object: nil)
         dismiss(animated: true, completion: nil)

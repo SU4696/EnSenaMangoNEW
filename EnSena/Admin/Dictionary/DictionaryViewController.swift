@@ -71,13 +71,14 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
                      if category == sender.category
                      {
                          let words = data["words"] as? Array<Any>
+                         if(words!.count != 0){
                          for wordIndex in 0...words!.count-1 {
                                  let word = words![wordIndex] as? [String: Any]
                                  let actualWord = word!["word"]
                                  let newWord = Dict(name: (actualWord) as! String)
                              //Solo agregar unas para que sea aleatorio
                                  self.dicArrayDetail.append(newWord)
-                         }
+                         }}
                          break
                      }
                      
