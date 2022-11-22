@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C81F0A3292CCD000086D5F2 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5C81F0A2292CCD000086D5F2 /* SDWebImage */; };
+		5C81F0A5292CCD000086D5F2 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C81F0A4292CCD000086D5F2 /* SDWebImageMapKit */; };
+		5CF429C6292C4E49000489FD /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CF429C5292C4E48000489FD /* GoogleService-Info-2.plist */; };
 		BE0CAEE42921B5D800DD1188 /* LearnComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */; };
 		BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */; };
 		BE0CAEEB2922DF7E00DD1188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */; };
@@ -41,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5CF429C5292C4E48000489FD /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnComposeViewController.swift; sourceTree = "<group>"; };
 		BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
 		BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 				BE1A3C192922E02F00E6D498 /* FirebaseFirestore in Frameworks */,
 				BEF9E052292320350026D94F /* FirebaseDatabase in Frameworks */,
 				BE1A3C1B2922E02F00E6D498 /* FirebaseStorage in Frameworks */,
+				5C81F0A5292CCD000086D5F2 /* SDWebImageMapKit in Frameworks */,
+				5C81F0A3292CCD000086D5F2 /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +174,7 @@
 				BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */,
 				BEF9E055292327560026D94F /* CrearCuentaViewController.swift */,
 				BEF9E057292409170026D94F /* AdminTabBarController.swift */,
+				5CF429C5292C4E48000489FD /* GoogleService-Info-2.plist */,
 			);
 			path = EnSena;
 			sourceTree = "<group>";
@@ -247,6 +254,8 @@
 				BE1A3C182922E02F00E6D498 /* FirebaseFirestore */,
 				BE1A3C1A2922E02F00E6D498 /* FirebaseStorage */,
 				BEF9E051292320350026D94F /* FirebaseDatabase */,
+				5C81F0A2292CCD000086D5F2 /* SDWebImage */,
+				5C81F0A4292CCD000086D5F2 /* SDWebImageMapKit */,
 			);
 			productName = EnSena;
 			productReference = BEBEC48628E23BD20055EE86 /* EnSena.app */;
@@ -278,6 +287,7 @@
 			mainGroup = BEBEC47D28E23BD20055EE86;
 			packageReferences = (
 				BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				5C81F0A1292CCD000086D5F2 /* XCRemoteSwiftPackageReference "SDWebImage" */,
 			);
 			productRefGroup = BEBEC48728E23BD20055EE86 /* Products */;
 			projectDirPath = "";
@@ -295,6 +305,7 @@
 			files = (
 				BEBEC49928E23BD70055EE86 /* LaunchScreen.storyboard in Resources */,
 				BE0CAEEB2922DF7E00DD1188 /* GoogleService-Info.plist in Resources */,
+				5CF429C6292C4E49000489FD /* GoogleService-Info-2.plist in Resources */,
 				BEBEC49628E23BD70055EE86 /* Assets.xcassets in Resources */,
 				BE6A0A4D2929E7DA002BFC77 /* PopUp.xib in Resources */,
 				BEBEC49128E23BD20055EE86 /* Main.storyboard in Resources */,
@@ -476,7 +487,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZPG82D37U3;
+				DEVELOPMENT_TEAM = L277A6GH74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnSena/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -505,7 +516,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZPG82D37U3;
+				DEVELOPMENT_TEAM = L277A6GH74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnSena/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -551,6 +562,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		5C81F0A1292CCD000086D5F2 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
 		BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
@@ -562,6 +581,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		5C81F0A2292CCD000086D5F2 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C81F0A1292CCD000086D5F2 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		5C81F0A4292CCD000086D5F2 /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5C81F0A1292CCD000086D5F2 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
 		BE1A3C162922E02F00E6D498 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = BE1A3C152922E02F00E6D498 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

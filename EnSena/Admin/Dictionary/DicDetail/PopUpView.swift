@@ -7,6 +7,7 @@
 
 import UIKit
 import SwiftUI
+import FirebaseStorage
 import FirebaseFirestore
 
 class PopUpView: UIView {
@@ -15,9 +16,11 @@ class PopUpView: UIView {
     
     @IBOutlet weak var wordLabel: UILabel! 
     
+    @IBOutlet weak var urlLabel: UILabel!
     
     
     @IBOutlet weak var wordImage: UIImageView!
+    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -38,6 +41,7 @@ class PopUpView: UIView {
         let view = nib.instantiate(withOwner: self, options: nil).first as? UIView
         return view!
     }
+    
     
     /*
     // Only override draw() if you perform custom drawing.

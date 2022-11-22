@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDWebImage
 import Firebase
 import FirebaseStorage
 
@@ -29,6 +30,21 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
+    private var imageURL = URL(string:"")
+    //let urlLabel.text = " \(imageURL?.absoluteString ?? "placeholder")"
+    
+    func loadImage(){
+        let storage = Storage.storage().reference(withPath: "dictionary/\(wordname).png")
+        storage.downloadURL { (url, error) in
+            if error != nil{
+                print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
+                return
+            } else {
+                
+            }
+            self.imageURL = url!
+        }
+    }
     
     @objc func labelTapped(_ sender: wordTapGesture) {
             //abrir un view controller
@@ -38,6 +54,9 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
         self.wordname=sender.wordname
 
         self.wordPopUp.wordLabel.text = wordname
+        loadImage()
+        self.wordPopUp.wordImage.sd_setImage(with: imageURL, placeholderImage: UIImage())
+        self.wordPopUp.urlLabel.text = " \(imageURL?.absoluteString ?? "placeholder")"
 
         }
     
