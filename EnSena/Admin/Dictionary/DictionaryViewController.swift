@@ -7,21 +7,8 @@
 
 import UIKit
 import FirebaseFirestore
-/*
-import SwiftUI
-struct DictionaryView: View {
-    @available(iOS 13.0.0, *)
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(Category.allCases) { category in Text(category.rawValue + "s")}
-            }
-        }
-    }
-    
-}
-*/
-class MyTapGesture: UITapGestureRecognizer {
+
+public class MyTapGesture: UITapGestureRecognizer {
     var category = String()
 }
 
@@ -41,9 +28,9 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
     func numberOfSections(in tableView: UITableView) -> Int {
             return 1
         }
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return 132
-//    }
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 132
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dicArray.count
     }

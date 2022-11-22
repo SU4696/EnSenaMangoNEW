@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -97,7 +97,7 @@
                         <outlet property="id" destination="DkS-0V-Tct" id="Ocw-h1-dqY"/>
                         <outlet property="pw" destination="pxF-lU-pXd" id="0bf-3n-AJM"/>
                         <segue destination="8tL-5f-D8e" kind="presentation" identifier="AdminSegue" id="olQ-gz-ziC"/>
-                        <segue destination="5WA-dV-nv6" kind="presentation" identifier="NotAdminView" id="cZY-bA-xzG"/>
+                        <segue destination="5WA-dV-nv6" kind="presentation" identifier="NotAdminSegue" id="cZY-bA-xzG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -357,7 +357,7 @@
             </objects>
             <point key="canvasLocation" x="4239" y="2194"/>
         </scene>
-        <!--Lección-->
+        <!--Vamos a Apender-->
         <scene sceneID="upB-YF-jJ3">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="nce-B2-jff" customClass="LearnViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
@@ -444,7 +444,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Lección" id="UmU-xa-Gti">
+                    <navigationItem key="navigationItem" title="Vamos a Apender" id="UmU-xa-Gti">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VqX-Pe-Ep6">
                             <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
@@ -915,7 +915,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j25-mi-hxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5315.9420289855079" y="2087.2767857142858"/>
+            <point key="canvasLocation" x="6283" y="1438"/>
         </scene>
         <!--Añadir Categoria-->
         <scene sceneID="a6I-b7-IVA">
@@ -1081,7 +1081,7 @@
             </objects>
             <point key="canvasLocation" x="929" y="-802"/>
         </scene>
-        <!--Vamos a aprender-->
+        <!--Bienvenido-->
         <scene sceneID="64V-9t-9sZ">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="0vl-ZK-WDI" customClass="HomeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
@@ -1089,8 +1089,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diccionario Populares" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-Oy-d17">
-                                <rect key="frame" x="27" y="112" width="285" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Diccionario Recomendado" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6oE-Oy-d17">
+                                <rect key="frame" x="27" y="112" width="344" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="xvD-KI-pPb"/>
                                 </constraints>
@@ -1098,11 +1098,11 @@
                                 <color key="textColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="App-7X-hUh">
-                                <rect key="frame" x="0.0" y="157" width="414" height="576"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="App-7X-hUh">
+                                <rect key="frame" x="0.0" y="157" width="414" height="656"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9dy-eU-Z38">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCell" id="9dy-eU-Z38">
                                         <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9dy-eU-Z38" id="IyC-P8-pM4">
@@ -1111,6 +1111,10 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="0vl-ZK-WDI" id="m9c-ge-eq2"/>
+                                    <outlet property="delegate" destination="0vl-ZK-WDI" id="llU-oZ-2PI"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qLX-fh-Y58"/>
@@ -1124,7 +1128,10 @@
                             <constraint firstItem="6oE-Oy-d17" firstAttribute="top" secondItem="qLX-fh-Y58" secondAttribute="top" constant="24" id="yBw-i7-oXV"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Vamos a aprender" id="gOF-Cq-sVm"/>
+                    <navigationItem key="navigationItem" title="Bienvenido" id="gOF-Cq-sVm"/>
+                    <connections>
+                        <outlet property="wordView" destination="App-7X-hUh" id="rUR-vm-sPE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6mj-Ta-2bw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1191,7 +1198,7 @@
         <!--Not Admin Dic Detail View Controller-->
         <scene sceneID="XEH-ZZ-4dJ">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jLD-9g-0rQ" customClass="NotAdminDicDetailViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotAdminDicDetailViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jLD-9g-0rQ" customClass="NotAdminDicDetailViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Jgn-e9-iEk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1218,8 +1225,8 @@
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
-                                    <outlet property="dataSource" destination="jLD-9g-0rQ" id="mjN-Is-WEE"/>
-                                    <outlet property="delegate" destination="jLD-9g-0rQ" id="8R3-6H-DYU"/>
+                                    <outlet property="dataSource" destination="jLD-9g-0rQ" id="PhO-YA-NoK"/>
+                                    <outlet property="delegate" destination="jLD-9g-0rQ" id="z1M-ZR-kaV"/>
                                 </connections>
                             </tableView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rva-4n-hXL">
@@ -1230,11 +1237,8 @@
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="xwq-Cs-qAX">
                                             <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                             <connections>
-                                                <action selector="close:" destination="jLD-9g-0rQ" id="ktW-ze-Qpj"/>
+                                                <action selector="close:" destination="jLD-9g-0rQ" id="1uO-tX-K4s"/>
                                             </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3W8-0M-dtA">
-                                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1261,14 +1265,14 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="palView" destination="2nn-El-jJQ" id="lT2-fA-qji"/>
+                        <outlet property="palView" destination="2nn-El-jJQ" id="4TO-Yk-GVu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W2Q-IY-rnZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3646" y="-1974"/>
         </scene>
-        <!--Lección-->
+        <!--Vamos a Apender-->
         <scene sceneID="A4b-Pm-I5A">
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="RmK-WO-KgH" customClass="NottAdminLessonViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
@@ -1315,7 +1319,7 @@
                         </constraints>
                     </view>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Lección" id="LTe-Nn-GPb"/>
+                    <navigationItem key="navigationItem" title="Vamos a Apender" id="LTe-Nn-GPb"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LuP-cr-nDn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1480,7 +1484,7 @@
         <!--Not Admin Lesson Learn View Controller-->
         <scene sceneID="YQN-4Z-MNq">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xvc-Zm-9y1" customClass="NotAdminLessonLearnViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NotAdminLessonLearnViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Xvc-Zm-9y1" customClass="NotAdminLessonLearnViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VV8-qc-h2i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1522,9 +1526,6 @@
                                                 <action selector="close:" destination="Xvc-Zm-9y1" id="fgR-yx-ujF"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="DNR-T6-uAv">
-                                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1551,7 +1552,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="LearnView" destination="GiT-UA-vZM" id="6Xd-IM-7iI"/>
-                        <outlet property="palView" destination="GiT-UA-vZM" id="CL2-lZ-TKs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eeU-sT-hu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

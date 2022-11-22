@@ -10,7 +10,7 @@ import SDWebImage
 import Firebase
 import FirebaseStorage
 
-class wordTapGesture: UITapGestureRecognizer {
+public class wordTapGesture: UITapGestureRecognizer {
     var wordname = String()
 }
 

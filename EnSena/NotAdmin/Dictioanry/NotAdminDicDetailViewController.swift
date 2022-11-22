@@ -1,42 +1,30 @@
 //
-//  HomeViewController.swift
+//  NotAdminDicDetailViewController.swift
 //  EnSena
 //
-//  Created by 조수연 on 2022/10/30.
+//  Created by 조수연 on 2022/11/17.
 //
 
 import UIKit
-import FirebaseFirestore
 import SDWebImage
 import Firebase
 import FirebaseStorage
 
-public class wordsTapGesture: UITapGestureRecognizer {
-    var wordname = String()
-}
-class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
+class NotAdminDicDetailViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
+    @IBOutlet weak var palView: UITableView!
+    var dicArrayDetail: [Dict] = []
     
-    @IBOutlet weak var wordView: UITableView!
-    private var imageURL = URL(string:"")
+    @IBAction func close(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
+    var category: String = ""
     var wordname: String = ""
-    
-    struct words {
-        let name: String
-    }
-    
-    var homeArray: [words] = []
-    let db = Firestore.firestore()
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-            return 1
-        }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 132
-    }
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return homeArray.count
-    }
+            return 132
+        }
+    private var imageURL = URL(string:"")
     func loadImage(){
         let storage = Storage.storage().reference(withPath: "dictionary/\(wordname).png")
         storage.downloadURL { (url, error) in
@@ -50,7 +38,8 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     var wordPopUp: PopUpView!
-    @objc func labelTapped(_ sender: wordsTapGesture) {
+    
+    @objc func labelTapped(_ sender: wordTapGesture) {
             //abrir un view controller
         self.wordPopUp = PopUpView(frame: self.view.frame)
         self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
@@ -63,17 +52,21 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         self.wordPopUp.urlLabel.text = " \(imageURL?.absoluteString ?? "placeholder")"
 
         }
-    
     @objc func closeTapped(){
         self.wordPopUp.removeFromSuperview()
     }
     
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dicArrayDetail.count
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let target = homeArray[indexPath.row ]
-        let cell = wordView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
+        let target = dicArrayDetail[indexPath.row ]
+        let cell = palView.dequeueReusableCell(withIdentifier: "dicCell", for: indexPath)
         cell.textLabel?.text = target.name
         //Programatically Tapped Action
-        let labelTap = wordsTapGesture(target: self, action: #selector(self.labelTapped(_:)))
+        let labelTap = wordTapGesture(target: self, action: #selector(self.labelTapped(_:)))
         cell.textLabel!.isUserInteractionEnabled = true
         cell.textLabel!.addGestureRecognizer(labelTap)
         labelTap.wordname = target.name
@@ -82,40 +75,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    func getDatabaseRecords(){
-      
-        homeArray = []
-        db.collection("DICTIONARY").getDocuments { (snapshot, error) in
-            if let error = error {
-                print(error)
-                return
-            } else {
-                for document in snapshot!.documents{
-//                    let data = document.data()
-//                   let newEntry = Dictionary(
-//                       name: data["category"] as! String)
-//                   self.dicArray.append(newEntry)
-                
-                    let data = document.data()
-                    let category = data["category"] as? String ?? ""
-                    let newCategory = words(name: category )
-                    self.homeArray.append(newCategory)
-                }
-                DispatchQueue.main.async {
-                                self.wordView.reloadData()
-                            }
-           }
-         
-        }
-
-   }
+    
 
     /*
     // MARK: - Navigation
