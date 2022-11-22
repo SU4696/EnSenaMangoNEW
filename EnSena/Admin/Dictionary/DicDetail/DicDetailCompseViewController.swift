@@ -164,7 +164,7 @@ class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDe
         
         
         
-        storage.child("dictionary/\(palabra).png").putData(imageData!, metadata: nil, completion: { _, error in
+        storage.child("dictionary/\(palabra)").putData(imageData!, metadata: nil, completion: { _, error in
            guard error == nil else{
                print("Failed to uploead")
                return
