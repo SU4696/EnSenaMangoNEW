@@ -118,10 +118,7 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
                 return
             } else {
                 for document in snapshot!.documents{
-//                    let data = document.data()
-//                   let newEntry = Dictionary(
-//                       name: data["category"] as! String)
-//                   self.dicArray.append(newEntry)
+//
                 
                     let data = document.data()
                     let category = data["category"] as? String ?? ""

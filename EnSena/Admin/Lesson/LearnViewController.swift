@@ -50,34 +50,37 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
                         print(error)
                         return
                     } else {
-                        for document in snapshot!.documents{
-                            
-                            let data: [String:Any] = document.data()
-                           let categories = data["categories"] as? Array<Any>
-                           for index in 0...categories!.count-1
-                           {
-                               let dataCategories = categories![index] as? [String: Any]
-                               let category = dataCategories!["category"]
-                               if category as! String == sender.category
-                               {
-                                   let words = dataCategories!["words"] as? Array<Any>
-                                   for wordIndex in 0...words!.count-1 {
-                                           let word = words![wordIndex] as? [String: Any]
-                                           let actualWord = word!["word"]
-                                           let newWord = Les(name: (actualWord) as! String)
-                                       //Solo agregar unas para que sea aleatorio
-                                           self.LesArrayDetail.append(newWord)
-                                   }
-                                   break
-                               }
-                        }
-                        }
-        vc.modalPresentationStyle = .fullScreen
-        vc.category = sender.category
-            self.present(vc, animated: true)
-        }
+                for document in snapshot!.documents{
+                    
+                    let data = document.data()
+                    let category = data["category"] as? String ?? ""
+                   
+                    if category == sender.category
+                    {
+                        let words = data["words"] as? Array<Any>
+                        if(words!.count != 0){
+                        for wordIndex in 0...words!.count-1 {
+                                let word = words![wordIndex] as? [String: Any]
+                                let actualWord = word!["word"]
+                                let newWord = Les(name: (actualWord) as! String)
+                            //Solo agregar unas para que sea aleatorio
+                                self.LesArrayDetail.append(newWord)
+                        }}
+                        break
+                    }
+                    
+                   
                 }
-    }
+                vc.modalPresentationStyle = .fullScreen
+                vc.category = sender.category
+                vc.LesArrayDetail = self.LesArrayDetail
+                    self.present(vc, animated: true)
+           }
+        }
+ 
+       }
+   
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = lessonName.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let target = LesArray[indexPath.row]
@@ -99,17 +102,12 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
         
        // print(#function)
     }
-    var token: NSObjectProtocol?
-    deinit {
-        if let token = token {
-            NotificationCenter.default.removeObserver(token)
-            
-        }
-    }
+ 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         getDatabaseRecords()
+        
         NotificationCenter.default.addObserver(forName: LearnComposeViewController.newLesDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.lessonName.reloadData()}
 
         // Do any additional setup after loading the view.
@@ -123,28 +121,17 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
                return
            } else {
                for document in snapshot!.documents{
-//                    let data = document.data()
-//                   let newEntry = Dictionary(
-//                       name: data["category"] as! String)
-//                   self.dicArray.append(newEntry)
                    
-                   let data: [String:Any] = document.data()
-                  let categories = data["categories"] as? Array<Any>
-                  for index in 0...categories!.count-1
-                  {
-                      let dataCategories = categories![index] as? [String: Any]
-                      let category = dataCategories!["category"]
-                      let newCategory = Lesson(name: (category) as! String)
-                      self.LesArray.append(newCategory)
+                   let data = document.data()
+                   let category = data["category"] as? String ?? ""
+                   let newCategory = Lesson(name: category )
+                   self.LesArray.append(newCategory)
                }
-               }
-           
-          }
-          DispatchQueue.main.async {
-                          self.lessonName.reloadData()
-                      }
+               DispatchQueue.main.async {
+                               self.lessonName.reloadData()
+                           }
        }
-   }
+       }}
     /*
     // MARK: - Navigation
 
