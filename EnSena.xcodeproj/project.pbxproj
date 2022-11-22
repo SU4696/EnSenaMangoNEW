@@ -40,6 +40,7 @@
 		BEE3DAE8292D248A00F39CB5 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAE7292D248A00F39CB5 /* FirebaseStorage */; };
 		BEE3DAEB292D24CD00F39CB5 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAEA292D24CD00F39CB5 /* SDWebImage */; };
 		BEE3DAED292D24CD00F39CB5 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAEC292D24CD00F39CB5 /* SDWebImageMapKit */; };
+		BEE3DAEF292D7B2B00F39CB5 /* LearnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */; };
 		BEF9221C29268B6400AF4275 /* NotAdminDictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */; };
 		BEF9221F29268C7F00AF4275 /* NotAdminDicDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */; };
 		BEF9222129268D3D00AF4275 /* RankingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF9222029268D3D00AF4275 /* RankingViewController.swift */; };
@@ -74,6 +75,7 @@
 		BEBEC49528E23BD70055EE86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEBEC49828E23BD70055EE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEBEC49A28E23BD70055EE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewCell.swift; sourceTree = "<group>"; };
 		BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDictionaryViewController.swift; sourceTree = "<group>"; };
 		BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDicDetailViewController.swift; sourceTree = "<group>"; };
 		BEF9222029268D3D00AF4275 /* RankingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				BE0CAEE52921B7D900DD1188 /* LessonDetail */,
 				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
 				BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */,
+				BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
 				BEF9222129268D3D00AF4275 /* RankingViewController.swift in Sources */,
+				BEE3DAEF292D7B2B00F39CB5 /* LearnTableViewCell.swift in Sources */,
 				BEF9221C29268B6400AF4275 /* NotAdminDictionaryViewController.swift in Sources */,
 				BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */,
 				BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */,

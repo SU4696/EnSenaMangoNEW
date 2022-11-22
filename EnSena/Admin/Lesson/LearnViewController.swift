@@ -19,8 +19,6 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
 
     @IBOutlet weak var lessonName: UITableView!
    
-    @IBOutlet weak var NameView: UIView!
-    @IBOutlet weak var nameLabel: UILabel!
     struct Lesson {
         let name: String
     }
@@ -82,9 +80,9 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
    
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = lessonName.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = lessonName.dequeueReusableCell(withIdentifier: "cell") as! LearnTableViewCell
         let target = LesArray[indexPath.row]
-        cell.textLabel?.text = target.name
+        cell.catName.text = target.name
         //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de cell.textLabel
         //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
             //Programatically Tapped Action
@@ -93,6 +91,8 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
             cell.textLabel!.addGestureRecognizer(labelTap)
             labelTap.category = target.name
             //Programatically Tapped Action
+        
+        cell.catView.layer.cornerRadius = cell.catView.frame.height/2
         return cell
     }
     

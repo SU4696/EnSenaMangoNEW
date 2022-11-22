@@ -369,7 +369,7 @@
                                 <rect key="frame" x="0.0" y="152" width="414" height="661"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="cell" rowHeight="131" id="QLl-fv-HzE">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" shouldIndentWhileEditing="NO" reuseIdentifier="cell" rowHeight="131" id="QLl-fv-HzE" customClass="LearnTableViewCell" customModule="EnSena" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49.5" width="374" height="131"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="QLl-fv-HzE" id="94l-2A-HMP">
@@ -393,6 +393,10 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="catName" destination="9AF-3c-lsk" id="sSP-46-spo"/>
+                                            <outlet property="catView" destination="jqF-xo-JjZ" id="Ban-Sq-NLR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
