@@ -53,7 +53,9 @@ class QuizLessonViewController: UIViewController, UITableViewDataSource, UITable
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        func getDatabaseRecords()
+         getDatabaseRecords()
+        
+       
 
         // Do any additional setup after loading the view.
     }
