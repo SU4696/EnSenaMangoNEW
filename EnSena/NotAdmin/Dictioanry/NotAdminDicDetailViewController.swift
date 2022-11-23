@@ -18,7 +18,7 @@ class NotAdminDicDetailViewController: UIViewController,UITableViewDataSource, U
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
+    var loadingData = false
     var category: String = ""
     var wordname: String = ""
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -27,30 +27,31 @@ class NotAdminDicDetailViewController: UIViewController,UITableViewDataSource, U
     private var imageURL = URL(string:"")
     func loadImage(){
         let storage = Storage.storage().reference(withPath: "dictionary/\(wordname).png")
-        storage.downloadURL { (url, error) in
+        storage.downloadURL { [self] (url, error) in
             if error != nil{
                 print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
                 return
             } else {
-                
+                //abrir un view controller
+            self.wordPopUp = PopUpView(frame: self.view.frame)
+            self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+            self.view.addSubview(wordPopUp)
+
+            self.wordPopUp.wordLabel.text = wordname
+                self.wordPopUp.wordImage.sd_setImage(with: url!, placeholderImage: UIImage())
+                self.wordPopUp.urlLabel.text = " \(url!.absoluteString ?? "placeholder")"
             }
-            self.imageURL = url!
         }
     }
     var wordPopUp: PopUpView!
     
     @objc func labelTapped(_ sender: wordTapGesture) {
-            //abrir un view controller
-        self.wordPopUp = PopUpView(frame: self.view.frame)
-        self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
-        self.view.addSubview(wordPopUp)
-        self.wordname=sender.wordname
-
-        self.wordPopUp.wordLabel.text = wordname
-        loadImage()
-        self.wordPopUp.wordImage.sd_setImage(with: imageURL, placeholderImage: UIImage())
-        self.wordPopUp.urlLabel.text = " \(imageURL?.absoluteString ?? "placeholder")"
-
+        print("VALOR: \(loadingData)")
+        if !loadingData {
+            loadingData = true
+            self.wordname=sender.wordname
+            loadImage()
+        }
         }
     @objc func closeTapped(){
         self.wordPopUp.removeFromSuperview()
@@ -62,16 +63,16 @@ class NotAdminDicDetailViewController: UIViewController,UITableViewDataSource, U
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let target = dicArrayDetail[indexPath.row ]
-        let cell = palView.dequeueReusableCell(withIdentifier: "dicCell", for: indexPath)
-        cell.textLabel?.text = target.name
-        //Programatically Tapped Action
-        let labelTap = wordTapGesture(target: self, action: #selector(self.labelTapped(_:)))
-        cell.textLabel!.isUserInteractionEnabled = true
-        cell.textLabel!.addGestureRecognizer(labelTap)
-        labelTap.wordname = target.name
-        
-        
+            //TODO: Una vez inicializado de manera correcta se cambia elements por elements[indexPath.row]
+            let target = dicArrayDetail[indexPath.row ]
+            let cell = palView.dequeueReusableCell(withIdentifier: "dicCell", for: indexPath)
+            cell.textLabel?.text = target.name
+            //Programatically Tapped Action
+            let labelTap = wordTapGesture(target: self, action: #selector(self.labelTapped(_:)))
+            cell.textLabel!.isUserInteractionEnabled = true
+            cell.textLabel!.addGestureRecognizer(labelTap)
+            labelTap.wordname = target.name
+            
         return cell
     }
     

@@ -94,6 +94,8 @@ class NotAdminDictionaryViewController: UIViewController, UITableViewDataSource,
         getDatabaseRecords()
         
         // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(forName: DictionaryCompseViewController.newDicDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.nameView.reloadData()}
+
     }
      func getDatabaseRecords(){
        

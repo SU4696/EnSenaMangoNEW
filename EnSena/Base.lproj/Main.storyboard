@@ -1294,6 +1294,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="Jl0-Cc-xGp"/>
                     <navigationItem key="navigationItem" title="Diccionario" id="td0-bc-itb"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="nameView" destination="qvG-JB-Fe2" id="9BT-uW-huO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLB-vM-P8e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
