@@ -460,7 +460,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VqX-Pe-Ep6">
                             <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="BTE-rX-Hyq" kind="presentation" id="N6q-A5-YW4"/>
+                                <segue destination="m2i-Zn-OUp" kind="presentation" id="PnH-y4-kYb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -904,7 +904,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wf-jg-B1u" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5315.9420289855079" y="1437.7232142857142"/>
+            <point key="canvasLocation" x="6226.0869565217399" y="1437.7232142857142"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="rC7-sU-ByQ">
@@ -1001,14 +1001,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j25-mi-hxZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6283" y="1438"/>
+            <point key="canvasLocation" x="7192.753623188406" y="1437.7232142857142"/>
         </scene>
         <!--Añadir Categoria-->
         <scene sceneID="a6I-b7-IVA">
             <objects>
                 <viewController id="YGo-Sz-4Ac" customClass="LearnComposeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uy0-n8-StP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-Ya-yKW">
@@ -1049,7 +1049,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTE-rX-Hyq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2A-nD-maO">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -1571,6 +1571,80 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tcB-97-8ox" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-323" y="1571"/>
+        </scene>
+        <!--Añadir Learn-->
+        <scene sceneID="HBG-Qd-Pni">
+            <objects>
+                <viewController id="CDa-eP-S4a" customClass="DicDetailCompseViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UPb-Ft-1up">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Palabra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LLH-zr-kQ2">
+                                <rect key="frame" x="90" y="212" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cXw-5m-xeB">
+                                <rect key="frame" x="90" y="148" width="235" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TXK-5Q-VkT">
+                                <rect key="frame" x="90" y="277" width="235" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Upload Media">
+                                    <color key="baseBackgroundColor" name="pinktheme"/>
+                                </buttonConfiguration>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf5-38-J4N">
+                                <rect key="frame" x="90" y="316" width="235" height="258"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" name="pinktheme"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UOW-v9-5US"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Añadir Learn" id="wqx-hg-thA">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="06K-JM-S6b">
+                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="wlT-7Q-llc">
+                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1eJ-Mo-aDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5536.231884057971" y="1437.7232142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dwQ-Mi-eql">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="m2i-Zn-OUp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="S0p-H9-Cwp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <color key="textColor" name="pinktheme"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="CDa-eP-S4a" kind="relationship" relationship="rootViewController" id="baM-IX-JyD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="evh-VQ-LM1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4627.536231884058" y="1437.7232142857142"/>
         </scene>
     </scenes>
     <resources>
