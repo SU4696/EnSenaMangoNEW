@@ -10,7 +10,7 @@
 		5C81F0A3292CCD000086D5F2 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5C81F0A2292CCD000086D5F2 /* SDWebImage */; };
 		5C81F0A5292CCD000086D5F2 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C81F0A4292CCD000086D5F2 /* SDWebImageMapKit */; };
 		5CF429C6292C4E49000489FD /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CF429C5292C4E48000489FD /* GoogleService-Info-2.plist */; };
-		BE0CAEE42921B5D800DD1188 /* LearnComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */; };
+		BE0CAEE42921B5D800DD1188 /* LessonComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE32921B5D800DD1188 /* LessonComposeViewController.swift */; };
 		BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */; };
 		BE0CAEEB2922DF7E00DD1188 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */; };
 		BE1A3C172922E02F00E6D498 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BE1A3C162922E02F00E6D498 /* FirebaseAuth */; };
@@ -40,6 +40,7 @@
 		BEC29A92292E0E3E00125A87 /* QuizTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A91292E0E3E00125A87 /* QuizTVC.swift */; };
 		BEC29A94292E0E6000125A87 /* QuizLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A93292E0E6000125A87 /* QuizLessonViewController.swift */; };
 		BEC29A96292E0E7700125A87 /* QuizDetailLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A95292E0E7700125A87 /* QuizDetailLessonViewController.swift */; };
+		BEC29A98292E5AF400125A87 /* LearnComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A97292E5AF400125A87 /* LearnComposeViewController.swift */; };
 		BEE3DAE2292D248A00F39CB5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAE1292D248A00F39CB5 /* FirebaseAuth */; };
 		BEE3DAE4292D248A00F39CB5 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAE3292D248A00F39CB5 /* FirebaseDatabase */; };
 		BEE3DAE6292D248A00F39CB5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAE5292D248A00F39CB5 /* FirebaseFirestore */; };
@@ -58,7 +59,7 @@
 
 /* Begin PBXFileReference section */
 		5CF429C5292C4E48000489FD /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
-		BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnComposeViewController.swift; sourceTree = "<group>"; };
+		BE0CAEE32921B5D800DD1188 /* LessonComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonComposeViewController.swift; sourceTree = "<group>"; };
 		BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailViewController.swift; sourceTree = "<group>"; };
 		BE0CAEEA2922DF7E00DD1188 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BE1E75C62927C63F00BB59CE /* NotAdminLessonLearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminLessonLearnViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		BEC29A91292E0E3E00125A87 /* QuizTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTVC.swift; sourceTree = "<group>"; };
 		BEC29A93292E0E6000125A87 /* QuizLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLessonViewController.swift; sourceTree = "<group>"; };
 		BEC29A95292E0E7700125A87 /* QuizDetailLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailLessonViewController.swift; sourceTree = "<group>"; };
+		BEC29A97292E5AF400125A87 /* LearnComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnComposeViewController.swift; sourceTree = "<group>"; };
 		BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewCell.swift; sourceTree = "<group>"; };
 		BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDictionaryViewController.swift; sourceTree = "<group>"; };
 		BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDicDetailViewController.swift; sourceTree = "<group>"; };
@@ -123,10 +125,11 @@
 			isa = PBXGroup;
 			children = (
 				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
-				BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */,
+				BE0CAEE32921B5D800DD1188 /* LessonComposeViewController.swift */,
 				BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */,
 				BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */,
 				BEC29A8E292E0B5F00125A87 /* LearnTVC.swift */,
+				BEC29A97292E5AF400125A87 /* LearnComposeViewController.swift */,
 			);
 			path = LearnLesson;
 			sourceTree = "<group>";
@@ -372,13 +375,14 @@
 				BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */,
 				BEBEC48E28E23BD20055EE86 /* LoginViewController.swift in Sources */,
 				BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */,
+				BEC29A98292E5AF400125A87 /* LearnComposeViewController.swift in Sources */,
 				BEC29A8D292E07D300125A87 /* NADicTVC.swift in Sources */,
 				BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */,
 				BE6A0A4B2929E7CA002BFC77 /* PopUpView.swift in Sources */,
 				BE1E75C72927C63F00BB59CE /* NotAdminLessonLearnViewController.swift in Sources */,
 				BE5EAFEC29103707002C5417 /* DictonaryDetailViewController.swift in Sources */,
 				BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */,
-				BE0CAEE42921B5D800DD1188 /* LearnComposeViewController.swift in Sources */,
+				BE0CAEE42921B5D800DD1188 /* LessonComposeViewController.swift in Sources */,
 				BEC29A92292E0E3E00125A87 /* QuizTVC.swift in Sources */,
 				BEC29A8F292E0B5F00125A87 /* LearnTVC.swift in Sources */,
 				BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */,

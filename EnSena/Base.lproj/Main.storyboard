@@ -460,7 +460,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="VqX-Pe-Ep6">
                             <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                             <connections>
-                                <segue destination="m2i-Zn-OUp" kind="presentation" id="PnH-y4-kYb"/>
+                                <segue destination="BTE-rX-Hyq" kind="presentation" id="BJz-D0-mYq"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -873,6 +873,9 @@
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="IUT-wl-A8n">
                                             <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <segue destination="m2i-Zn-OUp" kind="presentation" id="hdd-WT-eel"/>
+                                            </connections>
                                         </barButtonItem>
                                     </navigationItem>
                                 </items>
@@ -1006,9 +1009,9 @@
         <!--Añadir Categoria-->
         <scene sceneID="a6I-b7-IVA">
             <objects>
-                <viewController id="YGo-Sz-4Ac" customClass="LearnComposeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="YGo-Sz-4Ac" customClass="LessonComposeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uy0-n8-StP">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fA7-Ya-yKW">
@@ -1049,7 +1052,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BTE-rX-Hyq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X2A-nD-maO">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
@@ -1578,7 +1581,7 @@
         <!--Añadir Learn-->
         <scene sceneID="HBG-Qd-Pni">
             <objects>
-                <viewController id="CDa-eP-S4a" customClass="DicDetailCompseViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="CDa-eP-S4a" customClass="LearnComposeViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UPb-Ft-1up">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1602,6 +1605,9 @@
                                 <buttonConfiguration key="configuration" style="filled" title="Upload Media">
                                     <color key="baseBackgroundColor" name="pinktheme"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="tabImage:" destination="CDa-eP-S4a" eventType="touchUpInside" id="IwP-Gj-W8c"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf5-38-J4N">
                                 <rect key="frame" x="90" y="316" width="235" height="258"/>
@@ -1617,11 +1623,21 @@
                     <navigationItem key="navigationItem" title="Añadir Learn" id="wqx-hg-thA">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="06K-JM-S6b">
                             <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="close:" destination="CDa-eP-S4a" id="QTN-jY-Ddd"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="wlT-7Q-llc">
                             <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <connections>
+                                <action selector="save:" destination="CDa-eP-S4a" id="dJE-8k-7N0"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="category" destination="cXw-5m-xeB" id="gcb-bk-cee"/>
+                        <outlet property="palabra" destination="LLH-zr-kQ2" id="wlQ-vC-mve"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1eJ-Mo-aDt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -10,19 +10,7 @@ import Firebase
 import FirebaseStorage
 import FirebaseFirestore
 
-/*
- [
-    {
-        "category": "ABCD",
-        "words": [
-            {
-                "word": "A",
-                "media": "http://"
-            }
-        ]
-    }
- ]
- */
+
 
 class DicDetailCompseViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
