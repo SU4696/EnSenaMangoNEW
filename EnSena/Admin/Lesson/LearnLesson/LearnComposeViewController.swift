@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class LearnComposeViewController: UIViewController {
 
@@ -24,7 +25,14 @@ class LearnComposeViewController: UIViewController {
         NotificationCenter.default.post(name: LearnComposeViewController.newLesDidInsert, object: nil)
         dismiss(animated: true, completion: nil)
         
-        
+        let db = Firestore.firestore()
+        let categoryRef = db.collection("LESSON")
+
+        let docUpdateData: [String: Any] = [
+                "category": name,
+                "learn":[]
+        ]
+        categoryRef.document("\(name)").setData(docUpdateData)
     }
     
     override func viewDidLoad() {

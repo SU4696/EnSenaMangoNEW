@@ -55,7 +55,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
                    
                     if category == sender.category
                     {
-                        let words = data["words"] as? Array<Any>
+                        let words = data["learn"] as? Array<Any>
                         if(words!.count != 0){
                         for wordIndex in 0...words!.count-1 {
                                 let word = words![wordIndex] as? [String: Any]
@@ -87,12 +87,12 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
         //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
             //Programatically Tapped Action
             let labelTap = MyLessonTapGesture(target: self, action: #selector(self.labelTapped(_:)))
-            cell.textLabel!.isUserInteractionEnabled = true
-            cell.textLabel!.addGestureRecognizer(labelTap)
+            cell.catName.isUserInteractionEnabled = true
+            cell.catName.addGestureRecognizer(labelTap)
             labelTap.category = target.name
             //Programatically Tapped Action
         
-        cell.catView.layer.cornerRadius = cell.catView.frame.height/2
+        cell.catView.layer.cornerRadius = cell.catView.frame.height/3
         return cell
     }
     

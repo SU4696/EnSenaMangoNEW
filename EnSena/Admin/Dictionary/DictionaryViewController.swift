@@ -17,7 +17,9 @@ public struct Dict {
 }
 
 class DictionaryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var nameView: UITableView!
+    
     struct Dictionary {
         let name: String
     }
@@ -81,17 +83,18 @@ class DictionaryViewController: UIViewController, UITableViewDataSource, UITable
         }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = nameView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        let cell = nameView.dequeueReusableCell(withIdentifier: "cell") as! DicCategoryTVC
         let target = dicArray[indexPath.row]
-        cell.textLabel?.text = target.name
+        cell.catName.text = target.name
         //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de cell.textLabel
         //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
             //Programatically Tapped Action
             let labelTap = MyTapGesture(target: self, action: #selector(self.labelTapped(_:)))
-            cell.textLabel!.isUserInteractionEnabled = true
-            cell.textLabel!.addGestureRecognizer(labelTap)
+            cell.catName.isUserInteractionEnabled = true
+            cell.catName.addGestureRecognizer(labelTap)
             labelTap.category = target.name
             //Programatically Tapped Action
+        cell.catView.layer.cornerRadius = cell.catView.frame.height/3
         return cell
     }
     

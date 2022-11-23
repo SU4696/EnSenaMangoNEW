@@ -6,43 +6,41 @@
 //
 
 import UIKit
+import SDWebImage
 import Firebase
 import FirebaseStorage
 
 class LessonDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
     @IBOutlet weak var LesView: UITableView!
+    
     var LesArrayDetail: [Les] = []
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
+    var loadingData = false
     var category: String = ""
+    var wordname: String = ""
+    
 //    var elements = [LessonAprender(palabra: "")]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
-    
+    private var imageURL = URL(string:"")
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            //obtener los elementos de la misma categoria
-            //TODO: Incializar de manera correcta la varaible elments
-//            let LesCount = LessonAprender.dummyLesCategory
-//            elements = [LessonAprender(palabra: "")]
-//            for item in LesCount {
-//                if (item.category == category)
-//                {
-//                    elements.append(item)
-//                }
-//            }
-            //TODO: Una vez inicializado de manera correcta se cambia return por return elements.count
+            
             return LesArrayDetail.count
         }
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             //TODO: Una vez inicializado de manera correcta se cambia elements por elements[indexPath.row]
             let target = LesArrayDetail[indexPath.row ]
-            let cell = LesView.dequeueReusableCell(withIdentifier: "lesCell", for: indexPath)
-            cell.textLabel?.text = target.name
+            let cell = LesView.dequeueReusableCell(withIdentifier: "lesCell") as! LearnTVC
+            cell.learnLabel.text = target.name
+          //  cell.learnImage.image = UIImage(media: target.name)
+            
+            
             return cell
         }
         override func viewWillAppear(_ animated: Bool) {

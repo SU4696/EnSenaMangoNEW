@@ -34,6 +34,12 @@
 		BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC49228E23BD20055EE86 /* EnSena.xcdatamodeld */; };
 		BEBEC49628E23BD70055EE86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC49528E23BD70055EE86 /* Assets.xcassets */; };
 		BEBEC49928E23BD70055EE86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEBEC49728E23BD70055EE86 /* LaunchScreen.storyboard */; };
+		BEC29A8B292E060000125A87 /* DicCategoryTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A8A292E060000125A87 /* DicCategoryTVC.swift */; };
+		BEC29A8D292E07D300125A87 /* NADicTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A8C292E07D200125A87 /* NADicTVC.swift */; };
+		BEC29A8F292E0B5F00125A87 /* LearnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A8E292E0B5F00125A87 /* LearnTVC.swift */; };
+		BEC29A92292E0E3E00125A87 /* QuizTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A91292E0E3E00125A87 /* QuizTVC.swift */; };
+		BEC29A94292E0E6000125A87 /* QuizLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A93292E0E6000125A87 /* QuizLessonViewController.swift */; };
+		BEC29A96292E0E7700125A87 /* QuizDetailLessonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEC29A95292E0E7700125A87 /* QuizDetailLessonViewController.swift */; };
 		BEE3DAE2292D248A00F39CB5 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAE1292D248A00F39CB5 /* FirebaseAuth */; };
 		BEE3DAE4292D248A00F39CB5 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAE3292D248A00F39CB5 /* FirebaseDatabase */; };
 		BEE3DAE6292D248A00F39CB5 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = BEE3DAE5292D248A00F39CB5 /* FirebaseFirestore */; };
@@ -75,6 +81,12 @@
 		BEBEC49528E23BD70055EE86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEBEC49828E23BD70055EE86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEBEC49A28E23BD70055EE86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEC29A8A292E060000125A87 /* DicCategoryTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicCategoryTVC.swift; sourceTree = "<group>"; };
+		BEC29A8C292E07D200125A87 /* NADicTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NADicTVC.swift; sourceTree = "<group>"; };
+		BEC29A8E292E0B5F00125A87 /* LearnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTVC.swift; sourceTree = "<group>"; };
+		BEC29A91292E0E3E00125A87 /* QuizTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizTVC.swift; sourceTree = "<group>"; };
+		BEC29A93292E0E6000125A87 /* QuizLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLessonViewController.swift; sourceTree = "<group>"; };
+		BEC29A95292E0E7700125A87 /* QuizDetailLessonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizDetailLessonViewController.swift; sourceTree = "<group>"; };
 		BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnTableViewCell.swift; sourceTree = "<group>"; };
 		BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDictionaryViewController.swift; sourceTree = "<group>"; };
 		BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminDicDetailViewController.swift; sourceTree = "<group>"; };
@@ -107,21 +119,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		BE0CAEE52921B7D900DD1188 /* LessonDetail */ = {
+		BE0CAEE52921B7D900DD1188 /* LearnLesson */ = {
 			isa = PBXGroup;
 			children = (
+				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
+				BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */,
+				BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */,
 				BE0CAEE62921B80100DD1188 /* LessonDetailViewController.swift */,
+				BEC29A8E292E0B5F00125A87 /* LearnTVC.swift */,
 			);
-			path = LessonDetail;
+			path = LearnLesson;
 			sourceTree = "<group>";
 		};
 		BE3B46B8291E0C9A00E0D6C9 /* Lesson */ = {
 			isa = PBXGroup;
 			children = (
-				BE0CAEE52921B7D900DD1188 /* LessonDetail */,
-				BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */,
-				BE0CAEE32921B5D800DD1188 /* LearnComposeViewController.swift */,
-				BEE3DAEE292D7B2A00F39CB5 /* LearnTableViewCell.swift */,
+				BEC29A90292E0E2700125A87 /* QuizLesson */,
+				BE0CAEE52921B7D900DD1188 /* LearnLesson */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -141,6 +155,7 @@
 				BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */,
 				BE5EAFE7290F67B8002C5417 /* DictionaryCompseViewController.swift */,
 				BE5EAFE9290F6B49002C5417 /* UIViewController+Alert.swift */,
+				BEC29A8A292E060000125A87 /* DicCategoryTVC.swift */,
 			);
 			path = Dictionary;
 			sourceTree = "<group>";
@@ -194,6 +209,16 @@
 			path = EnSena;
 			sourceTree = "<group>";
 		};
+		BEC29A90292E0E2700125A87 /* QuizLesson */ = {
+			isa = PBXGroup;
+			children = (
+				BEC29A91292E0E3E00125A87 /* QuizTVC.swift */,
+				BEC29A93292E0E6000125A87 /* QuizLessonViewController.swift */,
+				BEC29A95292E0E7700125A87 /* QuizDetailLessonViewController.swift */,
+			);
+			path = QuizLesson;
+			sourceTree = "<group>";
+		};
 		BEF9221829268ACA00AF4275 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +245,7 @@
 			children = (
 				BEF9221B29268B6400AF4275 /* NotAdminDictionaryViewController.swift */,
 				BEF9221E29268C7F00AF4275 /* NotAdminDicDetailViewController.swift */,
+				BEC29A8C292E07D200125A87 /* NADicTVC.swift */,
 			);
 			path = Dictioanry;
 			sourceTree = "<group>";
@@ -338,6 +364,7 @@
 				BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */,
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
+				BEC29A96292E0E7700125A87 /* QuizDetailLessonViewController.swift in Sources */,
 				BEF9222129268D3D00AF4275 /* RankingViewController.swift in Sources */,
 				BEE3DAEF292D7B2B00F39CB5 /* LearnTableViewCell.swift in Sources */,
 				BEF9221C29268B6400AF4275 /* NotAdminDictionaryViewController.swift in Sources */,
@@ -345,13 +372,18 @@
 				BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */,
 				BEBEC48E28E23BD20055EE86 /* LoginViewController.swift in Sources */,
 				BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */,
+				BEC29A8D292E07D300125A87 /* NADicTVC.swift in Sources */,
 				BEBEC49428E23BD20055EE86 /* EnSena.xcdatamodeld in Sources */,
 				BE6A0A4B2929E7CA002BFC77 /* PopUpView.swift in Sources */,
 				BE1E75C72927C63F00BB59CE /* NotAdminLessonLearnViewController.swift in Sources */,
 				BE5EAFEC29103707002C5417 /* DictonaryDetailViewController.swift in Sources */,
 				BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */,
 				BE0CAEE42921B5D800DD1188 /* LearnComposeViewController.swift in Sources */,
+				BEC29A92292E0E3E00125A87 /* QuizTVC.swift in Sources */,
+				BEC29A8F292E0B5F00125A87 /* LearnTVC.swift in Sources */,
 				BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */,
+				BEC29A94292E0E6000125A87 /* QuizLessonViewController.swift in Sources */,
+				BEC29A8B292E060000125A87 /* DicCategoryTVC.swift in Sources */,
 				BEF9222429268E3700AF4275 /* NottAdminLessonViewController.swift in Sources */,
 				BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */,
 				BEF9221F29268C7F00AF4275 /* NotAdminDicDetailViewController.swift in Sources */,

@@ -23,7 +23,7 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
     }
     
     
-    
+    var loadingData = false
     var category: String = ""
     var wordname: String = ""
 //    var elements = [DictionaryDetail(name: "")]
@@ -35,32 +35,34 @@ class DictonaryDetailViewController: UIViewController,UITableViewDataSource, UIT
     
     func loadImage(){
         let storage = Storage.storage().reference(withPath: "dictionary/\(wordname).png")
-        storage.downloadURL { (url, error) in
+        storage.downloadURL { [self] (url, error) in
             if error != nil{
                 print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
                 return
             } else {
-                
+                //abrir un view controller
+            self.wordPopUp = PopUpView(frame: self.view.frame)
+            self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+            self.view.addSubview(wordPopUp)
+
+            self.wordPopUp.wordLabel.text = wordname
+                self.wordPopUp.wordImage.sd_setImage(with: url!, placeholderImage: UIImage())
+                self.wordPopUp.urlLabel.text = " \(url!.absoluteString ?? "placeholder")"
             }
-            self.imageURL = url!
         }
     }
     
     @objc func labelTapped(_ sender: wordTapGesture) {
-            //abrir un view controller
-        self.wordPopUp = PopUpView(frame: self.view.frame)
-        self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
-        self.view.addSubview(wordPopUp)
-        self.wordname=sender.wordname
-
-        self.wordPopUp.wordLabel.text = wordname
-        loadImage()
-        self.wordPopUp.wordImage.sd_setImage(with: imageURL, placeholderImage: UIImage())
-        self.wordPopUp.urlLabel.text = " \(imageURL?.absoluteString ?? "placeholder")"
-
+        print("VALOR: \(loadingData)")
+        if !loadingData {
+            loadingData = true
+            self.wordname=sender.wordname
+            loadImage()
+        }
         }
     
     @objc func closeTapped(){
+        loadingData = false
         self.wordPopUp.removeFromSuperview()
     }
     

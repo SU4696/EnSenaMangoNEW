@@ -6,15 +6,12 @@
 //
 
 import UIKit
-import Firebase
-import FirebaseStorage
+import FirebaseFirestore
 
 
 class DictionaryCompseViewController: UIViewController{
 
     @IBOutlet weak var catname: UITextField!
-    var imageData: Data?
-    private let storage = Storage.storage().reference()
     
     
     @IBAction func close(_ sender: Any) {
