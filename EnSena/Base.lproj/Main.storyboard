@@ -482,7 +482,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uj6-Ig-zI3">
-                                <rect key="frame" x="0.0" y="92" width="414" height="755"/>
+                                <rect key="frame" x="0.0" y="131" width="414" height="716"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="131" id="FzD-7j-Qj8" customClass="QuizTVC" customModule="EnSena" customModuleProvider="target">
@@ -522,7 +522,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p7e-ah-MsY">
                                 <rect key="frame" x="24" y="92" width="164" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="164" id="UVq-9f-k90"/>
+                                    <constraint firstAttribute="width" constant="164" id="vl6-rZ-qyb"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Learn">
@@ -543,15 +543,15 @@
                         <viewLayoutGuide key="safeArea" id="hYY-Vr-0NS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstAttribute="bottomMargin" secondItem="uj6-Ig-zI3" secondAttribute="bottom" constant="-34" id="EDq-Tw-2ih"/>
-                            <constraint firstItem="uj6-Ig-zI3" firstAttribute="centerX" secondItem="mAf-Mz-Ieb" secondAttribute="centerX" id="Kab-C9-P2e"/>
-                            <constraint firstItem="hYY-Vr-0NS" firstAttribute="trailing" secondItem="Ki4-qB-44n" secondAttribute="trailing" constant="24" id="Pj0-2A-mH6"/>
-                            <constraint firstItem="p7e-ah-MsY" firstAttribute="top" secondItem="hYY-Vr-0NS" secondAttribute="top" constant="4" id="RhO-8F-5IP"/>
-                            <constraint firstItem="p7e-ah-MsY" firstAttribute="leading" secondItem="hYY-Vr-0NS" secondAttribute="leading" constant="24" id="bxp-3X-s7z"/>
-                            <constraint firstItem="Ki4-qB-44n" firstAttribute="leading" secondItem="p7e-ah-MsY" secondAttribute="trailing" constant="38" id="fYh-GU-M8r"/>
-                            <constraint firstItem="uj6-Ig-zI3" firstAttribute="leading" secondItem="hYY-Vr-0NS" secondAttribute="leading" id="g73-VE-ndG"/>
-                            <constraint firstItem="uj6-Ig-zI3" firstAttribute="top" secondItem="p7e-ah-MsY" secondAttribute="top" id="rJB-eh-NgL"/>
-                            <constraint firstItem="p7e-ah-MsY" firstAttribute="baseline" secondItem="Ki4-qB-44n" secondAttribute="baseline" id="uo7-Yz-2y1"/>
+                            <constraint firstItem="uj6-Ig-zI3" firstAttribute="top" secondItem="p7e-ah-MsY" secondAttribute="bottom" constant="8" id="2At-8d-7zx"/>
+                            <constraint firstItem="p7e-ah-MsY" firstAttribute="leading" secondItem="hYY-Vr-0NS" secondAttribute="leading" constant="24" id="4gI-MR-sGu"/>
+                            <constraint firstItem="p7e-ah-MsY" firstAttribute="top" secondItem="hYY-Vr-0NS" secondAttribute="top" constant="4" id="7jh-no-n4s"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uj6-Ig-zI3" secondAttribute="bottom" constant="-34" id="FlK-Zv-HOb"/>
+                            <constraint firstItem="Ki4-qB-44n" firstAttribute="leading" secondItem="p7e-ah-MsY" secondAttribute="trailing" constant="38" id="Wsr-ld-lSF"/>
+                            <constraint firstItem="p7e-ah-MsY" firstAttribute="baseline" secondItem="Ki4-qB-44n" secondAttribute="baseline" id="cyQ-dh-EaB"/>
+                            <constraint firstItem="uj6-Ig-zI3" firstAttribute="leading" secondItem="hYY-Vr-0NS" secondAttribute="leading" id="kpS-Rx-GrT"/>
+                            <constraint firstItem="hYY-Vr-0NS" firstAttribute="trailing" secondItem="Ki4-qB-44n" secondAttribute="trailing" constant="24" id="lrC-Jd-exp"/>
+                            <constraint firstItem="uj6-Ig-zI3" firstAttribute="centerX" secondItem="mAf-Mz-Ieb" secondAttribute="centerX" id="yaz-oS-mqn"/>
                         </constraints>
                     </view>
                     <toolbarItems/>
