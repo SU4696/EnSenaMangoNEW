@@ -55,6 +55,7 @@ class NotAdminDicDetailViewController: UIViewController,UITableViewDataSource, U
         }
     @objc func closeTapped(){
         self.wordPopUp.removeFromSuperview()
+        loadingData = false
     }
     
     

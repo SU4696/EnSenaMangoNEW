@@ -18,13 +18,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     @IBOutlet weak var wordView: UITableView!
     private var imageURL = URL(string:"")
-    
+    var loadingData = false
     var wordname: String = ""
     
     struct words {
         let name: String
     }
     
+    var list: [String] = []
     var homeArray: [words] = []
     let db = Firestore.firestore()
     
@@ -39,33 +40,36 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     func loadImage(){
         let storage = Storage.storage().reference(withPath: "dictionary/\(wordname).png")
-        storage.downloadURL { (url, error) in
+        storage.downloadURL { [self] (url, error) in
             if error != nil{
                 print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
                 return
             } else {
-                
+                //abrir un view controller
+            self.wordPopUp = PopUpView(frame: self.view.frame)
+            self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+            self.view.addSubview(wordPopUp)
+
+            self.wordPopUp.wordLabel.text = wordname
+                self.wordPopUp.wordImage.sd_setImage(with: url!, placeholderImage: UIImage())
+                self.wordPopUp.urlLabel.text = " \(url!.absoluteString ?? "placeholder")"
             }
-            self.imageURL = url!
         }
     }
+    
     var wordPopUp: PopUpView!
     @objc func labelTapped(_ sender: wordsTapGesture) {
-            //abrir un view controller
-        self.wordPopUp = PopUpView(frame: self.view.frame)
-        self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
-        self.view.addSubview(wordPopUp)
-        self.wordname=sender.wordname
-
-        self.wordPopUp.wordLabel.text = wordname
-        loadImage()
-        self.wordPopUp.wordImage.sd_setImage(with: imageURL, placeholderImage: UIImage())
-        self.wordPopUp.urlLabel.text = " \(imageURL?.absoluteString ?? "placeholder")"
-
+        print("VALOR: \(loadingData)")
+        if !loadingData {
+            loadingData = true
+            self.wordname=sender.wordname
+            loadImage()
+        }
         }
     
     @objc func closeTapped(){
         self.wordPopUp.removeFromSuperview()
+        loadingData = false
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -93,6 +97,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func getDatabaseRecords(){
       
         homeArray = []
+        
         db.collection("DICTIONARY").getDocuments { (snapshot, error) in
             if let error = error {
                 print(error)
@@ -105,10 +110,28 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //                   self.dicArray.append(newEntry)
                 
                     let data = document.data()
-                    let category = data["category"] as? String ?? ""
-                    let newCategory = words(name: category )
-                    self.homeArray.append(newCategory)
+                    //let id = document.documentID
+
+                    let wordsa = data["words"] as? Array<Any>
+                    if(wordsa!.count != 0){
+                    for wordIndex in 0...wordsa!.count-1 {
+                            let word = wordsa![wordIndex] as? [String: Any]
+                            let actualWord = word!["word"] as! String
+                        self.list.append(actualWord)
+                        //Solo agregar unas para que sea aleatorio
+                            
+                    }}
                 }
+                for _ in 1...3  {
+                let randomword = self.list.randomElement()!
+                    if let index = self.list.firstIndex(of: "\(randomword)") {
+                        self.list.remove(at: index)
+                    }
+                let newCategory = words(name: randomword )
+                self.homeArray.append(newCategory)
+                }
+                
+                
                 DispatchQueue.main.async {
                                 self.wordView.reloadData()
                             }
