@@ -33,7 +33,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             return 1
         }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 132
+        return 205
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return homeArray.count
@@ -74,15 +74,16 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let target = homeArray[indexPath.row ]
-        let cell = wordView.dequeueReusableCell(withIdentifier: "wordCell", for: indexPath)
-        cell.textLabel?.text = target.name
+        let cell = wordView.dequeueReusableCell(withIdentifier: "wordCell") as! HomeLabelTableViewCell
+        cell.wordLabel.text = target.name
         //Programatically Tapped Action
         let labelTap = wordsTapGesture(target: self, action: #selector(self.labelTapped(_:)))
-        cell.textLabel!.isUserInteractionEnabled = true
-        cell.textLabel!.addGestureRecognizer(labelTap)
+        cell.wordLabel.isUserInteractionEnabled = true
+        cell.wordLabel.addGestureRecognizer(labelTap)
         labelTap.wordname = target.name
         
         
+        cell.wordView.layer.cornerRadius = cell.wordView.frame.height/4
         return cell
     }
     
