@@ -34,7 +34,7 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
     
 //    var = elements[indexPath.row]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 132
+            return 342
         }
     
     

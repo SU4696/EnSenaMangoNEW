@@ -39,7 +39,6 @@ class NotAdminDicDetailViewController: UIViewController,UITableViewDataSource, U
 
             self.wordPopUp.wordLabel.text = wordname
                 self.wordPopUp.wordImage.sd_setImage(with: url!, placeholderImage: UIImage())
-                self.wordPopUp.urlLabel.text = " \(url!.absoluteString ?? "placeholder")"
             }
         }
     }

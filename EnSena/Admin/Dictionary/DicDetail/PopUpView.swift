@@ -16,8 +16,6 @@ class PopUpView: UIView {
     
     @IBOutlet weak var wordLabel: UILabel! 
     
-    @IBOutlet weak var urlLabel: UILabel!
-    
     
     @IBOutlet weak var wordImage: UIImageView!
     

@@ -14,7 +14,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PopUpView" customModule="EnSena" customModuleProvider="target">
             <connections>
                 <outlet property="close" destination="Iyp-iu-317" id="9XM-jb-8sr"/>
-                <outlet property="urlLabel" destination="ipj-oO-L0b" id="zd5-no-72S"/>
                 <outlet property="wordImage" destination="Jol-H9-AkB" id="CbI-XM-jlL"/>
                 <outlet property="wordLabel" destination="eZg-JM-iPd" id="uXV-1r-4wP"/>
             </connections>
@@ -28,15 +27,16 @@
                     <rect key="frame" x="42" y="183" width="330" height="510"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jol-H9-AkB">
-                            <rect key="frame" x="8" y="29.5" width="314" height="272"/>
+                            <rect key="frame" x="8" y="30" width="314" height="272"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="272" id="hEB-M2-GQf"/>
+                                <constraint firstAttribute="height" constant="272" id="uTm-ao-6xy"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyp-iu-317">
                             <rect key="frame" x="280" y="8" width="42" height="18.5"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="42" id="xhb-d2-LVc"/>
+                                <constraint firstAttribute="height" constant="18.5" id="EzR-Sd-cA8"/>
+                                <constraint firstAttribute="width" constant="42" id="pNJ-UJ-7mq"/>
                             </constraints>
                             <color key="tintColor" name="pinktheme"/>
                             <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
@@ -45,14 +45,8 @@
                                 <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
                             </state>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipj-oO-L0b">
-                            <rect key="frame" x="8" y="8" width="272" height="8.5"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eZg-JM-iPd">
-                            <rect key="frame" x="8" y="426" width="314" height="42.5"/>
+                            <rect key="frame" x="127" y="402" width="76" height="42.5"/>
                             <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="30"/>
                             <color key="textColor" name="pinktheme"/>
                             <nil key="highlightedColor"/>
@@ -60,28 +54,23 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
-                        <constraint firstItem="Jol-H9-AkB" firstAttribute="top" secondItem="ipj-oO-L0b" secondAttribute="bottom" constant="13" id="1gg-Oa-To3"/>
-                        <constraint firstItem="ipj-oO-L0b" firstAttribute="leading" secondItem="Jol-H9-AkB" secondAttribute="leading" id="1jA-b6-NxE"/>
-                        <constraint firstItem="Iyp-iu-317" firstAttribute="leading" secondItem="ipj-oO-L0b" secondAttribute="trailing" id="6gT-6p-fMo"/>
-                        <constraint firstItem="ipj-oO-L0b" firstAttribute="top" secondItem="Iyp-iu-317" secondAttribute="top" id="8Jk-Vn-o7P"/>
-                        <constraint firstItem="Iyp-iu-317" firstAttribute="trailing" secondItem="2re-7b-tTr" secondAttribute="trailingMargin" id="ITy-PI-FkF"/>
-                        <constraint firstItem="Jol-H9-AkB" firstAttribute="trailing" secondItem="eZg-JM-iPd" secondAttribute="trailing" id="NjU-YW-xd7"/>
-                        <constraint firstItem="Iyp-iu-317" firstAttribute="trailing" secondItem="Jol-H9-AkB" secondAttribute="trailing" id="OxE-ge-hlo"/>
-                        <constraint firstAttribute="bottom" secondItem="eZg-JM-iPd" secondAttribute="bottom" constant="41.5" id="SWr-kT-vZf"/>
-                        <constraint firstItem="ipj-oO-L0b" firstAttribute="leading" secondItem="2re-7b-tTr" secondAttribute="leadingMargin" id="WkJ-MT-eMF"/>
-                        <constraint firstItem="ipj-oO-L0b" firstAttribute="top" secondItem="2re-7b-tTr" secondAttribute="top" constant="8" id="rFb-Xq-KAg"/>
-                        <constraint firstItem="Jol-H9-AkB" firstAttribute="leading" secondItem="eZg-JM-iPd" secondAttribute="leading" id="vC1-ck-iWb"/>
-                        <constraint firstItem="Jol-H9-AkB" firstAttribute="top" secondItem="Iyp-iu-317" secondAttribute="bottom" constant="3" id="yGh-IP-lXW"/>
+                        <constraint firstAttribute="bottom" secondItem="eZg-JM-iPd" secondAttribute="bottom" constant="65.5" id="4Av-vB-ThB"/>
+                        <constraint firstItem="Jol-H9-AkB" firstAttribute="top" secondItem="Iyp-iu-317" secondAttribute="bottom" constant="3.5" id="DqE-Hx-AJy"/>
+                        <constraint firstItem="Iyp-iu-317" firstAttribute="top" secondItem="2re-7b-tTr" secondAttribute="top" constant="8" id="Dqz-xF-lCu"/>
+                        <constraint firstItem="Jol-H9-AkB" firstAttribute="leading" secondItem="2re-7b-tTr" secondAttribute="leadingMargin" id="Liw-tI-zGR"/>
+                        <constraint firstItem="Iyp-iu-317" firstAttribute="trailing" secondItem="2re-7b-tTr" secondAttribute="trailingMargin" id="TXK-Hf-vy8"/>
+                        <constraint firstItem="Jol-H9-AkB" firstAttribute="centerX" secondItem="eZg-JM-iPd" secondAttribute="centerX" id="Zbx-aH-BlH"/>
+                        <constraint firstItem="Iyp-iu-317" firstAttribute="trailing" secondItem="Jol-H9-AkB" secondAttribute="trailing" id="cwm-Kk-6zP"/>
                     </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="separatorColor"/>
             <constraints>
-                <constraint firstItem="2re-7b-tTr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="42" id="2Sr-Qs-xz3"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2re-7b-tTr" secondAttribute="bottom" constant="169" id="NAA-Md-9wC"/>
-                <constraint firstItem="2re-7b-tTr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="139" id="opf-Yr-ih6"/>
-                <constraint firstItem="2re-7b-tTr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="rqt-XH-eOG"/>
+                <constraint firstItem="2re-7b-tTr" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="139" id="3f6-yD-VT0"/>
+                <constraint firstItem="2re-7b-tTr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="6yn-mU-vvL"/>
+                <constraint firstItem="2re-7b-tTr" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="42" id="Z4X-8G-rTC"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="2re-7b-tTr" secondAttribute="bottom" constant="169" id="fHL-QJ-gxJ"/>
             </constraints>
             <connections>
                 <outlet property="close" destination="Iyp-iu-317" id="6DM-BS-Agj"/>
