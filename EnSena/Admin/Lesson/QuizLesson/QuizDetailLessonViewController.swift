@@ -62,10 +62,7 @@ class QuizDetailLessonViewController: UIViewController {
     }
     
     @IBAction func exitPress(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "QuizLessonViewController") as! QuizLessonViewController
-        vc.modalPresentationStyle = .fullScreen
-        self.present(vc, animated: true)
+        dismiss(animated: true, completion: nil)
     }
     
     @IBAction func nextPress(_ sender: Any) {

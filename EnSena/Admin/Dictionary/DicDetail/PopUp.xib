@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -28,24 +28,25 @@
                     <rect key="frame" x="42" y="183" width="330" height="510"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jol-H9-AkB">
-                            <rect key="frame" x="8" y="42" width="314" height="272"/>
+                            <rect key="frame" x="8" y="29.5" width="314" height="272"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="272" id="hEB-M2-GQf"/>
                             </constraints>
                         </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iyp-iu-317">
-                            <rect key="frame" x="280" y="8" width="42" height="31"/>
+                            <rect key="frame" x="280" y="8" width="42" height="18.5"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="42" id="xhb-d2-LVc"/>
                             </constraints>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain">
+                            <color key="tintColor" name="pinktheme"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal">
+                                <color key="titleColor" name="pinktheme"/>
                                 <imageReference key="image" image="xmark" catalog="system" symbolScale="large"/>
-                                <color key="baseForegroundColor" name="pinktheme"/>
-                            </buttonConfiguration>
+                            </state>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ipj-oO-L0b">
-                            <rect key="frame" x="8" y="8" width="272" height="21"/>
+                            <rect key="frame" x="8" y="8" width="272" height="8.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="7"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
