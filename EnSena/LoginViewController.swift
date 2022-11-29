@@ -76,8 +76,10 @@ class LoginViewController: UIViewController {
     
     
     @IBAction func loginButton(_ sender: Any) {
+        LocalNotificationManager.setNotification(duration: 1, of: .seconds, repeats: false, title: "Hello", body: "local", userinfo: ["aps": ["hello" : "world"]])
         login()
-    }
+        
+            }
     
     
 }
