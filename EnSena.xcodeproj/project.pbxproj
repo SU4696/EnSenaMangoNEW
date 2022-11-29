@@ -27,6 +27,7 @@
 		BE5EAFF62910CB94002C5417 /* DicDetailCompseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFF52910CB94002C5417 /* DicDetailCompseViewController.swift */; };
 		BE6A0A4B2929E7CA002BFC77 /* PopUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6A0A4A2929E7CA002BFC77 /* PopUpView.swift */; };
 		BE6A0A4D2929E7DA002BFC77 /* PopUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = BE6A0A4C2929E7DA002BFC77 /* PopUp.xib */; };
+		BE82987529356F7700247AF6 /* HomeLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE82987429356F7600247AF6 /* HomeLabelTableViewCell.swift */; };
 		BEBEC48A28E23BD20055EE86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48928E23BD20055EE86 /* AppDelegate.swift */; };
 		BEBEC48C28E23BD20055EE86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */; };
 		BEBEC48E28E23BD20055EE86 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEBEC48D28E23BD20055EE86 /* LoginViewController.swift */; };
@@ -73,6 +74,7 @@
 		BE5EAFF52910CB94002C5417 /* DicDetailCompseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DicDetailCompseViewController.swift; sourceTree = "<group>"; };
 		BE6A0A4A2929E7CA002BFC77 /* PopUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopUpView.swift; sourceTree = "<group>"; };
 		BE6A0A4C2929E7DA002BFC77 /* PopUp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopUp.xib; sourceTree = "<group>"; };
+		BE82987429356F7600247AF6 /* HomeLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeLabelTableViewCell.swift; sourceTree = "<group>"; };
 		BEBEC48628E23BD20055EE86 /* EnSena.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EnSena.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEBEC48928E23BD20055EE86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEBEC48B28E23BD20055EE86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -239,6 +241,7 @@
 				BEF9222229268E1700AF4275 /* Lesson */,
 				BE5EAFD7290F23D6002C5417 /* NotificationViewController.swift */,
 				BEF9221A29268B4A00AF4275 /* Dictioanry */,
+				BE82987429356F7600247AF6 /* HomeLabelTableViewCell.swift */,
 			);
 			path = NotAdmin;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE82987529356F7700247AF6 /* HomeLabelTableViewCell.swift in Sources */,
 				BE5EAFD8290F23D6002C5417 /* NotificationViewController.swift in Sources */,
 				BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */,
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
@@ -539,7 +543,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = L277A6GH74;
+				DEVELOPMENT_TEAM = ZPG82D37U3;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnSena/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
