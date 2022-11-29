@@ -43,7 +43,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
             let vc = storyboard.instantiateViewController(withIdentifier: "LessonDetailViewController") as! LessonDetailViewController
         
                 LesArrayDetail = []
-                db.collection("LESSON").getDocuments { (snapshot, error) in
+                db.collection("DICTIONARY").getDocuments { (snapshot, error) in
                     if let error = error {
                         print(error)
                         return
@@ -55,7 +55,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
                    
                     if category == sender.category
                     {
-                        let words = data["learn"] as? Array<Any>
+                        let words = data["words"] as? Array<Any>
                         if(words!.count != 0){
                         for wordIndex in 0...words!.count-1 {
                                 let word = words![wordIndex] as? [String: Any]
@@ -70,7 +70,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
                    
                 }
                 vc.modalPresentationStyle = .fullScreen
-                vc.category = sender.category
+                vc.wordname = sender.category
                 vc.LesArrayDetail = self.LesArrayDetail
                     self.present(vc, animated: true)
            }
@@ -115,7 +115,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
     func getDatabaseRecords(){
       
        LesArray = []
-       db.collection("LESSON").getDocuments { (snapshot, error) in
+       db.collection("DICTIONARY").getDocuments { (snapshot, error) in
            if let error = error {
                print(error)
                return

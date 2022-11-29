@@ -8,7 +8,12 @@
 import UIKit
 import SDWebImage
 import Firebase
+import FirebaseFirestore
 import FirebaseStorage
+
+public struct Word {
+    let name: String
+}
 
 class LessonDetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -19,15 +24,20 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
         dismiss(animated: true, completion: nil)
     }
     var loadingData = false
-    var category: String = ""
+    var word: String = ""
     var wordname: String = ""
+    var check: String = ""
+    private var imageURL = URL(string:"")
     
-//    var elements = [LessonAprender(palabra: "")]
+    let db = Firestore.firestore()
+    
+    
+//    var = elements[indexPath.row]
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 132
         }
-    private var imageURL = URL(string:"")
-        
+    
+    
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
             
             return LesArrayDetail.count
@@ -35,12 +45,24 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             //TODO: Una vez inicializado de manera correcta se cambia elements por elements[indexPath.row]
-            let target = LesArrayDetail[indexPath.row ]
+            let target = LesArrayDetail[indexPath.row]
             let cell = LesView.dequeueReusableCell(withIdentifier: "lesCell") as! LearnTVC
             cell.learnLabel.text = target.name
-          //  cell.learnImage.image = UIImage(media: target.name)
-            
-            
+            func loadImage(){
+                let storage = Storage.storage().reference(withPath: "dictionary/\(target.name).png")
+                storage.downloadURL { [self] (url, error) in
+                    if error != nil{
+                        print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
+                        return
+                    } else {
+                        //abrir un view controller
+                        cell.learnImage.sd_setImage(with: url!, placeholderImage: UIImage())
+                    }
+                    
+                }
+            }
+            loadImage()
+
             return cell
         }
         override func viewWillAppear(_ animated: Bool) {
@@ -62,7 +84,8 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
    
         override func viewDidLoad() {
             super.viewDidLoad()
-
+            LesView.estimatedRowHeight = 55
+            LesView.rowHeight = UITableView.automaticDimension
             /*
             NotificationCenter.default.addObserver(forName: LessonDetailCompseViewController.newLesDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.LesView.reloadData()}*/
         }

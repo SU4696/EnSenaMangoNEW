@@ -26,7 +26,7 @@ class LessonComposeViewController: UIViewController {
         dismiss(animated: true, completion: nil)
         
         let db = Firestore.firestore()
-        let categoryRef = db.collection("LESSON")
+        let categoryRef = db.collection("DICTIONARY")
 
         let docUpdateData: [String: Any] = [
                 "category": name,
@@ -54,6 +54,6 @@ class LessonComposeViewController: UIViewController {
 
 }
 extension LearnComposeViewController {
-    static let newLesDidInsert = Notification.Name(rawValue: "Nuevo Lección creado")
+    static let newLesDidInsert = Notification.Name(rawValue: "Nueva Lección creada")
 }
 
