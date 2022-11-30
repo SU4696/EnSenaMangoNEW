@@ -15,12 +15,19 @@ public struct WordQuiz {
     let name: String
 }
 
+public var rightAnswers: Int = 0
+
+
+
+
 class QuizDetailLessonViewController: UIViewController {
     
     var QuizArrayDetail: [QuizLes] = []
     
     
+    @IBOutlet weak var questionNumberLabel: UILabel!
     @IBOutlet weak var quizImage: UIImageView!
+    @IBOutlet weak var answerSelected: UILabel!
     
     @IBOutlet weak var optionOne: UIButton!
     @IBOutlet weak var optionTwo: UIButton!
@@ -37,41 +44,82 @@ class QuizDetailLessonViewController: UIViewController {
     var wordname: String = ""
     private var imageURL = URL(string:"")
     var lockedWords: [String] = []
+    var lockedQuestions: [String] = []
+    var questionNumber: Int = 1
+
     
     let db = Firestore.firestore()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nextQuestion()
+        if (questionNumber == 5) {
+            dismiss(animated: true, completion: nil)
+        }
     }
     
     @IBAction func optionOnePress(_ sender: Any) {
         
+//        checkAnswer(answerCheck: word, buttonTitle: "\(optionOne.titleLabel)")
+        answerSelected.text = optionOne.titleLabel?.text
+
     }
     
     @IBAction func optionTwoPress(_ sender: Any) {
-        
-    }
+        answerSelected.text = optionTwo.titleLabel?.text
+
+        }
+    
     
     @IBAction func optionThreePress(_ sender: Any) {
-        
+        answerSelected.text = optionThree.titleLabel?.text
+
     }
     
     @IBAction func optionFourPress(_ sender: Any) {
-        
+        answerSelected.text = optionFour.titleLabel?.text
+
     }
     
     @IBAction func exitPress(_ sender: Any) {
+        rightAnswers = 0
         dismiss(animated: true, completion: nil)
-    }
-    
-    @IBAction func nextPress(_ sender: Any) {
-        nextQuestion()
         
     }
     
+    @IBAction func nextPress(_ sender: Any) {
+        if (answerSelected.text == word){
+            rightAnswers += 1
+    }
+        
+//        if (questionNumber == 5){
+//            dismiss(animated: true, completion: nil)
+//        }
+        if (questionNumber >= 5) {
+//            pushQuizViewController()
+//            questionNumber = 69
+//            nextButton.addTarget(self, action: #selector(pushQuizViewController), for: .touchUpInside)
+            pushQuizViewController()
+        } else {
+            questionNumber += 1
+            questionNumberLabel.text = "\(questionNumber)"
+            answerSelected.text = ""
+            nextQuestion()
+        
+//            respuestaCheck.text = "\(rightAnswers)"
+        }
+
+    }
+    
     func nextQuestion(){
-        let answer = QuizArrayDetail.randomElement()!.name
+        var answer = QuizArrayDetail.randomElement()!.name
+        
+        while (lockedQuestions.contains(answer)) {
+            answer = QuizArrayDetail.randomElement()!.name
+        }
+        lockedQuestions.append(answer)
+        
+        word = answer
         var n = Int.random(in: 1...4)
         switch n {
         case 1:
@@ -142,17 +190,24 @@ class QuizDetailLessonViewController: UIViewController {
             
             fakeAnswer = QuizArrayDetail.randomElement()!.name
         }
-//            for lWord in lockedWords where lWord == fakeAnswer{
-//                fakeAnswer = QuizArrayDetail.randomElement()!.name
-//            }
-            
-        
         lockedWords.append(fakeAnswer)
         return fakeAnswer
     }
     
+    func checkAnswer (answerCheck: String, buttonTitle: String) -> Bool {
+        if (buttonTitle == answerCheck) {
+            return true
+        } else {
+            return false
+        }
+    }
     
-    
+    @objc func pushQuizViewController() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = sb.instantiateViewController(withIdentifier: "QuizLessonFinalizarViewController") as! QuizLessonFinalizarViewController
+        self.present(destinationVC, animated: true)
+        
+    }
     
     /*
     // MARK: - Navigation

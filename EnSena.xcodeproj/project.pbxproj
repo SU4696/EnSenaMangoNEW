@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7652E92937121E005EA870 /* QuizLessonFinalizarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C7652E82937121D005EA870 /* QuizLessonFinalizarViewController.swift */; };
 		5C81F0A3292CCD000086D5F2 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 5C81F0A2292CCD000086D5F2 /* SDWebImage */; };
 		5C81F0A5292CCD000086D5F2 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5C81F0A4292CCD000086D5F2 /* SDWebImageMapKit */; };
 		5CF429C6292C4E49000489FD /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5CF429C5292C4E48000489FD /* GoogleService-Info-2.plist */; };
@@ -60,6 +61,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5C7652E82937121D005EA870 /* QuizLessonFinalizarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizLessonFinalizarViewController.swift; sourceTree = "<group>"; };
 		5CF429C5292C4E48000489FD /* GoogleService-Info-2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-2.plist"; sourceTree = "<group>"; };
 		658E265E29365D5800440AFF /* LocalNotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotificationManager.swift; sourceTree = "<group>"; };
 		BE0CAEE32921B5D800DD1188 /* LessonComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonComposeViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				BEC29A91292E0E3E00125A87 /* QuizTVC.swift */,
 				BEC29A93292E0E6000125A87 /* QuizLessonViewController.swift */,
 				BEC29A95292E0E7700125A87 /* QuizDetailLessonViewController.swift */,
+				5C7652E82937121D005EA870 /* QuizLessonFinalizarViewController.swift */,
 			);
 			path = QuizLesson;
 			sourceTree = "<group>";
@@ -374,6 +377,7 @@
 				BE0CAEE72921B80100DD1188 /* LessonDetailViewController.swift in Sources */,
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
+				5C7652E92937121E005EA870 /* QuizLessonFinalizarViewController.swift in Sources */,
 				BEC29A96292E0E7700125A87 /* QuizDetailLessonViewController.swift in Sources */,
 				658E265F29365D5800440AFF /* LocalNotificationManager.swift in Sources */,
 				BEF9222129268D3D00AF4275 /* RankingViewController.swift in Sources */,
@@ -547,7 +551,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZPG82D37U3;
+				DEVELOPMENT_TEAM = L277A6GH74;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = EnSena/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
