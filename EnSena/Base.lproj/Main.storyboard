@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -28,10 +28,6 @@
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="pw" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="20" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="pxF-lU-pXd">
                                 <rect key="frame" x="107" y="463" width="200" height="34"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="0RU-yO-21N"/>
-                                    <constraint firstAttribute="height" constant="34" id="0tS-SF-4Cb"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="password"/>
                             </textField>
@@ -49,14 +45,17 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EnSeña" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ode-YA-wOZ">
                                 <rect key="frame" x="141" y="334" width="132" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="9yk-Ag-0cl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="39"/>
                                 <color key="textColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="crearCuenta" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cZa-51-aSh">
-                                <rect key="frame" x="141" y="568" width="132" height="31"/>
+                                <rect key="frame" x="107" y="568" width="200" height="31"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="31" id="51q-89-9te"/>
+                                    <constraint firstAttribute="height" constant="31" id="cpV-7V-Csb"/>
                                 </constraints>
                                 <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
@@ -67,30 +66,43 @@
                                     <segue destination="a8y-Ku-2p1" kind="presentation" id="O1h-uh-cwL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" restorationIdentifier="aviso" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BU4-Yy-KWk">
+                                <rect key="frame" x="107" y="804" width="200" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="Bkc-51-mwm"/>
+                                </constraints>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Aviso de Privacidad">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
+                                </buttonConfiguration>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ode-YA-wOZ" firstAttribute="centerX" secondItem="DkS-0V-Tct" secondAttribute="centerX" id="6Az-bo-lYd"/>
-                            <constraint firstItem="ode-YA-wOZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="EQ2-fD-f0q"/>
-                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="166" id="GUU-lF-R2L"/>
-                            <constraint firstItem="DkS-0V-Tct" firstAttribute="top" secondItem="rsZ-xz-QNf" secondAttribute="bottom" constant="72" id="ONy-2c-SC1"/>
-                            <constraint firstItem="pxF-lU-pXd" firstAttribute="top" secondItem="DkS-0V-Tct" secondAttribute="bottom" constant="19" id="QCB-IU-RF9"/>
-                            <constraint firstItem="ode-YA-wOZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="290" id="RRS-t1-RHH"/>
-                            <constraint firstItem="pxF-lU-pXd" firstAttribute="leading" secondItem="KRG-JC-iDR" secondAttribute="leading" id="RUU-pR-ayX"/>
-                            <constraint firstItem="DkS-0V-Tct" firstAttribute="trailing" secondItem="KRG-JC-iDR" secondAttribute="trailing" id="Xad-mC-hwJ"/>
-                            <constraint firstItem="DkS-0V-Tct" firstAttribute="leading" secondItem="pxF-lU-pXd" secondAttribute="leading" id="b8i-FV-JET"/>
-                            <constraint firstItem="cZa-51-aSh" firstAttribute="top" secondItem="KRG-JC-iDR" secondAttribute="bottom" constant="4" id="eg9-0q-hC9"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cZa-51-aSh" secondAttribute="bottom" constant="263" id="gUS-T1-mIV"/>
-                            <constraint firstItem="ode-YA-wOZ" firstAttribute="leading" secondItem="cZa-51-aSh" secondAttribute="leading" id="gbo-AE-RHp"/>
-                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="hAM-br-fah"/>
-                            <constraint firstItem="KRG-JC-iDR" firstAttribute="top" secondItem="pxF-lU-pXd" secondAttribute="bottom" constant="30" id="noq-e3-xIo"/>
-                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pgk-QT-uS7"/>
-                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="centerX" secondItem="ode-YA-wOZ" secondAttribute="centerX" id="rnf-R3-WLi"/>
-                            <constraint firstItem="KRG-JC-iDR" firstAttribute="centerX" secondItem="cZa-51-aSh" secondAttribute="centerX" id="uup-YY-U2y"/>
-                            <constraint firstItem="DkS-0V-Tct" firstAttribute="top" secondItem="ode-YA-wOZ" secondAttribute="bottom" constant="20" id="wUq-IA-iuc"/>
-                            <constraint firstItem="pxF-lU-pXd" firstAttribute="centerX" secondItem="cZa-51-aSh" secondAttribute="centerX" id="wjp-zF-zTN"/>
-                            <constraint firstItem="DkS-0V-Tct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="x95-ri-veF"/>
+                            <constraint firstItem="pxF-lU-pXd" firstAttribute="trailing" secondItem="KRG-JC-iDR" secondAttribute="trailing" id="0bE-4Y-Xvw"/>
+                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="166" id="1jX-Bt-A7T"/>
+                            <constraint firstItem="KRG-JC-iDR" firstAttribute="leading" secondItem="cZa-51-aSh" secondAttribute="leading" id="D8I-nW-a8T"/>
+                            <constraint firstItem="pxF-lU-pXd" firstAttribute="top" secondItem="DkS-0V-Tct" secondAttribute="bottom" constant="19" id="Eja-zy-aAs"/>
+                            <constraint firstItem="pxF-lU-pXd" firstAttribute="leading" secondItem="KRG-JC-iDR" secondAttribute="leading" id="GDf-U5-AI8"/>
+                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Hb5-oi-fUs"/>
+                            <constraint firstItem="cZa-51-aSh" firstAttribute="top" secondItem="KRG-JC-iDR" secondAttribute="bottom" constant="4" id="LBK-bO-Qt9"/>
+                            <constraint firstItem="cZa-51-aSh" firstAttribute="trailing" secondItem="BU4-Yy-KWk" secondAttribute="trailing" id="Q0Q-ot-Awa"/>
+                            <constraint firstItem="ode-YA-wOZ" firstAttribute="centerX" secondItem="DkS-0V-Tct" secondAttribute="centerX" id="RPu-hL-kye"/>
+                            <constraint firstItem="ode-YA-wOZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="290" id="RYW-Qz-lC3"/>
+                            <constraint firstItem="ode-YA-wOZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="141" id="RjJ-cR-FLf"/>
+                            <constraint firstItem="KRG-JC-iDR" firstAttribute="top" secondItem="pxF-lU-pXd" secondAttribute="bottom" constant="30" id="SVO-Os-vLI"/>
+                            <constraint firstItem="cZa-51-aSh" firstAttribute="leading" secondItem="BU4-Yy-KWk" secondAttribute="leading" id="TEf-rW-87A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BU4-Yy-KWk" secondAttribute="bottom" constant="27" id="UMh-sY-wIf"/>
+                            <constraint firstItem="DkS-0V-Tct" firstAttribute="trailing" secondItem="pxF-lU-pXd" secondAttribute="trailing" id="XT9-pa-XVl"/>
+                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="87" id="cvR-fp-cXr"/>
+                            <constraint firstItem="KRG-JC-iDR" firstAttribute="trailing" secondItem="cZa-51-aSh" secondAttribute="trailing" id="fgl-27-6rw"/>
+                            <constraint firstItem="DkS-0V-Tct" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="107" id="gf5-5w-MOd"/>
+                            <constraint firstItem="rsZ-xz-QNf" firstAttribute="centerX" secondItem="ode-YA-wOZ" secondAttribute="centerX" id="iGE-PC-lgX"/>
+                            <constraint firstItem="DkS-0V-Tct" firstAttribute="leading" secondItem="pxF-lU-pXd" secondAttribute="leading" id="irf-vg-Pbx"/>
+                            <constraint firstItem="DkS-0V-Tct" firstAttribute="top" secondItem="ode-YA-wOZ" secondAttribute="bottom" constant="20" id="nye-jD-CNB"/>
+                            <constraint firstItem="DkS-0V-Tct" firstAttribute="top" secondItem="rsZ-xz-QNf" secondAttribute="bottom" constant="72" id="sYB-VY-FHd"/>
                         </constraints>
                     </view>
                     <connections>
@@ -102,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="-802"/>
+            <point key="canvasLocation" x="-17.39130434782609" y="-802.23214285714278"/>
         </scene>
         <!--Diccionario-->
         <scene sceneID="fTO-Nc-RZi">
@@ -568,7 +580,7 @@
         <!--Ranking-->
         <scene sceneID="QcJ-ym-WQy">
             <objects>
-                <viewController id="swy-UC-aPO" sceneMemberID="viewController">
+                <viewController id="swy-UC-aPO" customClass="RankingViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KOz-OZ-MaR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -578,21 +590,47 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="aYZ-ng-Irl">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="cell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="88" id="aYZ-ng-Irl" customClass="RankTableViewCell" customModule="EnSena" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aYZ-ng-Irl" id="4Ud-7G-2el">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-Za-3nW">
+                                                    <rect key="frame" x="20" y="0.0" width="243" height="88"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
+                                                    <color key="textColor" name="pinktheme"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-h0-TgN">
+                                                    <rect key="frame" x="271" y="0.0" width="123" height="88"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="nameLabel" destination="GDv-Za-3nW" id="2Cv-hR-CV0"/>
+                                            <outlet property="scoreLabel" destination="bbT-h0-TgN" id="sWx-pB-7Hn"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="swy-UC-aPO" id="qFx-KL-m6G"/>
+                                    <outlet property="delegate" destination="swy-UC-aPO" id="JU5-qq-KuM"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zTB-c2-0bL"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="Ranking" id="fjx-Ei-nR1"/>
+                    <connections>
+                        <outlet property="RankView" destination="lcI-8u-Dnq" id="hjC-IH-w6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ERm-re-Gk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1688,59 +1726,370 @@
             </objects>
             <point key="canvasLocation" x="3646" y="-1974"/>
         </scene>
-        <!--Notificaciones-->
+        <!--Aviso de Privacidad-->
         <scene sceneID="5gq-d1-t0A">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="0Wd-ao-aQK" customClass="NotificationViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="0Wd-ao-aQK" customClass="avisoViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PhU-PZ-W04">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="O8f-4c-74o">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iM7-6Y-O2h">
+                                <rect key="frame" x="20" y="56" width="374" height="786"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="ok1-Mn-Ymz" detailTextLabel="JAQ-4M-B0k" style="IBUITableViewCellStyleSubtitle" id="pJq-No-BdT">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pJq-No-BdT" id="DGS-hw-wve">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ok1-Mn-Ymz">
-                                                    <rect key="frame" x="20" y="6" width="25" height="14.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JAQ-4M-B0k">
-                                                    <rect key="frame" x="20" y="22.5" width="40.5" height="13.5"/>
-                                                    <autoresizingMask key="autoresizingMask"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </prototypes>
-                            </tableView>
+                                <mutableString key="text">Privacy Policy  
+==============
+
+Last updated: November 29, 2022
+
+This Privacy Policy describes Our policies and procedures on the collection,
+use and disclosure of Your information when You use the Service and tells You
+about Your privacy rights and how the law protects You.
+
+We use Your Personal data to provide and improve the Service. By using the
+Service, You agree to the collection and use of information in accordance with
+this Privacy Policy. This Privacy Policy has been created with the help of the
+[Privacy Policy Generator](https://www.privacypolicies.com/privacy-policy-
+generator/).
+
+Interpretation and Definitions  
+==============================
+
+Interpretation  
+--------------
+
+The words of which the initial letter is capitalized have meanings defined
+under the following conditions. The following definitions shall have the same
+meaning regardless of whether they appear in singular or in plural.
+
+Definitions  
+-----------
+
+For the purposes of this Privacy Policy:
+
+  * Account means a unique account created for You to access our Service or
+    parts of our Service.
+
+  * Affiliate means an entity that controls, is controlled by or is under
+    common control with a party, where "control" means ownership of 50% or
+    more of the shares, equity interest or other securities entitled to vote
+    for election of directors or other managing authority.
+
+  * Application means the software program provided by the Company downloaded
+    by You on any electronic device, named EnSeña
+
+  * Company (referred to as either "the Company", "We", "Us" or "Our" in this
+    Agreement) refers to EnSeña.
+
+  * Country refers to: Mexico
+
+  * Device means any device that can access the Service such as a computer, a
+    cellphone or a digital tablet.
+
+  * Personal Data is any information that relates to an identified or
+    identifiable individual.
+
+  * Service refers to the Application.
+
+  * Service Provider means any natural or legal person who processes the data
+    on behalf of the Company. It refers to third-party companies or
+    individuals employed by the Company to facilitate the Service, to provide
+    the Service on behalf of the Company, to perform services related to the
+    Service or to assist the Company in analyzing how the Service is used.
+
+  * Usage Data refers to data collected automatically, either generated by the
+    use of the Service or from the Service infrastructure itself (for example,
+    the duration of a page visit).
+
+  * You means the individual accessing or using the Service, or the company,
+    or other legal entity on behalf of which such individual is accessing or
+    using the Service, as applicable.
+
+
+Collecting and Using Your Personal Data  
+=======================================
+
+Types of Data Collected  
+-----------------------
+
+Personal Data  
+~~~~~~~~~~~~~
+
+While using Our Service, We may ask You to provide Us with certain personally
+identifiable information that can be used to contact or identify You.
+Personally identifiable information may include, but is not limited to:
+
+  * Email address
+
+  * First name and last name
+
+  * Usage Data
+
+
+Usage Data  
+~~~~~~~~~~
+
+Usage Data is collected automatically when using the Service.
+
+Usage Data may include information such as Your Device's Internet Protocol
+address (e.g. IP address), browser type, browser version, the pages of our
+Service that You visit, the time and date of Your visit, the time spent on
+those pages, unique device identifiers and other diagnostic data.
+
+When You access the Service by or through a mobile device, We may collect
+certain information automatically, including, but not limited to, the type of
+mobile device You use, Your mobile device unique ID, the IP address of Your
+mobile device, Your mobile operating system, the type of mobile Internet
+browser You use, unique device identifiers and other diagnostic data.
+
+We may also collect information that Your browser sends whenever You visit our
+Service or when You access the Service by or through a mobile device.
+
+Information Collected while Using the Application  
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+While using Our Application, in order to provide features of Our Application,
+We may collect, with Your prior permission:
+
+  * Pictures and other information from your Device's camera and photo library
+
+We use this information to provide features of Our Service, to improve and
+customize Our Service. The information may be uploaded to the Company's
+servers and/or a Service Provider's server or it may be simply stored on Your
+device.
+
+You can enable or disable access to this information at any time, through Your
+Device settings.
+
+Use of Your Personal Data  
+-------------------------
+
+The Company may use Personal Data for the following purposes:
+
+  * To provide and maintain our Service , including to monitor the usage of
+    our Service.
+
+  * To manage Your Account: to manage Your registration as a user of the
+    Service. The Personal Data You provide can give You access to different
+    functionalities of the Service that are available to You as a registered
+    user.
+
+  * For the performance of a contract: the development, compliance and
+    undertaking of the purchase contract for the products, items or services
+    You have purchased or of any other contract with Us through the Service.
+
+  * To contact You: To contact You by email, telephone calls, SMS, or other
+    equivalent forms of electronic communication, such as a mobile
+    application's push notifications regarding updates or informative
+    communications related to the functionalities, products or contracted
+    services, including the security updates, when necessary or reasonable for
+    their implementation.
+
+  * To provide You with news, special offers and general information about
+    other goods, services and events which we offer that are similar to those
+    that you have already purchased or enquired about unless You have opted
+    not to receive such information.
+
+  * To manage Your requests: To attend and manage Your requests to Us.
+
+  * For business transfers: We may use Your information to evaluate or conduct
+    a merger, divestiture, restructuring, reorganization, dissolution, or
+    other sale or transfer of some or all of Our assets, whether as a going
+    concern or as part of bankruptcy, liquidation, or similar proceeding, in
+    which Personal Data held by Us about our Service users is among the assets
+    transferred.
+
+  * For other purposes : We may use Your information for other purposes, such
+    as data analysis, identifying usage trends, determining the effectiveness
+    of our promotional campaigns and to evaluate and improve our Service,
+    products, services, marketing and your experience.
+
+
+We may share Your personal information in the following situations:
+
+  * With Service Providers: We may share Your personal information with
+    Service Providers to monitor and analyze the use of our Service, to
+    contact You.
+  * For business transfers: We may share or transfer Your personal information
+    in connection with, or during negotiations of, any merger, sale of Company
+    assets, financing, or acquisition of all or a portion of Our business to
+    another company.
+  * With Affiliates: We may share Your information with Our affiliates, in
+    which case we will require those affiliates to honor this Privacy Policy.
+    Affiliates include Our parent company and any other subsidiaries, joint
+    venture partners or other companies that We control or that are under
+    common control with Us.
+  * With business partners: We may share Your information with Our business
+    partners to offer You certain products, services or promotions.
+  * With other users: when You share personal information or otherwise
+    interact in the public areas with other users, such information may be
+    viewed by all users and may be publicly distributed outside.
+  * With Your consent : We may disclose Your personal information for any
+    other purpose with Your consent.
+
+Retention of Your Personal Data  
+-------------------------------
+
+The Company will retain Your Personal Data only for as long as is necessary
+for the purposes set out in this Privacy Policy. We will retain and use Your
+Personal Data to the extent necessary to comply with our legal obligations
+(for example, if we are required to retain your data to comply with applicable
+laws), resolve disputes, and enforce our legal agreements and policies.
+
+The Company will also retain Usage Data for internal analysis purposes. Usage
+Data is generally retained for a shorter period of time, except when this data
+is used to strengthen the security or to improve the functionality of Our
+Service, or We are legally obligated to retain this data for longer time
+periods.
+
+Transfer of Your Personal Data  
+------------------------------
+
+Your information, including Personal Data, is processed at the Company's
+operating offices and in any other places where the parties involved in the
+processing are located. It means that this information may be transferred to —
+and maintained on — computers located outside of Your state, province, country
+or other governmental jurisdiction where the data protection laws may differ
+than those from Your jurisdiction.
+
+Your consent to this Privacy Policy followed by Your submission of such
+information represents Your agreement to that transfer.
+
+The Company will take all steps reasonably necessary to ensure that Your data
+is treated securely and in accordance with this Privacy Policy and no transfer
+of Your Personal Data will take place to an organization or a country unless
+there are adequate controls in place including the security of Your data and
+other personal information.
+
+Delete Your Personal Data  
+-------------------------
+
+You have the right to delete or request that We assist in deleting the
+Personal Data that We have collected about You.
+
+Our Service may give You the ability to delete certain information about You
+from within the Service.
+
+You may update, amend, or delete Your information at any time by signing in to
+Your Account, if you have one, and visiting the account settings section that
+allows you to manage Your personal information. You may also contact Us to
+request access to, correct, or delete any personal information that You have
+provided to Us.
+
+Please note, however, that We may need to retain certain information when we
+have a legal obligation or lawful basis to do so.
+
+Disclosure of Your Personal Data  
+--------------------------------
+
+Business Transactions  
+~~~~~~~~~~~~~~~~~~~~~
+
+If the Company is involved in a merger, acquisition or asset sale, Your
+Personal Data may be transferred. We will provide notice before Your Personal
+Data is transferred and becomes subject to a different Privacy Policy.
+
+Law enforcement  
+~~~~~~~~~~~~~~~
+
+Under certain circumstances, the Company may be required to disclose Your
+Personal Data if required to do so by law or in response to valid requests by
+public authorities (e.g. a court or a government agency).
+
+Other legal requirements  
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+The Company may disclose Your Personal Data in the good faith belief that such
+action is necessary to:
+
+  * Comply with a legal obligation
+  * Protect and defend the rights or property of the Company
+  * Prevent or investigate possible wrongdoing in connection with the Service
+  * Protect the personal safety of Users of the Service or the public
+  * Protect against legal liability
+
+Security of Your Personal Data  
+------------------------------
+
+The security of Your Personal Data is important to Us, but remember that no
+method of transmission over the Internet, or method of electronic storage is
+100% secure. While We strive to use commercially acceptable means to protect
+Your Personal Data, We cannot guarantee its absolute security.
+
+Children's Privacy  
+==================
+
+Our Service does not address anyone under the age of 13. We do not knowingly
+collect personally identifiable information from anyone under the age of 13.
+If You are a parent or guardian and You are aware that Your child has provided
+Us with Personal Data, please contact Us. If We become aware that We have
+collected Personal Data from anyone under the age of 13 without verification
+of parental consent, We take steps to remove that information from Our
+servers.
+
+If We need to rely on consent as a legal basis for processing Your information
+and Your country requires consent from a parent, We may require Your parent's
+consent before We collect and use that information.
+
+Links to Other Websites  
+=======================
+
+Our Service may contain links to other websites that are not operated by Us.
+If You click on a third party link, You will be directed to that third party's
+site. We strongly advise You to review the Privacy Policy of every site You
+visit.
+
+We have no control over and assume no responsibility for the content, privacy
+policies or practices of any third party sites or services.
+
+Changes to this Privacy Policy  
+==============================
+
+We may update Our Privacy Policy from time to time. We will notify You of any
+changes by posting the new Privacy Policy on this page.
+
+We will let You know via email and/or a prominent notice on Our Service, prior
+to the change becoming effective and update the "Last updated" date at the top
+of this Privacy Policy.
+
+You are advised to review this Privacy Policy periodically for any changes.
+Changes to this Privacy Policy are effective when they are posted on this
+page.
+
+Contact Us  
+==========
+
+If you have any questions about this Privacy Policy, You can contact us:
+
+  * By email: test@gmail.com
+</mutableString>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="10"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JMt-WG-yaD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="O8f-4c-74o" firstAttribute="top" secondItem="JMt-WG-yaD" secondAttribute="top" id="91R-jG-BUT"/>
-                            <constraint firstItem="O8f-4c-74o" firstAttribute="centerX" secondItem="PhU-PZ-W04" secondAttribute="centerX" id="Yx3-9D-Xij"/>
-                            <constraint firstItem="O8f-4c-74o" firstAttribute="bottom" secondItem="JMt-WG-yaD" secondAttribute="bottom" id="oRp-P1-gLg"/>
-                            <constraint firstItem="O8f-4c-74o" firstAttribute="leading" secondItem="JMt-WG-yaD" secondAttribute="leading" id="yPs-B4-E8Y"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Notificaciones" id="6qX-Gb-UFc"/>
+                    <navigationItem key="navigationItem" title="Aviso de Privacidad" id="6qX-Gb-UFc">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="i0k-yQ-suh">
+                            <color key="tintColor" name="pinktheme"/>
+                            <connections>
+                                <action selector="cancel:" destination="0Wd-ao-aQK" id="U5s-Ar-GBD"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Acceptar" id="Fqh-Eg-0Bd">
+                            <color key="tintColor" name="pinktheme"/>
+                            <connections>
+                                <action selector="aceptar:" destination="0Wd-ao-aQK" id="V53-Fl-qbc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YLj-et-Zb6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7144.9275362318849" y="-2729.4642857142858"/>
+            <point key="canvasLocation" x="3789.8550724637685" y="-802.23214285714278"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="aOe-MY-Bii">
@@ -1759,7 +2108,6 @@
                     <connections>
                         <segue destination="6bA-qc-EPY" kind="relationship" relationship="viewControllers" id="BsH-M1-D5J"/>
                         <segue destination="1f0-Nt-3kj" kind="relationship" relationship="viewControllers" id="M1d-Wi-Lz3"/>
-                        <segue destination="ILx-zh-tdo" kind="relationship" relationship="viewControllers" id="vjC-U7-Z20"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BJC-YY-37K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1811,29 +2159,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sSe-EJ-Mrf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2581" y="-2729"/>
-        </scene>
-        <!--Notificación -->
-        <scene sceneID="M6d-4A-oYI">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ILx-zh-tdo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Notificación " id="xhu-Wx-Wci"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YWS-nP-10R">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <textAttributes key="titleTextAttributes">
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                            <color key="textColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="0Wd-ao-aQK" kind="relationship" relationship="rootViewController" id="CKX-1t-NeV"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Ups-p6-T4n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6236" y="-2729"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lhj-yv-snV">
@@ -1971,50 +2296,27 @@
             </objects>
             <point key="canvasLocation" x="4627.536231884058" y="1437.7232142857142"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="LjA-Jt-1Lc">
-            <objects>
-                <tableViewController id="BBM-jw-7Ee" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="k3W-zl-Qjv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="fVp-hU-Rhn">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fVp-hU-Rhn" id="5Ml-rD-61L">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="BBM-jw-7Ee" id="pF2-gW-v0N"/>
-                            <outlet property="delegate" destination="BBM-jw-7Ee" id="WJJ-uQ-BOM"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="nrh-rP-CJT"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="J30-c6-R1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6770" y="106"/>
-        </scene>
         <!--Navigation Controller-->
-        <scene sceneID="6VC-kf-NKQ">
+        <scene sceneID="jpR-qX-Jb3">
             <objects>
-                <navigationController id="FEs-ob-TnW" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6AJ-eM-V3W">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1gb-Su-Chj" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="H8E-xg-4JM">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                            <color key="textColor" name="pinktheme"/>
+                        </textAttributes>
                     </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="BBM-jw-7Ee" kind="relationship" relationship="rootViewController" id="P7p-Wg-LUl"/>
+                        <segue destination="0Wd-ao-aQK" kind="relationship" relationship="rootViewController" id="Arw-V8-Rk6"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zrg-0w-0lR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bUf-VR-eyj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6770" y="-567"/>
+            <point key="canvasLocation" x="2879.7101449275365" y="-802.23214285714278"/>
         </scene>
     </scenes>
     <resources>
@@ -2028,6 +2330,9 @@
         <namedColor name="yellowtheme">
             <color red="0.99607843160629272" green="0.85882353782653809" blue="0.50980395078659058" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

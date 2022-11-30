@@ -1,14 +1,20 @@
 //
-//  NotificationViewController.swift
+//  avisoViewController.swift
 //  EnSena
 //
-//  Created by 조수연 on 2022/10/30.
+//  Created by 조수연 on 2022/11/30.
 //
 
 import UIKit
 
-class NotificationViewController: UIViewController {
+class avisoViewController: UIViewController {
 
+    @IBAction func aceptar(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    @IBAction func cancel(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
