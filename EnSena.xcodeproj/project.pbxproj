@@ -21,6 +21,8 @@
 		BE1E75C72927C63F00BB59CE /* NotAdminLessonLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1E75C62927C63F00BB59CE /* NotAdminLessonLearnViewController.swift */; };
 		BE1FA91E2937DF4300594D16 /* avisoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA91D2937DF4300594D16 /* avisoViewController.swift */; };
 		BE1FA9202937E1F900594D16 /* RankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA91F2937E1F800594D16 /* RankTableViewCell.swift */; };
+		BE1FA9342937FE0600594D16 /* NALearnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA9332937FE0500594D16 /* NALearnTableViewCell.swift */; };
+		BE1FA9362937FF1200594D16 /* NALearnTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE1FA9352937FF1200594D16 /* NALearnTVC.swift */; };
 		BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */; };
 		BE5EAFD4290F23B2002C5417 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */; };
 		BE5EAFD6290F23BF002C5417 /* LearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */; };
@@ -71,6 +73,8 @@
 		BE1E75C62927C63F00BB59CE /* NotAdminLessonLearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotAdminLessonLearnViewController.swift; sourceTree = "<group>"; };
 		BE1FA91D2937DF4300594D16 /* avisoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = avisoViewController.swift; sourceTree = "<group>"; };
 		BE1FA91F2937E1F800594D16 /* RankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankTableViewCell.swift; sourceTree = "<group>"; };
+		BE1FA9332937FE0500594D16 /* NALearnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NALearnTableViewCell.swift; sourceTree = "<group>"; };
+		BE1FA9352937FF1200594D16 /* NALearnTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NALearnTVC.swift; sourceTree = "<group>"; };
 		BE5EAFCF290D816B002C5417 /* DictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD3290F23B2002C5417 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		BE5EAFD5290F23BF002C5417 /* LearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnViewController.swift; sourceTree = "<group>"; };
@@ -270,6 +274,8 @@
 			children = (
 				BEF9222329268E3600AF4275 /* NottAdminLessonViewController.swift */,
 				BE1E75C62927C63F00BB59CE /* NotAdminLessonLearnViewController.swift */,
+				BE1FA9332937FE0500594D16 /* NALearnTableViewCell.swift */,
+				BE1FA9352937FF1200594D16 /* NALearnTVC.swift */,
 			);
 			path = Lesson;
 			sourceTree = "<group>";
@@ -380,11 +386,13 @@
 				BE5EAFEA290F6B49002C5417 /* UIViewController+Alert.swift in Sources */,
 				BE5EAFD0290D816B002C5417 /* DictionaryViewController.swift in Sources */,
 				5C7652E92937121E005EA870 /* QuizLessonFinalizarViewController.swift in Sources */,
+				BE1FA9362937FF1200594D16 /* NALearnTVC.swift in Sources */,
 				BEC29A96292E0E7700125A87 /* QuizDetailLessonViewController.swift in Sources */,
 				658E265F29365D5800440AFF /* LocalNotificationManager.swift in Sources */,
 				BE1FA9202937E1F900594D16 /* RankTableViewCell.swift in Sources */,
 				BEF9222129268D3D00AF4275 /* RankingViewController.swift in Sources */,
 				BEE3DAEF292D7B2B00F39CB5 /* LearnTableViewCell.swift in Sources */,
+				BE1FA9342937FE0600594D16 /* NALearnTableViewCell.swift in Sources */,
 				BEF9221C29268B6400AF4275 /* NotAdminDictionaryViewController.swift in Sources */,
 				BE5EAFE8290F67B8002C5417 /* DictionaryCompseViewController.swift in Sources */,
 				BEF9E056292327560026D94F /* CrearCuentaViewController.swift in Sources */,
