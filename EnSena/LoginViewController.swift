@@ -23,8 +23,7 @@ class LoginViewController: UIViewController {
         Auth.auth().languageCode="en"
         // Do any additional setup after loading the view.
       
-        id.text = "nachtknot@gmail.com"
-        pw.text = "1234567"
+
     }
 
     @IBOutlet weak var id: UITextField!

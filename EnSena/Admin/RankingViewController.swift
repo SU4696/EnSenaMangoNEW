@@ -12,7 +12,7 @@ import FirebaseFirestore
 
 public struct Rank {
     let name: String
-    let score: String
+    let score: Int
 }
 
 class RankingViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -38,7 +38,7 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
         let cell = RankView.dequeueReusableCell(withIdentifier: "cell") as! RankTableViewCell
         let target = RankArray[indexPath.row]
         cell.nameLabel.text = target.name
-        cell.scoreLabel.text = target.score
+        cell.scoreLabel.text = String(target.score)
         //TODO: Asociar la acción del Tap (labelTapped) a un UIView en lugar de cell.textLabel
         //TODO: si no es posible, cambiar el width del label para que tome el mismo tamaño de la vista
             //Programatically Tapped Action
@@ -65,18 +65,20 @@ class RankingViewController: UIViewController, UITableViewDataSource, UITableVie
     func getDatabaseRecords(){
       
        RankArray = []
-        db.collection("USER").order(by: "score", descending: true).getDocuments { (snapshot, error) in
+        db.collection("USER").order(by:"score", descending: true).getDocuments { (snapshot, error) in
            if let error = error {
-               print(error)
-               return
+               print(error.localizedDescription)
            } else {
                for document in snapshot!.documents{
                  
                    let data = document.data()
-                   let nameR = data["name"] as? String ?? ""
-                   let scoreR = data["score"] as? String ?? ""
-                   let newRank = Rank(name: nameR, score: scoreR )
-                   self.RankArray.append(newRank)
+                   if data["type"] as! Int == 1{
+                       let nameR = data["name"] as? String ?? ""
+                       let scoreR = data["score"] as? Int ?? 0
+                       let newRank = Rank(name: nameR, score: scoreR )
+                       self.RankArray.append(newRank)
+                   }
+                  
                }
                DispatchQueue.main.async {
                                self.RankView.reloadData()

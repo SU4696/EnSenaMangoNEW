@@ -76,6 +76,9 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Aviso de Privacidad">
                                     <fontDescription key="titleFontDescription" type="system" pointSize="0.0"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1gb-Su-Chj" kind="presentation" id="MOr-TC-v86"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -597,20 +600,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="88"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-Za-3nW">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDv-Za-3nW">
                                                     <rect key="frame" x="20" y="0.0" width="243" height="88"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="243" id="zr6-v9-CRm"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="20"/>
                                                     <color key="textColor" name="pinktheme"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-h0-TgN">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbT-h0-TgN">
                                                     <rect key="frame" x="271" y="0.0" width="123" height="88"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="123" id="wlK-7g-Tqx"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="18"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="GDv-Za-3nW" firstAttribute="top" secondItem="bbT-h0-TgN" secondAttribute="top" id="0O5-AJ-K39"/>
+                                                <constraint firstItem="GDv-Za-3nW" firstAttribute="bottom" secondItem="bbT-h0-TgN" secondAttribute="bottom" id="C4Z-XF-2df"/>
+                                                <constraint firstItem="bbT-h0-TgN" firstAttribute="leading" secondItem="GDv-Za-3nW" secondAttribute="trailing" constant="8" id="Jo6-gh-yeo"/>
+                                                <constraint firstItem="GDv-Za-3nW" firstAttribute="leading" secondItem="4Ud-7G-2el" secondAttribute="leadingMargin" id="p3h-bb-HK6"/>
+                                                <constraint firstItem="GDv-Za-3nW" firstAttribute="top" secondItem="4Ud-7G-2el" secondAttribute="topMargin" constant="-11" id="vAY-Vh-C9j"/>
+                                                <constraint firstItem="GDv-Za-3nW" firstAttribute="centerY" secondItem="4Ud-7G-2el" secondAttribute="centerY" id="yvf-sp-ynC"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="nameLabel" destination="GDv-Za-3nW" id="2Cv-hR-CV0"/>
@@ -1731,7 +1746,7 @@
             <objects>
                 <viewController modalPresentationStyle="fullScreen" id="0Wd-ao-aQK" customClass="avisoViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="PhU-PZ-W04">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="iM7-6Y-O2h">
@@ -2302,7 +2317,7 @@ If you have any questions about this Privacy Policy, You can contact us:
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1gb-Su-Chj" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="H8E-xg-4JM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
