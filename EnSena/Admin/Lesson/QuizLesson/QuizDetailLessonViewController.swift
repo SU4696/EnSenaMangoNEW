@@ -166,11 +166,20 @@ class QuizDetailLessonViewController: UIViewController {
 //        optionOne.setTitle("\(notAnswer)", for: [])
         
         func loadImage(){
-            let storage = Storage.storage().reference(withPath: "dictionary/\(answer).png")
+            var storage = Storage.storage().reference(withPath: "dictionary/\(answer).png")
             storage.downloadURL { [self] (url, error) in
                 if error != nil{
-                    print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
-                    return
+                    storage = Storage.storage().reference(withPath: "dictionary/\(answer).gif")
+                                      storage.downloadURL { [self] (url, error) in
+                                          if error != nil{
+
+                                              print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
+                                             return
+                                          } else {
+                                              //abrir un view controller
+                                              quizImage.sd_setImage(with: url!, placeholderImage: UIImage())
+                                          }
+                                      }
                 } else {
                     //abrir un view controller
                     quizImage.sd_setImage(with: url!, placeholderImage: UIImage())

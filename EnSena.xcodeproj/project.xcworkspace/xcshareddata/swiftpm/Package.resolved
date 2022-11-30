@@ -28,6 +28,15 @@
       }
     },
     {
+      "identity" : "flanimatedimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Flipboard/FLAnimatedImage.git",
+      "state" : {
+        "revision" : "d4f07b6f164d53c1212c3e54d6460738b1981e9f",
+        "version" : "1.0.17"
+      }
+    },
+    {
       "identity" : "googleappmeasurement",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/google/GoogleAppMeasurement.git",
@@ -106,6 +115,15 @@
       "state" : {
         "revision" : "3312bf5e67b52fbce7c3caf431b0cda721a9f7bb",
         "version" : "5.14.2"
+      }
+    },
+    {
+      "identity" : "sdwebimageflplugin",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/SDWebImageFLPlugin",
+      "state" : {
+        "revision" : "40ea0e7c28189fcae5f03e5bc9acf2771ea0b224",
+        "version" : "0.6.0"
       }
     },
     {

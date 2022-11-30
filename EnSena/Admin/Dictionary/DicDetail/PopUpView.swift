@@ -9,6 +9,7 @@ import UIKit
 import SwiftUI
 import FirebaseStorage
 import FirebaseFirestore
+import FLAnimatedImage
 
 class PopUpView: UIView {
 

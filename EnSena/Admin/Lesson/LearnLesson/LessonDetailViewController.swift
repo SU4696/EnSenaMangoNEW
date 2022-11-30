@@ -49,11 +49,20 @@ class LessonDetailViewController: UIViewController, UITableViewDataSource, UITab
             let cell = LesView.dequeueReusableCell(withIdentifier: "lesCell") as! LearnTVC
             cell.learnLabel.text = target.name
             func loadImage(){
-                let storage = Storage.storage().reference(withPath: "dictionary/\(target.name).png")
+                var storage = Storage.storage().reference(withPath: "dictionary/\(target.name).png")
                 storage.downloadURL { [self] (url, error) in
                     if error != nil{
-                        print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
-                        return
+                        storage = Storage.storage().reference(withPath: "dictionary/\(target.name).gif")
+                                                storage.downloadURL { [self] (url, error) in
+                                                    if error != nil{
+
+                                                        print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
+                                                       return
+                                                    } else {
+                                                        //abrir un view controller
+                                                        cell.learnImage.sd_setImage(with: url!, placeholderImage: UIImage())
+                                                    }
+                                                }
                     } else {
                         //abrir un view controller
                         cell.learnImage.sd_setImage(with: url!, placeholderImage: UIImage())

@@ -26,10 +26,28 @@ class NotAdminDicDetailViewController: UIViewController,UITableViewDataSource, U
         }
     private var imageURL = URL(string:"")
     func loadImage(){
-        let storage = Storage.storage().reference(withPath: "dictionary/\(wordname).png")
+        var storage = Storage.storage().reference(withPath: "dictionary/\(wordname).png")
         storage.downloadURL { [self] (url, error) in
             if error != nil{
-                print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
+                storage = Storage.storage().reference(withPath: "dictionary/\(wordname).gif")
+                               storage.downloadURL { [self] (url, error) in
+                                   if error != nil{
+
+                                       print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
+                                      return
+                                   } else {
+                                       //abrir un view controller
+                                   self.wordPopUp = PopUpView(frame: self.view.frame)
+                                   self.wordPopUp.close.addTarget(self, action: #selector(closeTapped), for: .touchUpInside)
+                                   self.view.addSubview(wordPopUp)
+
+                                   self.wordPopUp.wordLabel.text = wordname
+
+                                       self.wordPopUp.wordImage.sd_setImage(with: url!, placeholderImage: UIImage())
+                                   }
+                               }
+               //                print ("Un error ocurrio al leer archivo \(storage) error = \(error?.localizedDescription)")
+               //                return
                 return
             } else {
                 //abrir un view controller
