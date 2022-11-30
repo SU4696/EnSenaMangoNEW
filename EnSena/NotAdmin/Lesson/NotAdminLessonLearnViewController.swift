@@ -11,8 +11,7 @@ import Firebase
 import FirebaseFirestore
 import FirebaseStorage
 
-
-class NotAdminLessonLearnViewController: UITabBarController, UITableViewDataSource, UITableViewDelegate  {
+class NotAdminLessonLearnViewController:UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var lesView: UITableView!
     
@@ -81,14 +80,11 @@ class NotAdminLessonLearnViewController: UITabBarController, UITableViewDataSour
    
         override func viewDidLoad() {
             super.viewDidLoad()
-            
             lesView.estimatedRowHeight = 55
             lesView.rowHeight = UITableView.automaticDimension
             /*
             NotificationCenter.default.addObserver(forName: LessonDetailCompseViewController.newLesDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.LesView.reloadData()}*/
         }
-    
-
     
 
     /*

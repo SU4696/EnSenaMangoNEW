@@ -2504,6 +2504,10 @@ If you have any questions about this Privacy Policy, You can contact us:
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Et7-d4-phg" id="tj4-0N-2IC"/>
+                                    <outlet property="delegate" destination="Et7-d4-phg" id="WMl-40-M1X"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Czq-jB-Tg0"/>

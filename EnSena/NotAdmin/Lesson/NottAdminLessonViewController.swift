@@ -18,7 +18,7 @@ class NAMyLessonTapGesture: UITapGestureRecognizer {
     var category = String()
 }
 
-class NotAdminLearnViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class NotAdminLearnViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
 
     @IBOutlet weak var lessonName: UITableView!
    
