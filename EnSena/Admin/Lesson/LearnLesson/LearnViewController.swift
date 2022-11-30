@@ -73,7 +73,7 @@ class LearnViewController: UIViewController, UITableViewDataSource, UITableViewD
                 vc.modalPresentationStyle = .fullScreen
                 vc.word = sender.category
                 vc.LesArrayDetail = self.LesArrayDetail
-                        self.present(vc, animated: true)
+                self.present(vc, animated: true)
            }
         }
  

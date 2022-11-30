@@ -2452,93 +2452,74 @@ If you have any questions about this Privacy Policy, You can contact us:
             <point key="canvasLocation" x="5013" y="-2559"/>
         </scene>
         <!--Not Admin Lesson Learn View Controller-->
-        <scene sceneID="eae-E9-kAg">
+        <scene sceneID="iM7-QK-C1b">
             <objects>
-                <viewController storyboardIdentifier="NotAdminLessonLearnViewController" modalPresentationStyle="fullScreen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="tfd-aA-TeF" customClass="NotAdminLessonLearnViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="hmV-LZ-wfe">
+                <viewController storyboardIdentifier="NotAdminLessonLearnViewController" id="Et7-d4-phg" customClass="NotAdminLessonLearnViewController" customModule="EnSena" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MOi-5A-oXg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="k1a-Ny-g9K">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sHI-TR-uXa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <items>
+                                    <navigationItem id="R53-NC-tI7">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="exU-x2-rd5">
+                                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="close:" destination="Et7-d4-phg" id="jsa-aG-rUz"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="0gw-kX-WZ9">
                                 <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lesCell" rowHeight="342" id="5op-wN-vwG" customClass="NALearnTVC" customModule="EnSena" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="lesCell" rowHeight="342" id="83g-IJ-v8x" customClass="NALearnTVC" customModule="EnSena" customModuleProvider="target">
                                         <rect key="frame" x="20" y="49.5" width="374" height="342"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5op-wN-vwG" id="irh-4s-2SS">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="83g-IJ-v8x" id="N4Z-fJ-55c">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="342"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3p1-I5-9fD">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYi-eS-Q5o">
                                                     <rect key="frame" x="20" y="278" width="334" height="53"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="30"/>
                                                     <color key="textColor" name="AccentColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TbV-Tc-xNV">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oiZ-g1-eS9">
                                                     <rect key="frame" x="20" y="11" width="334" height="270"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="learnImage" destination="TbV-Tc-xNV" id="oWE-hz-AlP"/>
-                                            <outlet property="learnLabel" destination="3p1-I5-9fD" id="VRz-if-b0O"/>
+                                            <outlet property="learnImage" destination="oiZ-g1-eS9" id="0HX-P9-7Np"/>
+                                            <outlet property="learnLabel" destination="mYi-eS-Q5o" id="gl5-qF-GCp"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="tfd-aA-TeF" id="ly4-PU-IWQ"/>
-                                    <outlet property="delegate" destination="tfd-aA-TeF" id="hup-jH-DfQ"/>
-                                </connections>
                             </tableView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h07-hx-dhE">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <items>
-                                    <navigationItem id="Kv4-Td-wip">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="hBj-YZ-QcH">
-                                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            <connections>
-                                                <action selector="close:" destination="tfd-aA-TeF" id="qjo-4Y-MFN"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="qWR-bd-cic"/>
+                        <viewLayoutGuide key="safeArea" id="Czq-jB-Tg0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="h07-hx-dhE" firstAttribute="trailing" secondItem="k1a-Ny-g9K" secondAttribute="trailing" id="EaS-Zv-XhD"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="k1a-Ny-g9K" secondAttribute="bottom" constant="-34" id="Ieo-yS-LhG"/>
-                            <constraint firstItem="k1a-Ny-g9K" firstAttribute="top" secondItem="h07-hx-dhE" secondAttribute="bottom" id="RVT-Nd-K1I"/>
-                            <constraint firstItem="h07-hx-dhE" firstAttribute="top" secondItem="qWR-bd-cic" secondAttribute="top" id="YjM-XS-PcM"/>
-                            <constraint firstItem="h07-hx-dhE" firstAttribute="centerX" secondItem="hmV-LZ-wfe" secondAttribute="centerX" id="lkj-aE-fbI"/>
-                            <constraint firstItem="h07-hx-dhE" firstAttribute="leading" secondItem="qWR-bd-cic" secondAttribute="leading" id="mDA-PY-Oek"/>
-                            <constraint firstItem="h07-hx-dhE" firstAttribute="leading" secondItem="k1a-Ny-g9K" secondAttribute="leading" id="pHG-lv-4se"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="65k-AY-mho">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="Jf7-dl-Oem">
-                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="00d-sj-TIe">
-                            <color key="tintColor" red="0.94117647410000005" green="0.60000002379999995" blue="0.58039218189999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        </barButtonItem>
-                    </navigationItem>
                     <connections>
-                        <outlet property="lesView" destination="k1a-Ny-g9K" id="vxa-DG-HKP"/>
+                        <outlet property="lesView" destination="0gw-kX-WZ9" id="quq-c1-Njh"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UsT-fT-cXJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YgX-F7-PgT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5012" y="-1881"/>
+            <point key="canvasLocation" x="5709" y="-1881"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="1LX-cK-Smg"/>
+        <segue reference="PdE-yE-M55"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="splash" width="256" height="256"/>

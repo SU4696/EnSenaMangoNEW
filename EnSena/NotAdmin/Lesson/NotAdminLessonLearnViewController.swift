@@ -81,11 +81,14 @@ class NotAdminLessonLearnViewController: UITabBarController, UITableViewDataSour
    
         override func viewDidLoad() {
             super.viewDidLoad()
+            
             lesView.estimatedRowHeight = 55
             lesView.rowHeight = UITableView.automaticDimension
             /*
             NotificationCenter.default.addObserver(forName: LessonDetailCompseViewController.newLesDidInsert, object: nil, queue: OperationQueue.main) { [weak self] (noti) in self?.LesView.reloadData()}*/
         }
+    
+
     
 
     /*
