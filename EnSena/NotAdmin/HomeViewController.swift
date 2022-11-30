@@ -91,6 +91,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
     override func viewDidLoad() {
         super.viewDidLoad()
         getDatabaseRecords()
+        loadingData = false
 
         // Do any additional setup after loading the view.
     }
